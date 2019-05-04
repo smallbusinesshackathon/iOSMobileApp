@@ -38,7 +38,6 @@ class Offer: NSObject{
         barcode = offerRepresentation.barcode
         qrCode = offerRepresentation.qrCode
         
-        
     
     }
     
