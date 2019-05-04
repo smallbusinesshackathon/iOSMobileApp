@@ -7,9 +7,7 @@
 
 import UIKit
 import MapKit
-struct Business{
-    
-}
+
 class CustomerBusinessesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, MKMapViewDelegate, CLLocationManagerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,18 +31,15 @@ class CustomerBusinessesViewController: UIViewController, UITableViewDelegate, U
         tableView.reloadData()
         
         mapView.delegate = self
-        mapView.register(MKMarkerAnnotationView.self, forAnnotationViewWithReuseIdentifier: "StoreAnnotation")
+        mapView.register(MKMarkerAnnotationView.self, forAnnotationViewWithReuseIdentifier: "BusinessAnnotation")
     }
     //MARK: UITableViewDataSource Methods
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return suggestions.count
+        return 0
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "StoreCell", for: indexPath)
-        let store = suggestions[indexPath.row]
-        cell.textLabel?.text = store.name
-        cell.detailTextLabel?.text = storeController.estimatedCostForGroceries(store: store, items: groceryItemController.groceryList)?.currencyString() ?? "N/A"
-        return cell
+        
+        return UITableViewCell()
     }
     
     //MARK: CLLocationManagerDelegate
@@ -61,17 +56,14 @@ class CustomerBusinessesViewController: UIViewController, UITableViewDelegate, U
     
     //MARK: MapViewDelegate Method
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        let storeAnnotation = mapView.dequeueReusableAnnotationView(withIdentifier: "StoreAnnotation", for: annotation) as! MKMarkerAnnotationView
-        storeAnnotation.markerTintColor = .darkGray
-        storeAnnotation.glyphTintColor = .white
+        let businessAnnotation = mapView.dequeueReusableAnnotationView(withIdentifier: "BusinessAnnotation", for: annotation) as! MKMarkerAnnotationView
+        businessAnnotation.markerTintColor = .darkGray
+        businessAnnotation.glyphTintColor = .white
         
-        storeAnnotation.canShowCallout = true
+        businessAnnotation.canShowCallout = true
         
-        let detailView = StoreDetailView(frame: .zero)
-        detailView.store = annotation as? Store
-        
-        storeAnnotation.detailCalloutAccessoryView = detailView
-        return storeAnnotation
+        //TODO: Implement detailView
+        return businessAnnotation
     }
     
     //MARK: - Private
@@ -94,7 +86,7 @@ class CustomerBusinessesViewController: UIViewController, UITableViewDelegate, U
     }
     
     //makes API request using location and radius
-    private func getBusinesses(around location: CLLocationCoordinate2D, with radius: Double, completion: ([Business], Error)->Void){
+    private func getBusinesses(around location: CLLocationCoordinate2D, with radius: Double, completion: ([Business]?, Error?)->Void){
         
     }
     

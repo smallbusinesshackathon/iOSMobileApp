@@ -13,6 +13,7 @@ class Business{
     let address: String?
     let openStatus: Bool
     let owner: String
+    
     init(name: String, phoneNumber: String, address: String?, openStatus: Bool, owner: String) {
         self.name = name
         self.phoneNumber = phoneNumber
