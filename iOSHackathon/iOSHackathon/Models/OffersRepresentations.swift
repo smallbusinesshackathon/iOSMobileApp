@@ -6,25 +6,25 @@
 //
 
 import Foundation
+import MapKit
 
-
-struct Offers: Codable {
-    let offers: [Offer]
+struct OfferRepresentations: Codable {
+    let offerRepresentations: [OfferRepresentation]
     
-    enum CodingKeys: String, CodingKey {
-        case offers = "Offers"
-        
-    }
+//    enum CodingKeys: String, CodingKey {
+//        case offerRepresentations = "Offers"
+//        
+//    }
 }
 
-struct Offer: Codable {
+struct OfferRepresentation:  Codable {
+    //var coordinate: CLLocationCoordinate2D
+    //let latitude: Double
+    //let longitude: Double
     let offerId: Int
     let activeIndicator, soldOut: Bool
     let lastModifiedDatetime: String
-    //let programID: Int
-    //let programName: String
-    //let languageID: Int
-    //let language: String
+   
     let merchantList: [MerchantList]
     let offerTitle: String
     let featuredOfferIndicator: Bool
@@ -47,18 +47,8 @@ struct Offer: Codable {
     // payments? let redemptionCountries, promotingCountries, cardProductList, cardPaymentTypeList: [BusinessSegmentList]
     //let businessSegmentList: [BusinessSegmentList]
     let categorySubcategoryList: [CategorySubcategoryList]
-    //let offerType: [BusinessSegmentList]
-    //let creativeApprovalsEmail, creativeGuidelines: String
-    //let bins, rpins, binstorpins, accountranges: [JSONAny]
-    //let accountrangestorpins, offerMetadata: [JSONAny]
-    //let supData1, supData2, supData3, supData4: FAQs
-    
-    enum CodingKeys: String, CodingKey {
-        //case indexNumber
-        //case offerContentID = "offerContentId"
-        case offerID = "offerId"
-        case activeIndicator, soldOut, lastModifiedDatetime, merchantList, offerTitle, featuredOfferIndicator, validityFromDate, validityToDate, shareTitle, offerShortDescription, offerCopy, merchantTerms, redemptionCode, imageList, barcode, qrCode, categorySubcategoryList
-    }
+//    init(latitude: Double, longitude: Double, offerId: Int, activeIndicator: Bool, soldOut: Bool, lastModifiedDatetime: String, merchantList: [MerchantList], offerTitle: String, featuredOfferindicator: Bool, vali)
+//  }
 }
 
 struct CategorySubcategoryList: Codable {
@@ -87,7 +77,7 @@ struct ImageList: Codable {
 struct MerchantList: Codable {
     let merchantID: Int
     let merchant: String
-    let merchantAddress: [JSONAny]
+    let merchantAddress: [String]
     let merchantImages: [MerchantImage]
     
     enum CodingKeys: String, CodingKey {
