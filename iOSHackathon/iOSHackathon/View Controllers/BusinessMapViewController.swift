@@ -63,23 +63,15 @@ class BusinessMapViewController: UIViewController, MKMapViewDelegate, CLLocation
         let viewRegion = MKCoordinateRegion(center: location, latitudinalMeters: 2000, longitudinalMeters: 2000)
         mapView.setRegion(viewRegion, animated: true)
         
-        //make API call to find array of business
-        //add annotations to map
-        getBusinesses(around: location, with: 10.0) { (openBusinesses, error) in
-            if let error = error {
-                NSLog("Error getting businesses: \(error)")
-                return
-            }
-            guard let openBusinesses = openBusinesses else {return}
-            mapView.addAnnotations(openBusinesses)
-        }
+        //TODO: - make API calls for Requests/Offers and handle the response
+        
+        //Find local alerts
         
     }
     
-    //makes API request using location and radius
-    private func getBusinesses(around location: CLLocationCoordinate2D, with radius: Double, completion: ([Business]?, Error?)->Void){
-        
-    }
+    //MARK: - Private Networking Functions
+    
+
     
     
     //MARK: - Properties
