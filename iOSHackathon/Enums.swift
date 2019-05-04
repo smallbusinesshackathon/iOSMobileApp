@@ -13,3 +13,7 @@ enum Severity:String {
     case severe
     case extreme
 }
+
+enum DecodingError: Error{
+    case invalidResponse
+}

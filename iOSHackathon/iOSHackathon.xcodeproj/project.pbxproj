@@ -10,6 +10,8 @@
 		10082B28227D539D002C8D56 /* BusinessMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10082B27227D539D002C8D56 /* BusinessMapViewController.swift */; };
 		10082B2A227D5E5D002C8D56 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10082B29227D5E5D002C8D56 /* Extensions.swift */; };
 		10082B2E227E187E002C8D56 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10082B2D227E187E002C8D56 /* Enums.swift */; };
+		10C3020D227E234F006A5CB7 /* WeatherAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C3020C227E234F006A5CB7 /* WeatherAlert.swift */; };
+		10C3020F227E2F19006A5CB7 /* NWSResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C3020E227E2F19006A5CB7 /* NWSResponse.swift */; };
 		7B8E4E47227D42CA001F9C2F /* Business.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B8E4E46227D42CA001F9C2F /* Business.storyboard */; };
 		7B8E4E49227D42D0001F9C2F /* Customer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B8E4E48227D42D0001F9C2F /* Customer.storyboard */; };
 		7B8E4E50227D4EB1001F9C2F /* BusinessOffersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8E4E4F227D4EB1001F9C2F /* BusinessOffersViewController.swift */; };
@@ -21,6 +23,7 @@
 		7B8E4E60227DE913001F9C2F /* BusinessOfferDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8E4E5F227DE913001F9C2F /* BusinessOfferDetailViewController.swift */; };
 		7B8E4E62227DE925001F9C2F /* AddEditBusinessRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8E4E61227DE925001F9C2F /* AddEditBusinessRequestViewController.swift */; };
 		7B8E4E6C227E1E52001F9C2F /* RequestCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8E4E6B227E1E52001F9C2F /* RequestCollectionViewCell.swift */; };
+		7B8E4E6E227E3885001F9C2F /* OfferCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8E4E6D227E3885001F9C2F /* OfferCollectionViewCell.swift */; };
 		A23F51F0227D2AAB00C729C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23F51EF227D2AAB00C729C7 /* AppDelegate.swift */; };
 		A23F51F5227D2AAB00C729C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A23F51F3227D2AAB00C729C7 /* Main.storyboard */; };
 		A23F51F7227D2AAF00C729C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A23F51F6227D2AAF00C729C7 /* Assets.xcassets */; };
@@ -36,6 +39,8 @@
 		10082B27227D539D002C8D56 /* BusinessMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessMapViewController.swift; sourceTree = "<group>"; };
 		10082B29227D5E5D002C8D56 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = iOSHackathon/Helper/Extensions.swift; sourceTree = "<group>"; };
 		10082B2D227E187E002C8D56 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		10C3020C227E234F006A5CB7 /* WeatherAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAlert.swift; sourceTree = "<group>"; };
+		10C3020E227E2F19006A5CB7 /* NWSResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NWSResponse.swift; sourceTree = "<group>"; };
 		7B8E4E46227D42CA001F9C2F /* Business.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Business.storyboard; sourceTree = "<group>"; };
 		7B8E4E48227D42D0001F9C2F /* Customer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Customer.storyboard; sourceTree = "<group>"; };
 		7B8E4E4F227D4EB1001F9C2F /* BusinessOffersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessOffersViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +52,7 @@
 		7B8E4E5F227DE913001F9C2F /* BusinessOfferDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessOfferDetailViewController.swift; sourceTree = "<group>"; };
 		7B8E4E61227DE925001F9C2F /* AddEditBusinessRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditBusinessRequestViewController.swift; sourceTree = "<group>"; };
 		7B8E4E6B227E1E52001F9C2F /* RequestCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestCollectionViewCell.swift; sourceTree = "<group>"; };
+		7B8E4E6D227E3885001F9C2F /* OfferCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferCollectionViewCell.swift; sourceTree = "<group>"; };
 		A23F51EC227D2AAB00C729C7 /* iOSHackathon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSHackathon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A23F51EF227D2AAB00C729C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A23F51F4227D2AAB00C729C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -58,8 +64,6 @@
 		A23F5210227DB33A00C729C7 /* OffersRepresentations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffersRepresentations.swift; sourceTree = "<group>"; };
 		A23F5212227DDC3200C729C7 /* Offer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Offer.swift; sourceTree = "<group>"; };
 		A23F5214227DE13700C729C7 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
-		A23F5218227DEE9500C729C7 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +121,7 @@
 				A23F520C227D549000C729C7 /* BusinessLoginViewController.swift */,
 				10082B27227D539D002C8D56 /* BusinessMapViewController.swift */,
 				7B8E4E4F227D4EB1001F9C2F /* BusinessOffersViewController.swift */,
+				7B8E4E6D227E3885001F9C2F /* OfferCollectionViewCell.swift */,
 				7B8E4E51227D501D001F9C2F /* AddEditBusinessOfferViewController.swift */,
 				7B8E4E5F227DE913001F9C2F /* BusinessOfferDetailViewController.swift */,
 				7B8E4E53227D53DE001F9C2F /* BusinessRequestsViewController.swift */,
@@ -156,16 +161,10 @@
 				A23F5210227DB33A00C729C7 /* OffersRepresentations.swift */,
 				A23F5212227DDC3200C729C7 /* Offer.swift */,
 				A23F5214227DE13700C729C7 /* Request.swift */,
+				10C3020C227E234F006A5CB7 /* WeatherAlert.swift */,
+				10C3020E227E2F19006A5CB7 /* NWSResponse.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		A23F5217227DEDD200C729C7 /* Helper */ = {
-			isa = PBXGroup;
-			children = (
-				A23F5218227DEE9500C729C7 /* Extensions.swift */,
-			);
-			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,6 +243,7 @@
 				7B8E4E5E227DE8C8001F9C2F /* MainViewController.swift in Sources */,
 				7B8E4E62227DE925001F9C2F /* AddEditBusinessRequestViewController.swift in Sources */,
 				10082B2A227D5E5D002C8D56 /* Extensions.swift in Sources */,
+				7B8E4E6E227E3885001F9C2F /* OfferCollectionViewCell.swift in Sources */,
 				A23F520B227D502400C729C7 /* Business.swift in Sources */,
 				7B8E4E60227DE913001F9C2F /* BusinessOfferDetailViewController.swift in Sources */,
 				7B8E4E5C227D6182001F9C2F /* BusinessSettingsViewController.swift in Sources */,
@@ -258,6 +258,8 @@
 				A23F520B227D502400C729C7 /* Business.swift in Sources */,
 				A23F5211227DB33A00C729C7 /* OffersRepresentations.swift in Sources */,
 				A23F51F0227D2AAB00C729C7 /* AppDelegate.swift in Sources */,
+				10C3020F227E2F19006A5CB7 /* NWSResponse.swift in Sources */,
+				10C3020D227E234F006A5CB7 /* WeatherAlert.swift in Sources */,
 				A23F5215227DE13700C729C7 /* Request.swift in Sources */,
 				10082B2E227E187E002C8D56 /* Enums.swift in Sources */,
 			);
@@ -406,7 +408,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3RPD3783PY;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "$(SRCROOT)/iOSHackathon/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -424,7 +426,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3RPD3783PY;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "$(SRCROOT)/iOSHackathon/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
