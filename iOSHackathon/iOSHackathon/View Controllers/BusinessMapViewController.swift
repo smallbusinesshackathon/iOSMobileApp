@@ -11,27 +11,27 @@ import MapKit
 class BusinessMapViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, MKMapViewDelegate, CLLocationManagerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.delegate = self
-        tableView.dataSource = self
-        
-        // Get Location
-        locationManager.delegate = self
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        
-        // Check for Location Services
-        locationManager.requestWhenInUseAuthorization()
-                locationManager.requestLocation()
-//        guard let avgCoordinate =  storeController.averageStoreCoordinate() else {return}
-//        let viewRegion = MKCoordinateRegion(center: avgCoordinate, latitudinalMeters: 2000, longitudinalMeters: 2000)
-//        mapView.setRegion(viewRegion, animated: false)
+//        tableView.delegate = self
+//        tableView.dataSource = self
+//
+//        // Get Location
+//        locationManager.delegate = self
+//        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+//
+//        // Check for Location Services
+//        locationManager.requestWhenInUseAuthorization()
+//                locationManager.requestLocation()
+////        guard let avgCoordinate =  storeController.averageStoreCoordinate() else {return}
+////        let viewRegion = MKCoordinateRegion(center: avgCoordinate, latitudinalMeters: 2000, longitudinalMeters: 2000)
+////        mapView.setRegion(viewRegion, animated: false)
     }
     override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        tableView.reloadData()
-        
-        mapView.delegate = self
-        mapView.register(MKMarkerAnnotationView.self, forAnnotationViewWithReuseIdentifier: "BusinessAnnotation")
+//        super.viewWillAppear(animated)
+//        
+//        tableView.reloadData()
+//        
+//        mapView.delegate = self
+//        mapView.register(MKMarkerAnnotationView.self, forAnnotationViewWithReuseIdentifier: "BusinessAnnotation")
     }
     //MARK: UITableViewDataSource Methods
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
