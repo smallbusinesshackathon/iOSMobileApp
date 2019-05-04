@@ -8,7 +8,8 @@
 import Foundation
 import MapKit
 
-class Requests: NSObject, MKAnnotation {
+
+class Request: NSObject, MKAnnotation {
     
     var title: String?
     var requestDescription: String
@@ -26,7 +27,7 @@ class Requests: NSObject, MKAnnotation {
         return location
     }
     
-    init(title: String, requestDescription: String, category: String, address: String, caseStatus: Bool, responder: String) {
+    self.init(title: String, requestDescription: String, category: String, address: String, caseStatus: Bool, responder: String) {
         self.title = title
         self.requestDescription = requestDescription
         self.category = category
@@ -36,5 +37,3 @@ class Requests: NSObject, MKAnnotation {
     }
 
 }
-    
-
