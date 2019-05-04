@@ -13,6 +13,9 @@ class AddEditBusinessRequestViewController: UIViewController {
         super.viewDidLoad()
 
     }
+    @IBAction func goBack(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
     
     @IBAction func createUpdateRequest(_ sender: Any) {
         
