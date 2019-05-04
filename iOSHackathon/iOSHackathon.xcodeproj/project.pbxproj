@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		10082B28227D539D002C8D56 /* CustomerBusinessesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10082B27227D539D002C8D56 /* CustomerBusinessesViewController.swift */; };
 		7B8E4E47227D42CA001F9C2F /* Business.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B8E4E46227D42CA001F9C2F /* Business.storyboard */; };
 		7B8E4E49227D42D0001F9C2F /* Customer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B8E4E48227D42D0001F9C2F /* Customer.storyboard */; };
 		7B8E4E4B227D45CB001F9C2F /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B8E4E4A227D45CB001F9C2F /* TabBar.storyboard */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		10082B27227D539D002C8D56 /* CustomerBusinessesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerBusinessesViewController.swift; sourceTree = "<group>"; };
 		7B8E4E46227D42CA001F9C2F /* Business.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Business.storyboard; sourceTree = "<group>"; };
 		7B8E4E48227D42D0001F9C2F /* Customer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Customer.storyboard; sourceTree = "<group>"; };
 		7B8E4E4A227D45CB001F9C2F /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
@@ -86,7 +88,11 @@
 				7B8E4E53227D53DE001F9C2F /* BusinessRequestsViewController.swift */,
 				7B8E4E55227D5400001F9C2F /* BusinessAllRequestsCollectionViewController.swift */,
 				A23F51F1227D2AAB00C729C7 /* ViewController.swift */,
+
 				A23F520C227D549000C729C7 /* AddBusinessViewController.swift */,
+
+				10082B27227D539D002C8D56 /* CustomerBusinessesViewController.swift */,
+
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -192,6 +198,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10082B28227D539D002C8D56 /* CustomerBusinessesViewController.swift in Sources */,
 				A23F51F2227D2AAB00C729C7 /* ViewController.swift in Sources */,
 				A23F520B227D502400C729C7 /* Business.swift in Sources */,
 				A23F520D227D549000C729C7 /* AddBusinessViewController.swift in Sources */,
