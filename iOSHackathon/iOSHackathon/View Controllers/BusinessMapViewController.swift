@@ -22,9 +22,9 @@ class BusinessMapViewController: UIViewController, MKMapViewDelegate, CLLocation
         // Check for Location Services
         locationManager.requestWhenInUseAuthorization()
         locationManager.requestLocation()
-        //        guard let avgCoordinate =  storeController.averageStoreCoordinate() else {return}
-        //        let viewRegion = MKCoordinateRegion(center: avgCoordinate, latitudinalMeters: 2000, longitudinalMeters: 2000)
-        //        mapView.setRegion(viewRegion, animated: false)
+        
+        alertLabel.textColor = .white
+        alertView.backgroundColor = .green
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -79,8 +79,27 @@ class BusinessMapViewController: UIViewController, MKMapViewDelegate, CLLocation
                 return
             }
             guard let results = results else {return}
+            DispatchQueue.main.async {
+                self.updateAlertLabel(alerts: results)
+            }
         }
         
+    }
+    
+    private func updateAlertLabel(alerts: [WeatherAlert]){
+        if alerts.isEmpty{
+            alertLabel.text = "There are no weather alerts in your current area"
+        } else {
+            guard let mostSevere = getMostSevereAlert(alerts: alerts) else {return}
+            alertLabel.text = mostSevere.headline
+            alertView.backgroundColor = severityRating[mostSevere.severity.lowercased()]!.color
+        }
+    }
+    
+    private func getMostSevereAlert(alerts: [WeatherAlert]) -> WeatherAlert? {
+        let sorted = alerts.sorted{ severityRating[$0.severity.lowercased()]!.rating > severityRating [$1.severity.lowercased()]!.rating}
+        
+        return sorted.first
     }
     
     //MARK: - Private Networking Functions

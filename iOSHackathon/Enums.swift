@@ -18,3 +18,8 @@ enum Severity:String {
 enum DecodingError: Error{
     case invalidResponse
 }
+
+let severityRating = ["minor": (rating: 0, color: UIColor.green),
+                      "moderate" : (rating: 1, color: UIColor.yellow),
+                      "severe" : (rating: 2, color: UIColor.orange),
+                      "extreme" : (rating: 3, color: UIColor.red)]
