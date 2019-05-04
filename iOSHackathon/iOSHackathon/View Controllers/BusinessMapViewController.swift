@@ -26,7 +26,7 @@ class BusinessMapViewController: UIViewController, MKMapViewDelegate, CLLocation
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        tableView.reloadData()
+//        tableView.reloadData()
         
         mapView.delegate = self
         mapView.register(MKMarkerAnnotationView.self, forAnnotationViewWithReuseIdentifier: "MapAnnotation")
