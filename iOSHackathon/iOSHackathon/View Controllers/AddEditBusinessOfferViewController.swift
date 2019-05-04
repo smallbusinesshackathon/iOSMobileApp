@@ -28,6 +28,10 @@ class AddEditBusinessOfferViewController: UIViewController {
         }
     }
     
+    @IBAction func goBack(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     private func postOffer(title: String, description: String) {
         let offer = Offer(title: title, description: description)
         

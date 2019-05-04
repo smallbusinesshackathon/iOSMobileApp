@@ -31,6 +31,8 @@ class BusinessOffersViewController: UIViewController, UICollectionViewDataSource
         }
     }
     
+    
+    
     private func checkDataSource() {
         switch offerSegmentedControl.selectedSegmentIndex {
         case 0:
