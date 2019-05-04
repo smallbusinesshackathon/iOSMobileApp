@@ -154,7 +154,6 @@
                                 <rect key="frame" x="356" y="79" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Add"/>
-
                                 <connections>
                                     <segue destination="66u-sK-t5q" kind="show" id="XEA-iQ-Weu"/>
                                 </connections>
@@ -181,6 +180,7 @@
                     <tabBarItem key="tabBarItem" title="Offers" id="MZo-B0-nKm"/>
                     <connections>
                         <outlet property="collectionView" destination="Tpi-1h-9e2" id="bnw-8W-qV8"/>
+                        <outlet property="offerSegmentedControl" destination="zGI-Rb-tQu" id="HuK-Dz-NTB"/>
                         <segue destination="66u-sK-t5q" kind="show" id="zQq-mt-0QA"/>
                         <segue destination="EgT-rv-fDs" kind="show" id="hf1-lC-TFC"/>
                     </connections>
@@ -673,11 +673,6 @@
             <point key="canvasLocation" x="2100" y="2400.6696428571427"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="icons8-automatic-69" width="34.5" height="34.5"/>
-        <image name="icons8-helping-hand-69" width="34.5" height="34.5"/>
-        <image name="icons8-money-bag-filled-69" width="69" height="69"/>
-    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="C1S-Xk-03J"/>
         <segue reference="XEA-iQ-Weu"/>

@@ -26,6 +26,36 @@ class BusinessLoginViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        //        curl -X GET "https://shared-sandbox-api.marqeta.com/v3/acceptedcountries?count=5&start_index=0&sort_by=-lastModifiedTime" -H "accept: application/json" -H "Authorization: Basic dXNlcjYyOTMxNTU2OTM2MzY5OmI1ZmRiYmFiLTAzYjAtNDBhMi1iNmRhLWEyYmJjZDE0NjEyZQ=="
+        
+        let url = URL(string: "https://shared-sandbox-api.marqeta.com/v3/acceptedcountries?count=5&start_index=0&sort_by=-lastModifiedTime")!
+        
+        var request = URLRequest(url: url)
+        
+        request.httpMethod = "GET"
+        request.addValue("accept", forHTTPHeaderField: "application/json")
+        request.addValue("Authorization", forHTTPHeaderField: "Basic dXNlcjYyOTMxNTU2OTM2MzY5OmI1ZmRiYmFiLTAzYjAtNDBhMi1iNmRhLWEyYmJjZDE0NjEyZQ==")
+        
+        URLSession.shared.dataTask(with: request) { (data, _, error) in
+            if let error = error {
+                NSLog("Error getting offers: \(error)")
+                return
+            }
+            
+            guard let data = data else {
+                NSLog("Error getting offers data: \(NSError())")
+                return
+            }
+            
+            do {
+                // let offersResult = JSONDecoder().decode(Offer.self, from: data)
+            } catch {
+                
+            }
+            
+        }
+
     }
     
 
