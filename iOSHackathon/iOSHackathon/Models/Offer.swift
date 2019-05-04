@@ -8,7 +8,7 @@
 import Foundation
 import MapKit
 
-class Offer: NSObject, MKAnnotation{
+class Offer: NSObject, MKAnnotation, Codable {
     var coordinate: CLLocationCoordinate2D {
         var location = CLLocationCoordinate2D()
         CLGeocoder().geocodeAddressString(merchantList.first?.merchantAddress.first ?? "") { (results, _) in
@@ -52,6 +52,23 @@ class Offer: NSObject, MKAnnotation{
         qrCode = offerRepresentation.qrCode
         
     
+    }
+    
+    init(title: String, description: String) {
+        self.offerTitle = title
+        self.offerId = UUID().hashValue
+        self.activeIndicator = true
+        self.soldOut = false
+        self.merchantList = [MerchantList(merchantId: 0, merchant: "", merchantAddress: [""], merchantImages: [MerchantImage(fileLocation: "")])]
+        self.validityToDate = ""
+        self.validityFromDate = ""
+        self.shareTitle = ""
+        self.offerShortDescription = FAQs(text: "")
+        self.offerCopy = FAQs(text: "")
+        self.merchantTerms = FAQs(text: "")
+        self.barcode = ""
+        self.qrCode = ""
+        self.redemptionCode = ""
     }
     
 }

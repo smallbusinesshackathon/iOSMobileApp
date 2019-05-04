@@ -14,7 +14,7 @@
         <!--Business Login View Controller-->
         <scene sceneID="D0g-rj-2Eb">
             <objects>
-                <viewController id="k3M-GR-pX2" customClass="BusinessLoginViewController" sceneMemberID="viewController">
+                <viewController id="k3M-GR-pX2" customClass="BusinessLoginViewController" customModule="iOSHackathon" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tsE-mX-vit">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -81,7 +81,6 @@
                     <connections>
                         <outlet property="businessNameInput" destination="eBt-Uw-IUp" id="tDK-H1-mDP"/>
                         <outlet property="businessPhoneNumInput" destination="vy9-Z4-aBE" id="VC6-9j-Uff"/>
-                        <outlet property="submitBusinessBotton" destination="fV0-fH-Cz0" id="5dO-y2-6cG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dhg-TQ-vdl" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -106,7 +105,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Ot4-rb-d5M">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="OfferCell" id="Ot4-rb-d5M" customClass="OfferCollectionViewCell" customModule="iOSHackathon" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="147"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -143,6 +142,9 @@
                                                 </label>
                                             </subviews>
                                         </view>
+                                        <connections>
+                                            <outlet property="titleLabel" destination="Aka-n0-LvX" id="8Ys-T7-f6Q"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
@@ -164,6 +166,9 @@
                                     <segment title="My Offers"/>
                                     <segment title="All Offers Nearby"/>
                                 </segments>
+                                <connections>
+                                    <action selector="selectSegmentControl:" destination="JMi-Cv-DAH" eventType="valueChanged" id="oTc-5e-E6i"/>
+                                </connections>
                             </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -336,13 +341,8 @@
                                 <rect key="frame" x="87" y="185" width="88" height="20.5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p83-hx-00H">
-                                <rect key="frame" x="343" y="87" width="51" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Update"/>
-                            </button>
                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="0G0-M0-OMI">
-                                <rect key="frame" x="48" y="185" width="318" height="223"/>
+                                <rect key="frame" x="48" y="185" width="318" height="261"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Offer Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jm2-6P-PXp">
@@ -370,12 +370,23 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p83-hx-00H">
+                                        <rect key="frame" x="0.0" y="231" width="318" height="30"/>
+                                        <state key="normal" title="Update"/>
+                                        <connections>
+                                            <action selector="addUpdateOffer:" destination="66u-sK-t5q" eventType="touchUpInside" id="TyT-k3-ivJ"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="fc1-CS-3bn"/>
                     </view>
+                    <connections>
+                        <outlet property="offerDescriptionTextView" destination="pfh-L2-3Xj" id="Ehh-cZ-uB0"/>
+                        <outlet property="offerTitleTextField" destination="McS-Xi-UP5" id="uJg-jB-w0m"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bbi-uf-GDl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -487,7 +498,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="G3n-8O-iL3">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="RequestCell" id="G3n-8O-iL3" customClass="RequestCollectionViewCell" customModule="iOSHackathon" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="147"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -524,11 +535,14 @@
                                                 </label>
                                             </subviews>
                                         </view>
+                                        <connections>
+                                            <outlet property="titleLabel" destination="Caz-h6-ns4" id="ZVh-EX-7tS"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
-                                    <outlet property="dataSource" destination="UN5-UN-TcU" id="BJ9-3G-HCF"/>
-                                    <outlet property="delegate" destination="UN5-UN-TcU" id="OOa-Ve-Djw"/>
+                                    <outlet property="dataSource" destination="UN5-UN-TcU" id="vsm-Mr-PkB"/>
+                                    <outlet property="delegate" destination="UN5-UN-TcU" id="baT-Jw-FvI"/>
                                 </connections>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Il-5Y-Xwg">
@@ -545,6 +559,9 @@
                                     <segment title="My Requests"/>
                                     <segment title="All Requests"/>
                                 </segments>
+                                <connections>
+                                    <action selector="selectSegmentedControl:" destination="UN5-UN-TcU" eventType="valueChanged" id="Zci-UY-ssO"/>
+                                </connections>
                             </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -560,7 +577,8 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Requests" id="5z3-pR-fC3"/>
                     <connections>
-                        <outlet property="collectionView" destination="HVa-jP-Kbj" id="IsD-yt-BZ4"/>
+                        <outlet property="collectionView" destination="HVa-jP-Kbj" id="93j-iS-14h"/>
+                        <outlet property="requestSegmentedControl" destination="2JQ-h5-whX" id="pJo-UP-Bnv"/>
                         <segue destination="8aj-7o-Qvv" kind="show" id="nEc-2m-eFD"/>
                         <segue destination="15T-ih-HLt" kind="show" id="gJA-o2-n0t"/>
                     </connections>
@@ -578,13 +596,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add/Edit Request" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="INa-6N-cM6">
-                                <rect key="frame" x="140.5" y="96" width="133" height="20.5"/>
+                                <rect key="frame" x="140.5" y="96" width="133" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="tjr-F2-Qp8">
-                                <rect key="frame" x="48" y="180.5" width="318" height="231.5"/>
+                                <rect key="frame" x="48" y="160" width="318" height="252"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Request Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SH5-Wt-auy">
                                         <rect key="frame" x="0.0" y="0.0" width="318" height="20.5"/>
@@ -593,31 +611,33 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IPX-fg-okF">
-                                        <rect key="frame" x="0.0" y="28.5" width="318" height="38.5"/>
+                                        <rect key="frame" x="0.0" y="28.5" width="318" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J95-S0-OEt">
-                                        <rect key="frame" x="0.0" y="75" width="318" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="66.5" width="318" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="d4O-Bh-1o8">
-                                        <rect key="frame" x="0.0" y="103.5" width="318" height="128"/>
+                                        <rect key="frame" x="0.0" y="95" width="318" height="119"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="87S-kk-8MK">
+                                        <rect key="frame" x="0.0" y="222" width="318" height="30"/>
+                                        <state key="normal" title="Update"/>
+                                        <connections>
+                                            <action selector="createUpdateRequest:" destination="8aj-7o-Qvv" eventType="touchUpInside" id="6EP-hB-2WD"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="87S-kk-8MK">
-                                <rect key="frame" x="343" y="87" width="51" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Update"/>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -630,6 +650,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="210-AU-cRi"/>
                     </view>
+                    <connections>
+                        <outlet property="requestDescriptionTextView" destination="d4O-Bh-1o8" id="pQH-vL-oBc"/>
+                        <outlet property="requestTitleTextField" destination="IPX-fg-okF" id="cHA-wE-z8p"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pfl-ZY-tqn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
