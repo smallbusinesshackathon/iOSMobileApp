@@ -105,7 +105,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Ot4-rb-d5M">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="OfferCell" id="Ot4-rb-d5M" customClass="OfferCollectionViewCell" customModule="iOSHackathon" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="147"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -142,6 +142,9 @@
                                                 </label>
                                             </subviews>
                                         </view>
+                                        <connections>
+                                            <outlet property="titleLabel" destination="Aka-n0-LvX" id="8Ys-T7-f6Q"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>

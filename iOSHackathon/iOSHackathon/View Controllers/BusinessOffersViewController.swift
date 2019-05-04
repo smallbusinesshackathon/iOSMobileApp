@@ -137,7 +137,9 @@ class BusinessOffersViewController: UIViewController, UICollectionViewDataSource
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "OfferCell", for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "OfferCell", for: indexPath) as! OfferCollectionViewCell
+        
+        cell.offer = offers[indexPath.row]
         
         return cell
     }
@@ -147,7 +149,9 @@ class BusinessOffersViewController: UIViewController, UICollectionViewDataSource
     
     private var offers: [Offer] = [] {
         didSet {
-            collectionView.reloadData()
+            DispatchQueue.main.async {
+                self.collectionView.reloadData()
+            }
         }
     }
     
