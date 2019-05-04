@@ -27,7 +27,7 @@ class Request: NSObject, MKAnnotation {
         return location
     }
     
-    self.init(title: String, requestDescription: String, category: String, address: String, caseStatus: Bool, responder: String) {
+    init(title: String, requestDescription: String, category: String, address: String, caseStatus: Bool, responder: String) {
         self.title = title
         self.requestDescription = requestDescription
         self.category = category

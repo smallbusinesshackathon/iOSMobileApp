@@ -72,6 +72,41 @@ class BusinessMapViewController: UIViewController, MKMapViewDelegate, CLLocation
     //MARK: - Private Networking Functions
     
 
+    private func getZoneFromCoordinate(coordinate: CLLocationCoordinate2D, completion:(String?, Error?)->Void){
+        
+        //        let request = URLRequest(url: <#T##URL#>)
+        //        URLSession.shared.dataTask(with: <#T##URLRequest#>) { (results, _, error) in
+        //
+        //        }
+        
+    }
+    
+    private func getURLForNWS(location: CLLocationCoordinate2D, severity: [Severity]) -> URL?{
+        let baseURL = URL(string: "https://api.weather.gov/alerts")!
+        
+        var urlComponents = URLComponents(url: baseURL, resolvingAgainstBaseURL: true)!
+
+        //create URLQueryItems to build request
+        let active = URLQueryItem(name: "active", value: "true")
+        
+        //make severity into a string for value as query item
+        var severityString:String = severity.reduce(""){
+            $0 + "\($1.rawValue),"
+        }
+        //remove extra comma from end of string
+        _ = severityString.popLast()
+        let severity = URLQueryItem(name: "severity", value: severityString)
+        
+        //add point
+        let coordinate = "\(location.latitude),\(location.longitude)"
+        let point = URLQueryItem(name: "point", value: coordinate)
+        
+        urlComponents.queryItems = [active,severity,point]
+        
+        return urlComponents.url
+    }
+    
+
     
     
     //MARK: - Properties
