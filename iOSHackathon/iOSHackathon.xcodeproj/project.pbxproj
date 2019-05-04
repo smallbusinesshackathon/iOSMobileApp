@@ -14,7 +14,8 @@
 		A23F51F5227D2AAB00C729C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A23F51F3227D2AAB00C729C7 /* Main.storyboard */; };
 		A23F51F7227D2AAF00C729C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A23F51F6227D2AAF00C729C7 /* Assets.xcassets */; };
 		A23F51FA227D2AAF00C729C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A23F51F8227D2AAF00C729C7 /* LaunchScreen.storyboard */; };
-		A23F5207227D49D900C729C7 /* AddBusinessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23F5206227D49D900C729C7 /* AddBusinessViewController.swift */; };
+		A23F520B227D502400C729C7 /* Business.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23F520A227D502400C729C7 /* Business.swift */; };
+		A23F520D227D549000C729C7 /* AddBusinessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23F520C227D549000C729C7 /* AddBusinessViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +28,8 @@
 		A23F51F6227D2AAF00C729C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A23F51F9227D2AAF00C729C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A23F51FB227D2AAF00C729C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A23F5206227D49D900C729C7 /* AddBusinessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBusinessViewController.swift; sourceTree = "<group>"; };
+		A23F520A227D502400C729C7 /* Business.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Business.swift; sourceTree = "<group>"; };
+		A23F520C227D549000C729C7 /* AddBusinessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBusinessViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 		A23F51EE227D2AAB00C729C7 /* iOSHackathon */ = {
 			isa = PBXGroup;
 			children = (
+				A23F5209227D500600C729C7 /* Models */,
 				A23F5203227D2B0900C729C7 /* Resources */,
 				A23F5201227D2ADF00C729C7 /* View Controllers */,
 				A23F5202227D2AF600C729C7 /* Storboards */,
@@ -71,7 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				A23F51F1227D2AAB00C729C7 /* ViewController.swift */,
-				A23F5206227D49D900C729C7 /* AddBusinessViewController.swift */,
+				A23F520C227D549000C729C7 /* AddBusinessViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -95,6 +98,14 @@
 				A23F51FB227D2AAF00C729C7 /* Info.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		A23F5209227D500600C729C7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A23F520A227D502400C729C7 /* Business.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,7 +181,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A23F51F2227D2AAB00C729C7 /* ViewController.swift in Sources */,
-				A23F5207227D49D900C729C7 /* AddBusinessViewController.swift in Sources */,
+				A23F520B227D502400C729C7 /* Business.swift in Sources */,
+				A23F520D227D549000C729C7 /* AddBusinessViewController.swift in Sources */,
 				A23F51F0227D2AAB00C729C7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

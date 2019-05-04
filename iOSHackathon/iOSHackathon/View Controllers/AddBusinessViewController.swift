@@ -5,13 +5,29 @@
 //  Created by Xu Mo on 5/4/19.
 //
 
-import Foundation
 import UIKit
 
-class Business{
-    let name: String
-    init (name: String?){
-        self.name = name // it has a chance so its value can be set!
+class AddBusinessViewController: UIViewController {
+    
+    @IBOutlet weak var businessNameInput: UITextInput!
+    @IBOutlet weak var businessphoneNumInput: UITextInput!
+
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        // Do any additional setup after loading the view.
     }
-    let phoneNumber: String
+    
+
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+    }
+    */
+
 }
