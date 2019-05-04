@@ -11,17 +11,17 @@ import MapKit
 class BusinessMapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Get Location
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         
         // Check for Location Services
         locationManager.requestWhenInUseAuthorization()
-                locationManager.requestLocation()
-//        guard let avgCoordinate =  storeController.averageStoreCoordinate() else {return}
-//        let viewRegion = MKCoordinateRegion(center: avgCoordinate, latitudinalMeters: 2000, longitudinalMeters: 2000)
-//        mapView.setRegion(viewRegion, animated: false)
+        locationManager.requestLocation()
+        //        guard let avgCoordinate =  storeController.averageStoreCoordinate() else {return}
+        //        let viewRegion = MKCoordinateRegion(center: avgCoordinate, latitudinalMeters: 2000, longitudinalMeters: 2000)
+        //        mapView.setRegion(viewRegion, animated: false)
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -31,7 +31,7 @@ class BusinessMapViewController: UIViewController, MKMapViewDelegate, CLLocation
         mapView.delegate = self
         mapView.register(MKMarkerAnnotationView.self, forAnnotationViewWithReuseIdentifier: "MapAnnotation")
     }
-
+    
     //MARK: CLLocationManagerDelegate
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let location = locations.last else {
@@ -71,7 +71,65 @@ class BusinessMapViewController: UIViewController, MKMapViewDelegate, CLLocation
     
     //MARK: - Private Networking Functions
     
-
+    
+    private func getAlertFromNWSAPI(coordinate: CLLocationCoordinate2D, completion:@escaping ([WeatherAlert]?, Error?)->Void){
+        
+        //set severity levels which can be changed in the future
+        let severity:[Severity] = [.extreme,.severe]
+        
+        //build url and send request
+        guard let url = getURLForNWS(location: coordinate, severity: severity) else { return }
+        let request = URLRequest(url: url)
+        URLSession.shared.dataTask(with: request) { (data, _, error) in
+            if let error = error{
+                completion(nil,error)
+                return
+            }
+            guard let data = data else {
+                completion(nil,DecodingError.invalidResponse)
+                return
+            }
+            
+            do{
+                let response = try JSONDecoder().decode(NWSResponse.self, from: data)
+                completion(response.features,nil)
+                return
+            } catch {
+                completion(nil,error)
+                return
+            }
+            
+        }.resume()
+        
+    }
+    
+    //builds url for URLRequest. written with future changes to severity in mind
+    private func getURLForNWS(location: CLLocationCoordinate2D, severity: [Severity]) -> URL?{
+        let baseURL = URL(string: "https://api.weather.gov/alerts")!
+        
+        var urlComponents = URLComponents(url: baseURL, resolvingAgainstBaseURL: true)!
+        
+        //create URLQueryItems to build request
+        let active = URLQueryItem(name: "active", value: "true")
+        
+        //make severity into a string for value as query item
+        var severityString:String = severity.reduce(""){
+            $0 + "\($1.rawValue),"
+        }
+        //remove extra comma from end of string
+        _ = severityString.popLast()
+        let severity = URLQueryItem(name: "severity", value: severityString)
+        
+        //add point
+        let coordinate = "\(location.latitude),\(location.longitude)"
+        let point = URLQueryItem(name: "point", value: coordinate)
+        
+        urlComponents.queryItems = [active,severity,point]
+        
+        return urlComponents.url
+    }
+    
+    
     
     
     //MARK: - Properties
