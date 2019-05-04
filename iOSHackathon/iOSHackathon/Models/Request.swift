@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Requests: NSObject{
+class Request: NSObject{
     
     var title: String
     var requestDescription: String

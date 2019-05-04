@@ -154,7 +154,6 @@
                                 <rect key="frame" x="356" y="79" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Add"/>
-
                                 <connections>
                                     <segue destination="66u-sK-t5q" kind="show" id="XEA-iQ-Weu"/>
                                 </connections>
@@ -274,8 +273,25 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="itl-48-LBb">
                                 <rect key="frame" x="0.0" y="44" width="414" height="769"/>
                                 <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1F8-2U-eqd">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AlertLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kxC-FF-9fF">
+                                                <rect key="frame" x="168" y="17" width="78.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="kxC-FF-9fF" firstAttribute="centerY" secondItem="1F8-2U-eqd" secondAttribute="centerY" constant="5" id="RJZ-l8-oCa"/>
+                                            <constraint firstItem="kxC-FF-9fF" firstAttribute="centerX" secondItem="1F8-2U-eqd" secondAttribute="centerX" id="qZM-ZA-EOq"/>
+                                            <constraint firstAttribute="height" constant="44" id="yND-rN-55r"/>
+                                        </constraints>
+                                    </view>
                                     <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="K6I-sR-Dfi">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="769"/>
+                                        <rect key="frame" x="0.0" y="52" width="414" height="717"/>
                                     </mapView>
                                 </subviews>
                             </stackView>
@@ -290,6 +306,11 @@
                         <viewLayoutGuide key="safeArea" id="TEm-lu-1YO"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Map" id="m9V-Az-cS4"/>
+                    <connections>
+                        <outlet property="alertLabel" destination="kxC-FF-9fF" id="I97-fe-mip"/>
+                        <outlet property="alertView" destination="1F8-2U-eqd" id="uri-pp-UHs"/>
+                        <outlet property="mapView" destination="K6I-sR-Dfi" id="cLT-97-AGx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NuZ-Px-88c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -673,11 +694,6 @@
             <point key="canvasLocation" x="2100" y="2400.6696428571427"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="icons8-automatic-69" width="34.5" height="34.5"/>
-        <image name="icons8-helping-hand-69" width="34.5" height="34.5"/>
-        <image name="icons8-money-bag-filled-69" width="69" height="69"/>
-    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="C1S-Xk-03J"/>
         <segue reference="XEA-iQ-Weu"/>
