@@ -72,7 +72,7 @@ class BusinessMapViewController: UIViewController, MKMapViewDelegate, CLLocation
     //MARK: - Private Networking Functions
     
     
-    private func getAlertFromNWSAPI(coordinate: CLLocationCoordinate2D, completion:(String?, Error?)->Void){
+    private func getAlertFromNWSAPI(coordinate: CLLocationCoordinate2D, completion:@escaping ([WeatherAlert]?, Error?)->Void){
         
         //set severity levels which can be changed in the future
         let severity:[Severity] = [.extreme,.severe]
@@ -80,8 +80,22 @@ class BusinessMapViewController: UIViewController, MKMapViewDelegate, CLLocation
         //build url and send request
         guard let url = getURLForNWS(location: coordinate, severity: severity) else { return }
         let request = URLRequest(url: url)
-        URLSession.shared.dataTask(with: request) { (results, _, error) in
+        URLSession.shared.dataTask(with: request) { (data, _, error) in
             if let error = error{
+                completion(nil,error)
+                return
+            }
+            guard let data = data else {
+                completion(nil,DecodingError.invalidResponse)
+                return
+            }
+            
+            do{
+                let response = try JSONDecoder().decode(NWSResponse.self, from: data)
+                completion(response.features,nil)
+                return
+            } catch {
+                completion(nil,error)
                 return
             }
             
