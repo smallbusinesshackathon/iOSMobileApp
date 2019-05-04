@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		10082B28227D539D002C8D56 /* CustomerBusinessesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10082B27227D539D002C8D56 /* CustomerBusinessesViewController.swift */; };
+		10082B2A227D5E5D002C8D56 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10082B29227D5E5D002C8D56 /* Extensions.swift */; };
 		7B8E4E47227D42CA001F9C2F /* Business.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B8E4E46227D42CA001F9C2F /* Business.storyboard */; };
 		7B8E4E49227D42D0001F9C2F /* Customer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B8E4E48227D42D0001F9C2F /* Customer.storyboard */; };
-		7B8E4E4B227D45CB001F9C2F /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B8E4E4A227D45CB001F9C2F /* TabBar.storyboard */; };
 		7B8E4E50227D4EB1001F9C2F /* BusinessOffersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8E4E4F227D4EB1001F9C2F /* BusinessOffersViewController.swift */; };
 		7B8E4E52227D501D001F9C2F /* EditBusinessOfferViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8E4E51227D501D001F9C2F /* EditBusinessOfferViewController.swift */; };
 		7B8E4E54227D53DE001F9C2F /* BusinessRequestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8E4E53227D53DE001F9C2F /* BusinessRequestsViewController.swift */; };
@@ -25,9 +25,9 @@
 
 /* Begin PBXFileReference section */
 		10082B27227D539D002C8D56 /* CustomerBusinessesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerBusinessesViewController.swift; sourceTree = "<group>"; };
+		10082B29227D5E5D002C8D56 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		7B8E4E46227D42CA001F9C2F /* Business.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Business.storyboard; sourceTree = "<group>"; };
 		7B8E4E48227D42D0001F9C2F /* Customer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Customer.storyboard; sourceTree = "<group>"; };
-		7B8E4E4A227D45CB001F9C2F /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
 		7B8E4E4F227D4EB1001F9C2F /* BusinessOffersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessOffersViewController.swift; sourceTree = "<group>"; };
 		7B8E4E51227D501D001F9C2F /* EditBusinessOfferViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditBusinessOfferViewController.swift; sourceTree = "<group>"; };
 		7B8E4E53227D53DE001F9C2F /* BusinessRequestsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessRequestsViewController.swift; sourceTree = "<group>"; };
@@ -53,6 +53,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		10082B2B227D5E65002C8D56 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				10082B29227D5E5D002C8D56 /* Extensions.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		A23F51E3227D2AAB00C729C7 = {
 			isa = PBXGroup;
 			children = (
@@ -76,6 +84,7 @@
 				A23F5203227D2B0900C729C7 /* Resources */,
 				A23F5201227D2ADF00C729C7 /* View Controllers */,
 				A23F5202227D2AF600C729C7 /* Storboards */,
+				10082B2B227D5E65002C8D56 /* Helper */,
 			);
 			path = iOSHackathon;
 			sourceTree = "<group>";
@@ -87,11 +96,8 @@
 				7B8E4E51227D501D001F9C2F /* EditBusinessOfferViewController.swift */,
 				7B8E4E53227D53DE001F9C2F /* BusinessRequestsViewController.swift */,
 				7B8E4E55227D5400001F9C2F /* BusinessAllRequestsCollectionViewController.swift */,
-				A23F51F1227D2AAB00C729C7 /* ViewController.swift */,
 				A23F520C227D549000C729C7 /* AddBusinessViewController.swift */,
-
 				10082B27227D539D002C8D56 /* CustomerBusinessesViewController.swift */,
-
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -198,7 +204,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				10082B28227D539D002C8D56 /* CustomerBusinessesViewController.swift in Sources */,
-				A23F51F2227D2AAB00C729C7 /* ViewController.swift in Sources */,
+				10082B2A227D5E5D002C8D56 /* Extensions.swift in Sources */,
 				A23F520B227D502400C729C7 /* Business.swift in Sources */,
 				A23F520D227D549000C729C7 /* AddBusinessViewController.swift in Sources */,
 				A23F51F0227D2AAB00C729C7 /* AppDelegate.swift in Sources */,

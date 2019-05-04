@@ -80,6 +80,7 @@ class CustomerBusinessesViewController: UIViewController, UITableViewDelegate, U
                 NSLog("Error getting businesses: \(error)")
                 return
             }
+            guard let openBusinesses = openBusinesses else {return}
             mapView.addAnnotations(openBusinesses)
         }
         
