@@ -11,8 +11,18 @@ class BusinessOffersViewController: UIViewController, UICollectionViewDataSource
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        loadOffers()
+        
+        switch offerSegmentedControl.selectedSegmentIndex {
+        case 0:
+            loadMyOffers()
+        case 1:
+            loadAllOffers()
+        default:
+            break
+        }
+        
+        // Load offers from API
+        loadAllOffers()
     }
     
     // MARK: - Navigation
@@ -23,19 +33,22 @@ class BusinessOffersViewController: UIViewController, UICollectionViewDataSource
         // Pass the selected object to the new view controller.
     }
     
-    private func loadOffers() {
+    private func loadMyOffers() {
         
-//        curl -X GET "https://shared-sandbox-api.marqeta.com/v3/acceptedcountries?count=5&start_index=0&sort_by=-lastModifiedTime" -H "accept: application/json" -H "Authorization: Basic dXNlcjYyOTMxNTU2OTM2MzY5OmI1ZmRiYmFiLTAzYjAtNDBhMi1iNmRhLWEyYmJjZDE0NjEyZQ=="
+    }
+    
+    private func loadAllOffers() {
         
-        let url = URL(string: "https://shared-sandbox-api.marqeta.com/v3/acceptedcountries?count=5&start_index=0&sort_by=-lastModifiedTime")!
+        let url = URL(string: "https://sandbox.api.visa.com/vmorc/offers/v1/byfilter")!
         
         var request = URLRequest(url: url)
         
         request.httpMethod = "GET"
-        request.addValue("accept", forHTTPHeaderField: "application/json")
-        request.addValue("Authorization", forHTTPHeaderField: "Basic dXNlcjYyOTMxNTU2OTM2MzY5OmI1ZmRiYmFiLTAzYjAtNDBhMi1iNmRhLWEyYmJjZDE0NjEyZQ==")
+        request.addValue("Accept", forHTTPHeaderField: "application/json")
+        request.addValue("Authorization", forHTTPHeaderField: "Basic dXNlcjYyOTMxNTU2OTM2MzY5OmI1ZmRiYmFiLTAzYjAtNDBhMi1iNmRhLWEyYmJjZDE0NjEyZQ==") // TODO: {base64 encoded userid:password}
         
         URLSession.shared.dataTask(with: request) { (data, _, error) in
+            
             if let error = error {
                 NSLog("Error getting offers: \(error)")
                 return
@@ -47,27 +60,41 @@ class BusinessOffersViewController: UIViewController, UICollectionViewDataSource
             }
             
             do {
-               // let offersResult = JSONDecoder().decode(Offer.self, from: data)
+                let offerResult = try JSONDecoder().decode(OfferRepresentations.self, from: data)
+                for offerRep in offerResult.offerRepresentations {
+                    let offer = Offer(offerRepresentation: offerRep)
+                    self.offers.append(offer)
+                }
             } catch {
-                
+                NSLog("Error decoding offer representations: \(error)")
             }
             
-        }
+        }.resume()
         
     }
 
     // MARK - UICollectionViewDataSource
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 0
+        return offers.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        return UICollectionViewCell()
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "OfferCell", for: indexPath)
+        
+        return cell
     }
 
     
     // MARK - Properties
     
+    private var offers: [Offer] = [] {
+        didSet {
+            collectionView.reloadData()
+        }
+    }
+    
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var offerSegmentedControl: UISegmentedControl!
 }
