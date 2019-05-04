@@ -17,17 +17,29 @@ class AddEditBusinessRequestViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
+    @IBOutlet weak var requestTitleTextField: UITextField!
+    @IBOutlet weak var requestDescriptionTextView: UITextView!
+    @IBOutlet weak var requestCategoryTextField: UITextField!
+    @IBOutlet weak var requestAddressTextField: UITextField!
+    @IBOutlet weak var requestCaseStatusSwitch: UISwitch!
+    
+    
     @IBAction func createUpdateRequest(_ sender: Any) {
         
         guard let requestTitle = requestTitleTextField.text,
-            let requestDescription = requestDescriptionTextView.text else { return}
+            let requestDescription = requestDescriptionTextView.text,
+            let requestCategory = requestCategoryTextField.text,
+            let requestAddress = requestAddressTextField.text else { return}
+        
+        let requestCaseStatus = requestCaseStatusSwitch.isOn
+        //let requestDate = request?.date
         
         if request != nil {
             // UPDATE REQUEST
             
         } else {
             // POST REQUEST
-            postRequest(title: requestTitle, description: requestDescription)
+            postRequest(title: requestTitle, description: requestDescription, category: requestCategory, address: requestAddress, caseStatus: requestCaseStatus)
         }
     }
     
@@ -35,16 +47,22 @@ class AddEditBusinessRequestViewController: UIViewController {
         guard let request = request else {return}
         
         requestTitleTextField.text = request.title
-        requestDescriptionTextView.text = request.description
+        requestDescriptionTextView.text = request.requestDescription
+        requestCategoryTextField.text = request.category
+        requestAddressTextField.text = request.address
+        requestCaseStatusSwitch.isOn = request.caseStatus
+        
     }
     
     private func putRequest(helpRequest: Request) {
         
     }
     
-    private func postRequest(title: String, description: String) {
+    private func postRequest(title: String, description: String, category: String, address: String, caseStatus: Bool) {
         
-        let helpRequest = Request(title: title, requestDescription: description, category: "labor", address: "address", date: Date(), caseStatus: true, id: UUID())
+
+        let helpRequest = Request(title: title, requestDescription: description, category: category, address: address, date: Date(), caseStatus: caseStatus, id: UUID())
+
         
         let url = URL(string: "https://smallbusinesshackathon.firebaseio.com/requests")!.appendingPathComponent(helpRequest.id.uuidString).appendingPathExtension("json")
         
@@ -80,6 +98,5 @@ class AddEditBusinessRequestViewController: UIViewController {
         }
     }
     
-    @IBOutlet weak var requestTitleTextField: UITextField!
-    @IBOutlet weak var requestDescriptionTextView: UITextView!
+    
 }
