@@ -11,7 +11,8 @@ class AddEditBusinessOfferViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        updateViews()
     }
     
     @IBAction func addUpdateOffer(_ sender: Any) {
@@ -19,8 +20,9 @@ class AddEditBusinessOfferViewController: UIViewController {
         guard let offerTitle = offerTitleTextField.text,
             let offerDescription = offerDescriptionTextView.text else { return}
         
-        if offer != nil {
+        if let offer = offer {
             // UPDATE REQUEST
+            postOffer(title: offerTitle, description: offerDescription, id: offer.offerId)
             
         } else {
             // POST REQUEST
@@ -32,8 +34,17 @@ class AddEditBusinessOfferViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
-    private func postOffer(title: String, description: String) {
-        let offer = Offer(title: title, description: description)
+    private func updateViews() {
+        guard let offer = offer else {
+            return
+        }
+        
+        offerTitleTextField.text = offer.offerTitle
+        offerDescriptionTextView.text = offer.offerShortDescription.text
+    }
+    
+    private func postOffer(title: String, description: String, id: Int = UUID().hashValue) {
+        let offer = Offer(title: title, description: description, id: id)
         
         let url = URL(string: "https://smallbusinesshackathon.firebaseio.com/offers")!.appendingPathComponent("\(offer.offerId)").appendingPathExtension("json")
         
@@ -59,21 +70,19 @@ class AddEditBusinessOfferViewController: UIViewController {
             print(data)
             
         }.resume()
+        
+        self.dismiss(animated: true, completion: nil)
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
+    
     
     // MARK - Properties
     
-    var offer: Offer?
+    var offer: Offer? {
+        didSet {
+            updateViews()
+        }
+    }
     
     @IBOutlet weak var offerTitleTextField: UITextField!
     @IBOutlet weak var offerDescriptionTextView: UITextView!
