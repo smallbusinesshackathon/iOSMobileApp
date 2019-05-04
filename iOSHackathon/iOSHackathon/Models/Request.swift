@@ -14,6 +14,7 @@ class Request: NSObject, MKAnnotation, Codable {
     var requestDescription: String
     var category: String
     var address: String
+    var date: Date
     var caseStatus: Bool
     var id: UUID
     
@@ -26,11 +27,12 @@ class Request: NSObject, MKAnnotation, Codable {
         return location
     }
     
-    init(title: String, requestDescription: String, category: String, address: String, caseStatus: Bool, id: UUID) {
+    init(title: String, requestDescription: String, category: String, address: String, date: Date, caseStatus: Bool, id: UUID) {
         self.title = title
         self.requestDescription = requestDescription
         self.category = category
         self.address = address
+        self.date = date
         self.caseStatus = caseStatus
         self.id = id
     }
