@@ -8,7 +8,20 @@
 import Foundation
 import MapKit
 
-class Offer: NSObject{
+class Offer: NSObject, MKAnnotation{
+    var coordinate: CLLocationCoordinate2D {
+        var location = CLLocationCoordinate2D()
+        CLGeocoder().geocodeAddressString(merchantList.first?.merchantAddress.first ?? "") { (results, _) in
+            guard let coordinates = results?.first?.location?.coordinate else {return}
+            location = coordinates
+        }
+        return location
+    }
+    
+    var title: String?{
+        return offerTitle
+    }
+    
     var offerId: Int
     var activeIndicator, soldOut: Bool
     var merchantList: [MerchantList]

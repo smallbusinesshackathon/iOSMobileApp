@@ -180,6 +180,7 @@
                     <tabBarItem key="tabBarItem" title="Offers" id="MZo-B0-nKm"/>
                     <connections>
                         <outlet property="collectionView" destination="Tpi-1h-9e2" id="bnw-8W-qV8"/>
+                        <outlet property="offerSegmentedControl" destination="zGI-Rb-tQu" id="HuK-Dz-NTB"/>
                         <segue destination="66u-sK-t5q" kind="show" id="zQq-mt-0QA"/>
                         <segue destination="EgT-rv-fDs" kind="show" id="hf1-lC-TFC"/>
                     </connections>
