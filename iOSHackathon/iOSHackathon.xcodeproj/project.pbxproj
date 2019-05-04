@@ -27,11 +27,13 @@
 		A23F520D227D549000C729C7 /* BusinessLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23F520C227D549000C729C7 /* BusinessLoginViewController.swift */; };
 		A23F5211227DB33A00C729C7 /* OffersRepresentations.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23F5210227DB33A00C729C7 /* OffersRepresentations.swift */; };
 		A23F5213227DDC3200C729C7 /* Offer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23F5212227DDC3200C729C7 /* Offer.swift */; };
-		A23F5215227DE13700C729C7 /* Requests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23F5214227DE13700C729C7 /* Requests.swift */; };
+		A23F5215227DE13700C729C7 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23F5214227DE13700C729C7 /* Request.swift */; };
+
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		10082B27227D539D002C8D56 /* BusinessMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessMapViewController.swift; sourceTree = "<group>"; };
+		10082B29227D5E5D002C8D56 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = iOSHackathon/Helper/Extensions.swift; sourceTree = "<group>"; };
 		7B8E4E46227D42CA001F9C2F /* Business.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Business.storyboard; sourceTree = "<group>"; };
 		7B8E4E48227D42D0001F9C2F /* Customer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Customer.storyboard; sourceTree = "<group>"; };
 		7B8E4E4F227D4EB1001F9C2F /* BusinessOffersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessOffersViewController.swift; sourceTree = "<group>"; };
@@ -53,7 +55,7 @@
 		A23F520C227D549000C729C7 /* BusinessLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessLoginViewController.swift; sourceTree = "<group>"; };
 		A23F5210227DB33A00C729C7 /* OffersRepresentations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffersRepresentations.swift; sourceTree = "<group>"; };
 		A23F5212227DDC3200C729C7 /* Offer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Offer.swift; sourceTree = "<group>"; };
-		A23F5214227DE13700C729C7 /* Requests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requests.swift; sourceTree = "<group>"; };
+		A23F5214227DE13700C729C7 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 			children = (
 				A23F51EE227D2AAB00C729C7 /* iOSHackathon */,
 				A23F51ED227D2AAB00C729C7 /* Products */,
+				10082B2C227DEFC5002C8D56 /* Helpers */,
 			);
 			sourceTree = "<group>";
 		};
@@ -147,7 +150,7 @@
 				A23F520A227D502400C729C7 /* Business.swift */,
 				A23F5210227DB33A00C729C7 /* OffersRepresentations.swift */,
 				A23F5212227DDC3200C729C7 /* Offer.swift */,
-				A23F5214227DE13700C729C7 /* Requests.swift */,
+				A23F5214227DE13700C729C7 /* Request.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -241,7 +244,7 @@
 				A23F520B227D502400C729C7 /* Business.swift in Sources */,
 				A23F5211227DB33A00C729C7 /* OffersRepresentations.swift in Sources */,
 				A23F51F0227D2AAB00C729C7 /* AppDelegate.swift in Sources */,
-				A23F5215227DE13700C729C7 /* Requests.swift in Sources */,
+				A23F5215227DE13700C729C7 /* Request.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

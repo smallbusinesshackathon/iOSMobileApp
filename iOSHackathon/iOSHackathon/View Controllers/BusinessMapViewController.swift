@@ -8,12 +8,10 @@
 import UIKit
 import MapKit
 
-class BusinessMapViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, MKMapViewDelegate, CLLocationManagerDelegate {
+class BusinessMapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.delegate = self
-        tableView.dataSource = self
-        
+
         // Get Location
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
@@ -31,17 +29,9 @@ class BusinessMapViewController: UIViewController, UITableViewDelegate, UITableV
         tableView.reloadData()
         
         mapView.delegate = self
-        mapView.register(MKMarkerAnnotationView.self, forAnnotationViewWithReuseIdentifier: "BusinessAnnotation")
+        mapView.register(MKMarkerAnnotationView.self, forAnnotationViewWithReuseIdentifier: "MapAnnotation")
     }
-    //MARK: UITableViewDataSource Methods
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
-    }
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        return UITableViewCell()
-    }
-    
+
     //MARK: CLLocationManagerDelegate
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let location = locations.last else {
@@ -91,11 +81,7 @@ class BusinessMapViewController: UIViewController, UITableViewDelegate, UITableV
         
     }
     
-    //MARK: - Navigation
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-
-    }
     //MARK: - Properties
     private var locationManager  = CLLocationManager()
     private var location: CLLocationCoordinate2D? {
@@ -104,6 +90,11 @@ class BusinessMapViewController: UIViewController, UITableViewDelegate, UITableV
         }
     }
     
+    private var offers = [Offer]()
+    private var requests = [Request]()
+    
+    @IBOutlet weak var alertView: UIView!
+    @IBOutlet weak var alertLabel: UILabel!
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var tableView: UITableView!
     
