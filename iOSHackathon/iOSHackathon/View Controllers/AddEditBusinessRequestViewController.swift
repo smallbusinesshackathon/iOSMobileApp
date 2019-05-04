@@ -1,26 +1,13 @@
 //
-//  AddBusinessViewController.swift
+//  AddEditBusinessRequestViewController.swift
 //  iOSHackathon
 //
-//  Created by Xu Mo on 5/4/19.
+//  Created by Daniela Parra on 5/4/19.
 //
 
 import UIKit
 
-class AddBusinessViewController: UIViewController {
-    
-    
-    @IBOutlet weak var businessNameInput: UITextField!
-    @IBOutlet weak var businessPhoneNumInput: UITextField!
-    @IBOutlet weak var submitBusinessBotton: UIButton!
-
-    
-    @IBAction func buttonClick(sender: UIButton) {
-//        guard let businessName = businessNameInput.text,
-//            let businessPhoneNum = businessPhoneNumInput.text else { return }
-//
-    }
-
+class AddEditBusinessRequestViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
