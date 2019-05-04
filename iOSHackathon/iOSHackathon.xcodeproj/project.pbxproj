@@ -16,7 +16,9 @@
 		A23F520B227D502400C729C7 /* Business.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23F520A227D502400C729C7 /* Business.swift */; };
 		A23F520D227D549000C729C7 /* AddBusinessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23F520C227D549000C729C7 /* AddBusinessViewController.swift */; };
 		A23F520F227D661100C729C7 /* BusinessDashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23F520E227D661100C729C7 /* BusinessDashboardViewController.swift */; };
-		A23F5211227DB33A00C729C7 /* Offers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23F5210227DB33A00C729C7 /* Offers.swift */; };
+		A23F5211227DB33A00C729C7 /* OffersRepresentations.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23F5210227DB33A00C729C7 /* OffersRepresentations.swift */; };
+		A23F5213227DDC3200C729C7 /* Offer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23F5212227DDC3200C729C7 /* Offer.swift */; };
+		A23F5215227DE13700C729C7 /* Requests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23F5214227DE13700C729C7 /* Requests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,7 +33,9 @@
 		A23F520A227D502400C729C7 /* Business.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Business.swift; sourceTree = "<group>"; };
 		A23F520C227D549000C729C7 /* AddBusinessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBusinessViewController.swift; sourceTree = "<group>"; };
 		A23F520E227D661100C729C7 /* BusinessDashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessDashboardViewController.swift; sourceTree = "<group>"; };
-		A23F5210227DB33A00C729C7 /* Offers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Offers.swift; sourceTree = "<group>"; };
+		A23F5210227DB33A00C729C7 /* OffersRepresentations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffersRepresentations.swift; sourceTree = "<group>"; };
+		A23F5212227DDC3200C729C7 /* Offer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Offer.swift; sourceTree = "<group>"; };
+		A23F5214227DE13700C729C7 /* Requests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,7 +110,9 @@
 			isa = PBXGroup;
 			children = (
 				A23F520A227D502400C729C7 /* Business.swift */,
-				A23F5210227DB33A00C729C7 /* Offers.swift */,
+				A23F5210227DB33A00C729C7 /* OffersRepresentations.swift */,
+				A23F5212227DDC3200C729C7 /* Offer.swift */,
+				A23F5214227DE13700C729C7 /* Requests.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -183,10 +189,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A23F5213227DDC3200C729C7 /* Offer.swift in Sources */,
 				A23F520B227D502400C729C7 /* Business.swift in Sources */,
 				A23F520D227D549000C729C7 /* AddBusinessViewController.swift in Sources */,
-				A23F5211227DB33A00C729C7 /* Offers.swift in Sources */,
+				A23F5211227DB33A00C729C7 /* OffersRepresentations.swift in Sources */,
 				A23F51F0227D2AAB00C729C7 /* AppDelegate.swift in Sources */,
+				A23F5215227DE13700C729C7 /* Requests.swift in Sources */,
 				A23F520F227D661100C729C7 /* BusinessDashboardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
