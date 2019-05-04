@@ -81,7 +81,6 @@
                     <connections>
                         <outlet property="businessNameInput" destination="eBt-Uw-IUp" id="tDK-H1-mDP"/>
                         <outlet property="businessPhoneNumInput" destination="vy9-Z4-aBE" id="VC6-9j-Uff"/>
-                        <outlet property="submitBusinessBotton" destination="fV0-fH-Cz0" id="5dO-y2-6cG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dhg-TQ-vdl" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -164,6 +163,9 @@
                                     <segment title="My Offers"/>
                                     <segment title="All Offers Nearby"/>
                                 </segments>
+                                <connections>
+                                    <action selector="selectSegmentControl:" destination="JMi-Cv-DAH" eventType="valueChanged" id="oTc-5e-E6i"/>
+                                </connections>
                             </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -336,13 +338,8 @@
                                 <rect key="frame" x="87" y="185" width="88" height="20.5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p83-hx-00H">
-                                <rect key="frame" x="343" y="87" width="51" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Update"/>
-                            </button>
                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="0G0-M0-OMI">
-                                <rect key="frame" x="48" y="185" width="318" height="223"/>
+                                <rect key="frame" x="48" y="185" width="318" height="261"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Offer Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jm2-6P-PXp">
@@ -370,12 +367,23 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p83-hx-00H">
+                                        <rect key="frame" x="0.0" y="231" width="318" height="30"/>
+                                        <state key="normal" title="Update"/>
+                                        <connections>
+                                            <action selector="addUpdateOffer:" destination="66u-sK-t5q" eventType="touchUpInside" id="TyT-k3-ivJ"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="fc1-CS-3bn"/>
                     </view>
+                    <connections>
+                        <outlet property="offerDescriptionTextView" destination="pfh-L2-3Xj" id="Ehh-cZ-uB0"/>
+                        <outlet property="offerTitleTextField" destination="McS-Xi-UP5" id="uJg-jB-w0m"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bbi-uf-GDl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -12,9 +12,50 @@ class AddEditBusinessOfferViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
     
+    @IBAction func addUpdateOffer(_ sender: Any) {
+        
+        guard let offerTitle = offerTitleTextField.text,
+            let offerDescription = offerDescriptionTextView.text else { return}
+        
+        if offer != nil {
+            // UPDATE REQUEST
+            
+        } else {
+            // POST REQUEST
+            postOffer(title: offerTitle, description: offerDescription)
+        }
+    }
+    
+    private func postOffer(title: String, description: String) {
+        let offer = Offer(title: title, description: description)
+        
+        let url = URL(string: "https://smallbusinesshackathon.firebaseio.com/offers")!.appendingPathComponent("\(offer.offerId)").appendingPathExtension("json")
+        
+        var request = URLRequest(url: url)
+        
+        request.httpMethod = "PUT"
+        
+        do {
+            request.httpBody =  try JSONEncoder().encode(offer)
+        } catch {
+            NSLog("Error encoding offer: \(error)")
+        }
+        
+        URLSession.shared.dataTask(with: request) { (data, _, error) in
+            
+            if let error = error {
+                NSLog("Error putting offer: \(error)")
+                return
+            }
+            
+            guard let data = data else { return }
+            
+            print(data)
+            
+        }.resume()
+    }
 
     /*
     // MARK: - Navigation
@@ -25,5 +66,12 @@ class AddEditBusinessOfferViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    
+    // MARK - Properties
+    
+    var offer: Offer?
+    
+    @IBOutlet weak var offerTitleTextField: UITextField!
+    @IBOutlet weak var offerDescriptionTextView: UITextView!
+    
 }

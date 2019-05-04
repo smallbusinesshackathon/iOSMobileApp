@@ -41,7 +41,7 @@ class AddEditBusinessRequestViewController: UIViewController {
     
     private func postRequest(title: String, description: String) {
         
-        let helpRequest = Request(title: title, requestDescription: description, category: "labor", address: "address", caseStatus: true, id: UUID())
+        let helpRequest = Request(title: title, requestDescription: description, category: "labor", address: "address", date: Date(), caseStatus: true, id: UUID())
         
         let url = URL(string: "https://smallbusinesshackathon.firebaseio.com/requests")!.appendingPathComponent(helpRequest.id.uuidString).appendingPathExtension("json")
         
@@ -52,7 +52,7 @@ class AddEditBusinessRequestViewController: UIViewController {
         do {
             request.httpBody =  try JSONEncoder().encode(helpRequest)
         } catch {
-            NSLog("Error encoding offer representations: \(error)")
+            NSLog("Error encoding request: \(error)")
         }
         
         URLSession.shared.dataTask(with: request) { (data, _, error) in
