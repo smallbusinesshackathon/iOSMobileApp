@@ -36,5 +36,4 @@ class Request: NSObject, MKAnnotation, Codable {
     }
 
 }
-    
-
+   

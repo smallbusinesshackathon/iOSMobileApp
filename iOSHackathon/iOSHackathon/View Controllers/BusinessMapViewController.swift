@@ -8,40 +8,30 @@
 import UIKit
 import MapKit
 
-class BusinessMapViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, MKMapViewDelegate, CLLocationManagerDelegate {
+class BusinessMapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
-//        tableView.delegate = self
-//        tableView.dataSource = self
-//
-//        // Get Location
-//        locationManager.delegate = self
-//        locationManager.desiredAccuracy = kCLLocationAccuracyBest
-//
-//        // Check for Location Services
-//        locationManager.requestWhenInUseAuthorization()
-//                locationManager.requestLocation()
-////        guard let avgCoordinate =  storeController.averageStoreCoordinate() else {return}
-////        let viewRegion = MKCoordinateRegion(center: avgCoordinate, latitudinalMeters: 2000, longitudinalMeters: 2000)
-////        mapView.setRegion(viewRegion, animated: false)
+
+        // Get Location
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        
+        // Check for Location Services
+        locationManager.requestWhenInUseAuthorization()
+                locationManager.requestLocation()
+//        guard let avgCoordinate =  storeController.averageStoreCoordinate() else {return}
+//        let viewRegion = MKCoordinateRegion(center: avgCoordinate, latitudinalMeters: 2000, longitudinalMeters: 2000)
+//        mapView.setRegion(viewRegion, animated: false)
     }
     override func viewWillAppear(_ animated: Bool) {
-//        super.viewWillAppear(animated)
-//        
-//        tableView.reloadData()
-//        
-//        mapView.delegate = self
-//        mapView.register(MKMarkerAnnotationView.self, forAnnotationViewWithReuseIdentifier: "BusinessAnnotation")
-    }
-    //MARK: UITableViewDataSource Methods
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
-    }
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        super.viewWillAppear(animated)
         
-        return UITableViewCell()
+        tableView.reloadData()
+        
+        mapView.delegate = self
+        mapView.register(MKMarkerAnnotationView.self, forAnnotationViewWithReuseIdentifier: "MapAnnotation")
     }
-    
+
     //MARK: CLLocationManagerDelegate
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let location = locations.last else {
@@ -73,29 +63,17 @@ class BusinessMapViewController: UIViewController, UITableViewDelegate, UITableV
         let viewRegion = MKCoordinateRegion(center: location, latitudinalMeters: 2000, longitudinalMeters: 2000)
         mapView.setRegion(viewRegion, animated: true)
         
-        //make API call to find array of business
-        //add annotations to map
-        getBusinesses(around: location, with: 10.0) { (openBusinesses, error) in
-            if let error = error {
-                NSLog("Error getting businesses: \(error)")
-                return
-            }
-            guard let openBusinesses = openBusinesses else {return}
-            mapView.addAnnotations(openBusinesses)
-        }
+        //TODO: - make API calls for Requests/Offers and handle the response
+        
+        //Find local alerts
         
     }
     
-    //makes API request using location and radius
-    private func getBusinesses(around location: CLLocationCoordinate2D, with radius: Double, completion: ([Business]?, Error?)->Void){
-        
-    }
+    //MARK: - Private Networking Functions
     
-    //MARK: - Navigation
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 
-    }
+    
+    
     //MARK: - Properties
     private var locationManager  = CLLocationManager()
     private var location: CLLocationCoordinate2D? {
@@ -104,6 +82,11 @@ class BusinessMapViewController: UIViewController, UITableViewDelegate, UITableV
         }
     }
     
+    private var offers = [Offer]()
+    private var requests = [Request]()
+    
+    @IBOutlet weak var alertView: UIView!
+    @IBOutlet weak var alertLabel: UILabel!
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var tableView: UITableView!
     

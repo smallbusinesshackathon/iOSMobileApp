@@ -51,7 +51,6 @@ class Offer: NSObject, MKAnnotation{
         barcode = offerRepresentation.barcode
         qrCode = offerRepresentation.qrCode
         
-        
     
     }
     
