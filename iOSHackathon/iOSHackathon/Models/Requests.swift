@@ -6,21 +6,31 @@
 //
 
 import Foundation
+import MapKit
 
-class Requests: NSObject{
+class Requests: NSObject, MKAnnotation {
     
-    var title: String
+    var title: String?
     var requestDescription: String
     var category: String
-    var location: String
+    var address: String
     var caseStatus: Bool
     var responder: String?
     
-    init(title: String, requestDescription: String, category: String, location: String, caseStatus: Bool, responder: String) {
+    var coordinate: CLLocationCoordinate2D {
+        var location = CLLocationCoordinate2D()
+        CLGeocoder().geocodeAddressString(address) { (results, _) in
+            guard let coordinates = results?.first?.location?.coordinate else {return}
+            location = coordinates
+        }
+        return location
+    }
+    
+    init(title: String, requestDescription: String, category: String, address: String, caseStatus: Bool, responder: String) {
         self.title = title
         self.requestDescription = requestDescription
         self.category = category
-        self.location = location
+        self.address = address
         self.caseStatus = caseStatus
         self.responder = responder
     }
