@@ -1,5 +1,5 @@
 //
-//  Requests.swift
+//  Request.swift
 //  iOSHackathon
 //
 //  Created by Xu Mo on 5/4/19.
@@ -8,15 +8,14 @@
 import Foundation
 import MapKit
 
-
-class Request: NSObject, MKAnnotation {
+class Request: NSObject, MKAnnotation, Codable {
     
     var title: String?
     var requestDescription: String
     var category: String
     var address: String
     var caseStatus: Bool
-    var responder: String?
+    var id: UUID
     
     var coordinate: CLLocationCoordinate2D {
         var location = CLLocationCoordinate2D()
@@ -27,13 +26,14 @@ class Request: NSObject, MKAnnotation {
         return location
     }
     
-    self.init(title: String, requestDescription: String, category: String, address: String, caseStatus: Bool, responder: String) {
+    init(title: String, requestDescription: String, category: String, address: String, caseStatus: Bool, id: UUID) {
         self.title = title
         self.requestDescription = requestDescription
         self.category = category
         self.address = address
         self.caseStatus = caseStatus
-        self.responder = responder
+        self.id = id
     }
 
 }
+   
