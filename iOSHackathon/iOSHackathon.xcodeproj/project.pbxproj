@@ -14,6 +14,8 @@
 		7B8E4E54227D53DE001F9C2F /* BusinessRequestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8E4E53227D53DE001F9C2F /* BusinessRequestsViewController.swift */; };
 		7B8E4E56227D5400001F9C2F /* BusinessAllRequestsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8E4E55227D5400001F9C2F /* BusinessAllRequestsCollectionViewController.swift */; };
 		7B8E4E58227D5D6B001F9C2F /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B8E4E57227D5D6B001F9C2F /* TabBar.storyboard */; };
+		7B8E4E5A227D6167001F9C2F /* BusinessRespondToRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8E4E59227D6167001F9C2F /* BusinessRespondToRequestViewController.swift */; };
+		7B8E4E5C227D6182001F9C2F /* BusinessSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8E4E5B227D6182001F9C2F /* BusinessSettingsViewController.swift */; };
 		A23F51F0227D2AAB00C729C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23F51EF227D2AAB00C729C7 /* AppDelegate.swift */; };
 		A23F51F5227D2AAB00C729C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A23F51F3227D2AAB00C729C7 /* Main.storyboard */; };
 		A23F51F7227D2AAF00C729C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A23F51F6227D2AAF00C729C7 /* Assets.xcassets */; };
@@ -30,6 +32,8 @@
 		7B8E4E53227D53DE001F9C2F /* BusinessRequestsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessRequestsViewController.swift; sourceTree = "<group>"; };
 		7B8E4E55227D5400001F9C2F /* BusinessAllRequestsCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessAllRequestsCollectionViewController.swift; sourceTree = "<group>"; };
 		7B8E4E57227D5D6B001F9C2F /* TabBar.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = TabBar.storyboard; path = "../../../../../../../Downloads/iOSMobileApp-daniela/iOSHackathon/iOSHackathon/Storboards/TabBar.storyboard"; sourceTree = "<group>"; };
+		7B8E4E59227D6167001F9C2F /* BusinessRespondToRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessRespondToRequestViewController.swift; sourceTree = "<group>"; };
+		7B8E4E5B227D6182001F9C2F /* BusinessSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessSettingsViewController.swift; sourceTree = "<group>"; };
 		A23F51EC227D2AAB00C729C7 /* iOSHackathon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSHackathon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A23F51EF227D2AAB00C729C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A23F51F4227D2AAB00C729C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -86,6 +90,8 @@
 				7B8E4E53227D53DE001F9C2F /* BusinessRequestsViewController.swift */,
 				7B8E4E55227D5400001F9C2F /* BusinessAllRequestsCollectionViewController.swift */,
 				A23F520C227D549000C729C7 /* AddBusinessViewController.swift */,
+				7B8E4E59227D6167001F9C2F /* BusinessRespondToRequestViewController.swift */,
+				7B8E4E5B227D6182001F9C2F /* BusinessSettingsViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -194,6 +200,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A23F520B227D502400C729C7 /* Business.swift in Sources */,
+				7B8E4E5C227D6182001F9C2F /* BusinessSettingsViewController.swift in Sources */,
+				7B8E4E5A227D6167001F9C2F /* BusinessRespondToRequestViewController.swift in Sources */,
 				A23F520D227D549000C729C7 /* AddBusinessViewController.swift in Sources */,
 				A23F51F0227D2AAB00C729C7 /* AppDelegate.swift in Sources */,
 				7B8E4E50227D4EB1001F9C2F /* BusinessOffersViewController.swift in Sources */,
