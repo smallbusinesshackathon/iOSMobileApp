@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import MapKit
 
 enum Severity:String {
     case minor

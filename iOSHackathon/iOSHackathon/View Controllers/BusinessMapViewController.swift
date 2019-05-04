@@ -8,6 +8,9 @@
 import UIKit
 import MapKit
 
+
+let demoLocationDC = CLLocationCoordinate2D(latitude: 38.907192, longitude: -77.036873)
+
 class BusinessMapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,15 +60,26 @@ class BusinessMapViewController: UIViewController, MKMapViewDelegate, CLLocation
     }
     
     //MARK: - Private
-    private func updateWithLocation(){
+    private func updateWithLocation(demo:Bool = false){
         //Zoom to user location
-        guard let location = location else {return}
-        let viewRegion = MKCoordinateRegion(center: location, latitudinalMeters: 2000, longitudinalMeters: 2000)
+    
+        let location = demo ? demoLocationDC : self.location! 
+//        guard let location = location else {return}
+//        let location = demoLocationDC
+        
+        let viewRegion = MKCoordinateRegion(center: demoLocationDC, latitudinalMeters: 2000, longitudinalMeters: 2000)
         mapView.setRegion(viewRegion, animated: true)
         
         //TODO: - make API calls for Requests/Offers and handle the response
         
         //Find local alerts
+        getAlertFromNWSAPI(coordinate: location) { (results, error) in
+            if let error = error {
+                NSLog("Error sending API request: \(error)")
+                return
+            }
+            guard let results = results else {return}
+        }
         
     }
     
@@ -136,7 +150,7 @@ class BusinessMapViewController: UIViewController, MKMapViewDelegate, CLLocation
     private var locationManager  = CLLocationManager()
     private var location: CLLocationCoordinate2D? {
         didSet{
-            updateWithLocation()
+            updateWithLocation(demo: true)
         }
     }
     
