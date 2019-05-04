@@ -1,16 +1,14 @@
 //
-//  BusinessDashboardViewController.swift
+//  AddEditBusinessOfferViewController.swift
 //  iOSHackathon
 //
-//  Created by Xu Mo on 5/4/19.
+//  Created by Daniela Parra on 5/4/19.
 //
 
 import UIKit
 
-class BusinessDashboardViewController: UIViewController {
+class AddEditBusinessOfferViewController: UIViewController {
 
-    @IBOutlet var buttons: [UIButton]!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -18,7 +16,7 @@ class BusinessDashboardViewController: UIViewController {
     }
     
 
-
+    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -26,6 +24,6 @@ class BusinessDashboardViewController: UIViewController {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
     }
-
+    */
 
 }

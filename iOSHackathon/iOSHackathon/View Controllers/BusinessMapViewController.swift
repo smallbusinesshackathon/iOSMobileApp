@@ -1,5 +1,5 @@
 //
-//  CustomerBusinessesViewController.swift
+//  BusinessMapViewController.swift
 //  iOSHackathon
 //
 //  Created by Andrew Dhan on 5/4/19.
@@ -8,7 +8,7 @@
 import UIKit
 import MapKit
 
-class CustomerBusinessesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, MKMapViewDelegate, CLLocationManagerDelegate {
+class BusinessMapViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, MKMapViewDelegate, CLLocationManagerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
