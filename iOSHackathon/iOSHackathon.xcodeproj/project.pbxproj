@@ -88,7 +88,6 @@
 				7B8E4E53227D53DE001F9C2F /* BusinessRequestsViewController.swift */,
 				7B8E4E55227D5400001F9C2F /* BusinessAllRequestsCollectionViewController.swift */,
 				A23F51F1227D2AAB00C729C7 /* ViewController.swift */,
-
 				A23F520C227D549000C729C7 /* AddBusinessViewController.swift */,
 
 				10082B27227D539D002C8D56 /* CustomerBusinessesViewController.swift */,
