@@ -370,14 +370,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="itl-48-LBb">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="itl-48-LBb">
                                 <rect key="frame" x="0.0" y="44" width="414" height="769"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1F8-2U-eqd">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="66"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AlertLabel" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kxC-FF-9fF">
-                                                <rect key="frame" x="17" y="17" width="380" height="20.5"/>
+                                                <rect key="frame" x="17" y="28" width="380" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -389,11 +389,11 @@
                                             <constraint firstAttribute="trailing" secondItem="kxC-FF-9fF" secondAttribute="trailing" constant="17" id="T7J-ar-KI9"/>
                                             <constraint firstItem="kxC-FF-9fF" firstAttribute="leading" secondItem="1F8-2U-eqd" secondAttribute="leading" constant="17" id="m5t-qv-hMl"/>
                                             <constraint firstItem="kxC-FF-9fF" firstAttribute="centerX" secondItem="1F8-2U-eqd" secondAttribute="centerX" id="qZM-ZA-EOq"/>
-                                            <constraint firstAttribute="height" constant="44" id="yND-rN-55r"/>
+                                            <constraint firstAttribute="height" constant="66" id="yND-rN-55r"/>
                                         </constraints>
                                     </view>
                                     <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="K6I-sR-Dfi">
-                                        <rect key="frame" x="0.0" y="52" width="414" height="717"/>
+                                        <rect key="frame" x="0.0" y="66" width="414" height="703"/>
                                     </mapView>
                                 </subviews>
                             </stackView>

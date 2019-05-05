@@ -6,6 +6,9 @@
 //
 
 import Foundation
+import UIKit
+import MapKit
+
 
 extension Date{
     func dateFormatter() -> String {
@@ -20,3 +23,26 @@ extension Date{
         return dateFormatter.string(from: self)
     }
 }
+
+extension Request: HelpAnnotation{
+    var type: AnnotationType {
+        get {
+           return .request
+        }
+    }
+    
+    
+}
+
+extension Offer: HelpAnnotation{
+    var type: AnnotationType {
+        get {
+            return .offer
+        }
+    }
+}
+
+extension UIColor{
+    static let darkGreen = UIColor(red: 11.0/255.0, green: 102.0/255.0, blue: 35.0/255.0, alpha: 1.0)
+}
+
