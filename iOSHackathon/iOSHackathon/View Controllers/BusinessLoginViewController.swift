@@ -15,25 +15,23 @@ class BusinessLoginViewController: UIViewController {
 
     
     @IBAction func buttonClick(sender: UIButton) {
-
-    }
-
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        signInButton.layer.cornerRadius = 5
-
-        // Do any additional setup after loading the view.
+        let username = "35C9vt7T2"
+        let transactionKey = "9GxM2nU34267zw6Z"
         
-        //        curl -X GET "https://shared-sandbox-api.marqeta.com/v3/acceptedcountries?count=5&start_index=0&sort_by=-lastModifiedTime" -H "accept: application/json" -H "Authorization: Basic dXNlcjYyOTMxNTU2OTM2MzY5OmI1ZmRiYmFiLTAzYjAtNDBhMi1iNmRhLWEyYmJjZDE0NjEyZQ=="
-        
-        let url = URL(string: "https://shared-sandbox-api.marqeta.com/v3/acceptedcountries?count=5&start_index=0&sort_by=-lastModifiedTime")!
+        let url = URL(string: "https://apitest.authorize.net/xml/v1/request.api")!
         
         var request = URLRequest(url: url)
         
-        request.httpMethod = "GET"
-        request.addValue("accept", forHTTPHeaderField: "application/json")
-        request.addValue("Authorization", forHTTPHeaderField: "Basic dXNlcjYyOTMxNTU2OTM2MzY5OmI1ZmRiYmFiLTAzYjAtNDBhMi1iNmRhLWEyYmJjZDE0NjEyZQ==")
+        request.httpMethod = "POST"
+        //request.addValue("accept", forHTTPHeaderField: "application/json")
+        
+        let json: [String: Any] = ["authenticateTestRequest": ["merchantAuthentication": ["name": username, "transactionKey": transactionKey]]]
+        
+        do {
+            request.httpBody = try JSONSerialization.data(withJSONObject: json, options: [])
+        } catch {
+            NSLog("\(error)")
+        }
         
         URLSession.shared.dataTask(with: request) { (data, _, error) in
             if let error = error {
@@ -46,13 +44,33 @@ class BusinessLoginViewController: UIViewController {
                 return
             }
             
-            do {
-                // let offersResult = JSONDecoder().decode(Offer.self, from: data)
-            } catch {
-                
+            let convertedString = String(data: data, encoding: String.Encoding.utf8)
+            print(convertedString!)
+            
+            let alertController = UIAlertController(title: "Success", message: "Merchant verified.", preferredStyle: .alert)
+            
+            let alertAction = UIAlertAction(title: "Ok", style: .default, handler: { (_) in
+                DispatchQueue.main.async {
+                    self.performSegue(withIdentifier: "ViewTabBar", sender: self)
+                }
+            })
+            
+            alertController.addAction(alertAction)
+            
+            DispatchQueue.main.async {
+                self.present(alertController, animated: true)
             }
             
-        }
+            
+        }.resume()
+        
+    }
+    
+
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        signInButton.layer.cornerRadius = 5
 
     }
     

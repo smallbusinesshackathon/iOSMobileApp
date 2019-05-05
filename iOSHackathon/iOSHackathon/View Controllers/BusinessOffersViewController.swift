@@ -33,6 +33,14 @@ class BusinessOffersViewController: UIViewController, UICollectionViewDataSource
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "AddOffer" {
+            
+        } else if segue.identifier == "EditOffer" {
+            
+        } else if segue.identifier == "" {
+            
+        }
         if let destinationVC = segue.destination as? AddEditBusinessOfferViewController {
             if let indexPath = collectionView.indexPathsForSelectedItems?.first {
                 destinationVC.offer = offers[indexPath.row]
@@ -135,7 +143,7 @@ class BusinessOffersViewController: UIViewController, UICollectionViewDataSource
                 //                print(convertedString!)
                 let offerResult = try JSONDecoder().decode([String: Offer].self, from: data)
                 
-                print(offerResult)
+                //print(offerResult)
                 self.offers = offerResult.compactMap({ $0.value })
             } catch {
                 NSLog("Error decoding offer representations: \(error)")
