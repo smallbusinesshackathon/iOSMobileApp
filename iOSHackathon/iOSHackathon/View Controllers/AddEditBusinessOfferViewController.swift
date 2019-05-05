@@ -56,6 +56,8 @@ class AddEditBusinessOfferViewController: UIViewController {
     private func updateViews() {
         guard let offer = offer else { return}
         
+        viewTitleLabel.text = "Edit offer"
+        
         offerTitleTextField.text = offer.offerTitle
         offerDescriptionTextView.text = offer.offerShortDescription?.text
         offerLocationTextField.text = offer.merchantList.first?.merchantAddress.first?.address1

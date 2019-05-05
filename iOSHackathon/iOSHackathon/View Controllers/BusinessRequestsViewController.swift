@@ -114,12 +114,12 @@ class BusinessRequestsViewController: UIViewController, UICollectionViewDelegate
                 let requestResult = try JSONDecoder().decode([String: Request].self, from: data)
                 
                 let array = requestResult.compactMap({ $0.value })
-                self.requests.append(array.first!)
+                self.requests = [array.first!]
             } catch {
                 NSLog("Error decoding requests: \(error)")
             }
             
-            }.resume()
+        }.resume()
     }
     
     private func loadAllRequests() {
