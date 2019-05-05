@@ -34,6 +34,7 @@
 		7BD13E86227E800B001E758C /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD13E85227E800B001E758C /* TabBarViewController.swift */; };
 		7BD13E88227EA724001E758C /* d.json in Resources */ = {isa = PBXBuildFile; fileRef = 7BD13E87227EA724001E758C /* d.json */; };
 		7BD13E8A227ED6F3001E758C /* demo2.json in Resources */ = {isa = PBXBuildFile; fileRef = 7BD13E89227ED6F3001E758C /* demo2.json */; };
+		7BD13E8D227F0524001E758C /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BD13E8C227F0524001E758C /* WebKit.framework */; };
 		A23F51F0227D2AAB00C729C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23F51EF227D2AAB00C729C7 /* AppDelegate.swift */; };
 		A23F51F5227D2AAB00C729C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A23F51F3227D2AAB00C729C7 /* Main.storyboard */; };
 		A23F51F7227D2AAF00C729C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A23F51F6227D2AAF00C729C7 /* Assets.xcassets */; };
@@ -72,6 +73,7 @@
 		7BD13E85227E800B001E758C /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		7BD13E87227EA724001E758C /* d.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = d.json; sourceTree = "<group>"; };
 		7BD13E89227ED6F3001E758C /* demo2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = demo2.json; sourceTree = SOURCE_ROOT; };
+		7BD13E8C227F0524001E758C /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		A23F51EC227D2AAB00C729C7 /* iOSHackathon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSHackathon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A23F51EF227D2AAB00C729C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A23F51F4227D2AAB00C729C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BD13E8D227F0524001E758C /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,12 +110,21 @@
 			name = Helpers;
 			sourceTree = "<group>";
 		};
+		7BD13E8B227F0523001E758C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7BD13E8C227F0524001E758C /* WebKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A23F51E3227D2AAB00C729C7 = {
 			isa = PBXGroup;
 			children = (
 				A23F51EE227D2AAB00C729C7 /* iOSHackathon */,
 				A23F51ED227D2AAB00C729C7 /* Products */,
 				10082B2C227DEFC5002C8D56 /* Helpers */,
+				7BD13E8B227F0523001E758C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};

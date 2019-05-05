@@ -665,6 +665,10 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1488302913578" translatesAutoresizingMaskIntoConstraints="NO" id="peO-cH-o9a">
+                                <rect key="frame" x="87" y="642" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -1082,7 +1086,7 @@
         <image name="003-voucher" width="24" height="24"/>
         <image name="005-danger" width="24" height="24"/>
         <image name="007-plus" width="32" height="32"/>
-        <image name="alert" width="16" height="16"/>
+        <image name="1488302913578" width="230" height="130"/>
         <image name="store-1" width="256" height="256"/>
     </resources>
     <inferredMetricsTieBreakers>
