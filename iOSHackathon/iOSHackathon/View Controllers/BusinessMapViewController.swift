@@ -383,8 +383,8 @@ class BusinessMapViewController: UIViewController, MKMapViewDelegate, CLLocation
         didSet{
             //            updateWithLocation()
             //            demoUpdateWithLocationDC()
-//            demoUpdateWithHazard(fileName: .TX, coordinates: CLLocationCoordinate2D(latitude: 29.384020, longitude: -94.902550))
-            demoUpdateWithHazard(demoData: .DC, coordinates: demoLocationDC)
+            demoUpdateWithHazard(demoData: .TX, coordinates: CLLocationCoordinate2D(latitude: 29.384020, longitude: -94.902550))
+//            demoUpdateWithHazard(demoData: .DC, coordinates: demoLocationDC)
         }
     }
     
