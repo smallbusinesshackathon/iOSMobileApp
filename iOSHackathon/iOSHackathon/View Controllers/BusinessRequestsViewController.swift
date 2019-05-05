@@ -57,7 +57,7 @@ class BusinessRequestsViewController: UIViewController, UICollectionViewDelegate
     }
     
     private func loadMyRequests() {
-        
+        loadAllRequests()
     }
     
     private func loadAllRequests() {

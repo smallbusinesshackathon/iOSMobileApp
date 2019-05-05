@@ -186,8 +186,8 @@
                     <connections>
                         <outlet property="collectionView" destination="Tpi-1h-9e2" id="bnw-8W-qV8"/>
                         <outlet property="offerSegmentedControl" destination="zGI-Rb-tQu" id="HuK-Dz-NTB"/>
-                        <segue destination="66u-sK-t5q" kind="show" id="zQq-mt-0QA"/>
-                        <segue destination="EgT-rv-fDs" kind="show" id="hf1-lC-TFC"/>
+                        <segue destination="66u-sK-t5q" kind="show" identifier="EditOffer" id="zQq-mt-0QA"/>
+                        <segue destination="EgT-rv-fDs" kind="show" identifier="ViewOffer" id="hf1-lC-TFC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wz1-rO-baH" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -231,6 +231,9 @@
                                 <rect key="frame" x="20" y="88" width="34" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="goBack:" destination="EgT-rv-fDs" eventType="touchUpInside" id="7qU-uy-nGS"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Valid Until Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kef-hn-c9Z">
                                 <rect key="frame" x="277" y="134" width="117" height="21"/>
@@ -737,6 +740,6 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="C1S-Xk-03J"/>
-        <segue reference="XEA-iQ-Weu"/>
+        <segue reference="zQq-mt-0QA"/>
     </inferredMetricsTieBreakers>
 </document>
