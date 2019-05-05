@@ -12,18 +12,24 @@ class BusinessOfferDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        updateViews()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func goBack(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
-    */
+    private func updateViews() {
+        guard let offer = offer else { return }
+        
+        
+    }
+
+    // MARK - Properties
+    
+    var offer: Offer? {
+        didSet {
+            updateViews()
+        }
+    }
 
 }

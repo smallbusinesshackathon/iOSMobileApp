@@ -22,6 +22,7 @@ class AddEditBusinessRequestViewController: UIViewController {
     @IBOutlet weak var requestCategoryTextField: UITextField!
     @IBOutlet weak var requestAddressTextField: UITextField!
     @IBOutlet weak var requestCaseStatusSwitch: UISwitch!
+    @IBOutlet weak var viewTitleLabel: UILabel!
     
     
     @IBAction func createUpdateRequest(_ sender: Any) {
@@ -46,6 +47,7 @@ class AddEditBusinessRequestViewController: UIViewController {
     private func loadRequest() {
         guard let request = request else {return}
         
+        viewTitleLabel.text = "Edit Request"
         requestTitleTextField.text = request.title
         requestDescriptionTextView.text = request.requestDescription
         requestCategoryTextField.text = request.category
@@ -60,10 +62,8 @@ class AddEditBusinessRequestViewController: UIViewController {
     
     private func postRequest(title: String, description: String, category: String, address: String, caseStatus: Bool) {
         
-
         let helpRequest = Request(title: title, requestDescription: description, category: category, address: address, date: Date(), caseStatus: caseStatus, id: UUID())
 
-        
         let url = URL(string: "https://smallbusinesshackathon.firebaseio.com/requests")!.appendingPathComponent(helpRequest.id.uuidString).appendingPathExtension("json")
         
         var request = URLRequest(url: url)

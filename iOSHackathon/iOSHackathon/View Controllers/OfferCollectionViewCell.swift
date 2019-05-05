@@ -9,10 +9,25 @@ import UIKit
 
 class OfferCollectionViewCell: UICollectionViewCell {
     
+    
+    @IBOutlet weak var offerTitleLabel: UILabel!
+    @IBOutlet weak var offerMerchantNameLabel: UILabel!
+    @IBOutlet weak var offerLocationLabel: UILabel!
+    @IBOutlet weak var offerActiveIndicatorLabel: UILabel!
+    
     private func updateViews() {
         guard let offer = offer else { return }
         
-        titleLabel.text = offer.offerTitle
+        offerTitleLabel.text = offer.offerTitle
+        offerMerchantNameLabel.text = "\(offer.merchantList[1])"
+        offerLocationLabel.text = "\(offer.merchantList[2])"
+        if offer.activeIndicator == true {
+            offerActiveIndicatorLabel.text = "Active"
+        } else {
+            offerActiveIndicatorLabel.text = "Inactive"
+        }
+        
+        
     }
     
     // MARK - Properties
@@ -22,6 +37,5 @@ class OfferCollectionViewCell: UICollectionViewCell {
             updateViews()
         }
     }
-    
-    @IBOutlet weak var titleLabel: UILabel!
 }
+
