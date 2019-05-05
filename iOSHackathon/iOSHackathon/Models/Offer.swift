@@ -21,8 +21,12 @@ class Offer: NSObject, MKAnnotation, Codable {
     var validityToDate: String
     var validityFromDate: String
     var shareTitle:String
-    var offerShortDescription: String
     var redemptionCode: String
+    var offerShortDescription: ShortDescription?
+    
+    struct ShortDescription: Codable{
+        var text:String
+    }
     
     var coordinate: CLLocationCoordinate2D {
         let latitude = merchantList[0].merchantAddress[0].latitude
@@ -32,8 +36,8 @@ class Offer: NSObject, MKAnnotation, Codable {
     }
     
     struct Merchant: Codable {
-        var merchantID: Int
-        var merchant: String
+        var merchantID: Int?
+        var merchant: String?
         var merchantAddress: [MerchantAddress]
         
         struct MerchantAddress: Codable{
@@ -51,7 +55,7 @@ class Offer: NSObject, MKAnnotation, Codable {
         validityToDate = ""
         validityFromDate = ""
         shareTitle = ""
-        offerShortDescription = ""
+        offerShortDescription = ShortDescription(text: "")
         redemptionCode = ""
         self.merchantList = []
         
