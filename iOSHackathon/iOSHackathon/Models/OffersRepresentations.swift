@@ -45,6 +45,8 @@ struct MerchantList: Codable {
     let merchantId: Int
     let merchant: String
     let merchantAddress: [String]
+    let latitude: Double
+    let longitude: Double
     let merchantImages: [MerchantImage]
     
 }
