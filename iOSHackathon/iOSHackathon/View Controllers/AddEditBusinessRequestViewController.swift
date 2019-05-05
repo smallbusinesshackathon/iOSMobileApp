@@ -13,6 +13,9 @@ class AddEditBusinessRequestViewController: UIViewController {
         super.viewDidLoad()
 
     }
+    @IBAction func goBack(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
     
     @IBOutlet weak var requestTitleTextField: UITextField!
     @IBOutlet weak var requestDescriptionTextView: UITextView!
@@ -58,7 +61,7 @@ class AddEditBusinessRequestViewController: UIViewController {
     private func postRequest(title: String, description: String, category: String, address: String, caseStatus: Bool) {
         
         let helpRequest = Request(title: title, requestDescription: description, category: category, address: address, date: Date(), caseStatus: caseStatus, id: UUID())
-        
+
         let url = URL(string: "https://smallbusinesshackathon.firebaseio.com/requests")!.appendingPathComponent(helpRequest.id.uuidString).appendingPathExtension("json")
         
         var request = URLRequest(url: url)
@@ -68,7 +71,7 @@ class AddEditBusinessRequestViewController: UIViewController {
         do {
             request.httpBody =  try JSONEncoder().encode(helpRequest)
         } catch {
-            NSLog("Error encoding offer representations: \(error)")
+            NSLog("Error encoding request: \(error)")
         }
         
         URLSession.shared.dataTask(with: request) { (data, _, error) in

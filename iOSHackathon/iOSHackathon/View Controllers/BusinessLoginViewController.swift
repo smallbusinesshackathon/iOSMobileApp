@@ -12,7 +12,6 @@ class BusinessLoginViewController: UIViewController {
     
     @IBOutlet weak var businessNameInput: UITextField!
     @IBOutlet weak var businessPhoneNumInput: UITextField!
-    @IBOutlet weak var submitBusinessButton: UIButton!
 
     
     @IBAction func buttonClick(sender: UIButton) {

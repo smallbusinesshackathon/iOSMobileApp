@@ -71,12 +71,12 @@ class BusinessRequestsViewController: UIViewController, UICollectionViewDelegate
         URLSession.shared.dataTask(with: request) { (data, _, error) in
             
             if let error = error {
-                NSLog("Error getting offers: \(error)")
+                NSLog("Error getting request: \(error)")
                 return
             }
             
             guard let data = data else {
-                NSLog("Error getting offers data: \(NSError())")
+                NSLog("Error getting request data: \(NSError())")
                 return
             }
             
@@ -89,7 +89,7 @@ class BusinessRequestsViewController: UIViewController, UICollectionViewDelegate
                 print(requestResult)
                 self.requests = requestResult.compactMap({ $0.value })
             } catch {
-                NSLog("Error decoding offer representations: \(error)")
+                NSLog("Error decoding requests: \(error)")
             }
             
         }.resume()
