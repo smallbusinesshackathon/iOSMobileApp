@@ -14,6 +14,7 @@ class OfferCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var offerMerchantNameLabel: UILabel!
     @IBOutlet weak var offerLocationLabel: UILabel!
     @IBOutlet weak var offerActiveIndicatorLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
     
     
     
@@ -21,14 +22,14 @@ class OfferCollectionViewCell: UICollectionViewCell {
         guard let offer = offer else { return }
         
         offerTitleLabel.text = offer.offerTitle
-        offerMerchantNameLabel.text = "\(offer.merchantList)"
-        offerLocationLabel.text = "\(offer.merchantList)"
+        offerMerchantNameLabel.text = "\(offer.merchantList.first?.merchant ?? "Local Gardens")"
+        offerLocationLabel.text = offer.merchantList.first?.merchantAddress.first?.address1 ?? "123 Main St"
         if offer.activeIndicator == true {
             offerActiveIndicatorLabel.text = "Active"
         } else {
             offerActiveIndicatorLabel.text = "Inactive"
         }
-        
+        descriptionLabel.text = offer.offerShortDescription?.text ?? "Check it out!"
         
     }
     
