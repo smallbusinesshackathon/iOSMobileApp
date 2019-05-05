@@ -31,6 +31,8 @@ class BusinessMapViewController: UIViewController, MKMapViewDelegate, CLLocation
         
         updateAlertLabel(alerts: [])
         
+        mapView.delegate = self
+        mapView.register(MKMarkerAnnotationView.self, forAnnotationViewWithReuseIdentifier: "MapAnnotation")
         loadAllOffers() {
             self.mapView.addAnnotations(self.offers)
         }
@@ -54,15 +56,24 @@ class BusinessMapViewController: UIViewController, MKMapViewDelegate, CLLocation
     
     //MARK: MapViewDelegate Method
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        let annotation = mapView.dequeueReusableAnnotationView(withIdentifier: "MapAnnotation", for: annotation) as! MKMarkerAnnotationView
-        annotation.markerTintColor = .darkGray
-        annotation.glyphTintColor = .white
+        guard let annotation = annotation as? HelpAnnotation else {return nil}
+        var color = UIColor.red
         
-        annotation.canShowCallout = true
+        if annotation.type == .offer {
+            color = UIColor.darkGreen
+        }
+        
+        let dequeued = mapView.dequeueReusableAnnotationView(withIdentifier: "MapAnnotation", for: annotation) as! MKMarkerAnnotationView
+        
+        dequeued.markerTintColor = color
+        dequeued.glyphTintColor = .white
+        
+        dequeued.canShowCallout = true
         
         //TODO: Implement detailView
-        return annotation
+        return dequeued
     }
+    
     
     //MARK: - Private
     private func updateWithLocation(demo:Bool = false){
@@ -273,12 +284,11 @@ class BusinessMapViewController: UIViewController, MKMapViewDelegate, CLLocation
         }
     }
     
-    private let severityRating = [ "none": (rating: 0, color: UIColor(red: 11.0/255.0, green: 102.0/255.0, blue: 35.0/255.0, alpha: 1.0)),
+    private let severityRating = [ "none": (rating: 0, color: UIColor.darkGreen),
                                    "minor": (rating: 1, color: UIColor.green),
                                    "moderate" : (rating: 2, color: UIColor.yellow),
                                    "severe" : (rating: 3, color: UIColor.orange),
                                    "extreme" : (rating: 4, color: UIColor.red)]
-    
     
     private var offers = [Offer]()
     private var requests = [Request]()

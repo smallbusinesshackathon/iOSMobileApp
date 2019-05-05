@@ -19,3 +19,7 @@ enum DecodingError: Error{
     case invalidResponse
 }
 
+enum AnnotationType: String {
+    case request
+    case offer
+}
