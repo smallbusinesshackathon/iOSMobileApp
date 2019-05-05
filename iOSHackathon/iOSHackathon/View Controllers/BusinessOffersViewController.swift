@@ -15,6 +15,15 @@ class BusinessOffersViewController: UIViewController, UICollectionViewDataSource
         
         // Check which data to populate collection view.
         checkDataSource()
+        
+        offerSegmentedControl.backgroundColor = .clear
+        offerSegmentedControl.tintColor = .clear
+        offerSegmentedControl.setTitleTextAttributes([
+            NSAttributedString.Key.foregroundColor: UIColor.lightGray
+            ], for: .normal)
+        offerSegmentedControl.setTitleTextAttributes([
+            NSAttributedString.Key.foregroundColor: #colorLiteral(red: 0.011998998, green: 0.4799926877, blue: 1, alpha: 1)  // #colorLiteral(red: 0.9342113733, green: 0.7635644078, blue: 0.07422252744, alpha: 1)
+            ], for: .selected)
     }
     
     @IBAction func selectSegmentControl(_ sender: Any) {
@@ -25,6 +34,14 @@ class BusinessOffersViewController: UIViewController, UICollectionViewDataSource
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "AddOffer" {
+            
+        } else if segue.identifier == "EditOffer" {
+            
+        } else if segue.identifier == "" {
+            
+        }
         if let destinationVC = segue.destination as? AddEditBusinessOfferViewController {
             if let indexPath = collectionView.indexPathsForSelectedItems?.first {
                 destinationVC.offer = offers[indexPath.row]
@@ -127,7 +144,7 @@ class BusinessOffersViewController: UIViewController, UICollectionViewDataSource
                 //                print(convertedString!)
                 let offerResult = try JSONDecoder().decode([String: Offer].self, from: data)
                 
-                print(offerResult)
+                //print(offerResult)
                 self.offers = offerResult.compactMap({ $0.value })
             } catch {
                 NSLog("Error decoding offer representations: \(error)")
@@ -148,6 +165,8 @@ class BusinessOffersViewController: UIViewController, UICollectionViewDataSource
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "OfferCell", for: indexPath) as! OfferCollectionViewCell
         
         cell.offer = offers[indexPath.row]
+        cell.contentView.backgroundColor = #colorLiteral(red: 0.921431005, green: 0.9214526415, blue: 0.9214410186, alpha: 1)
+        cell.contentView.layer.cornerRadius = 20
         
         return cell
     }
