@@ -6,24 +6,17 @@
 //
 
 import UIKit
+//import WebKit
 
 class BusinessSettingsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+//
+//        myWeb.loadHTMLString("<iframe width=\"310\" height=\"175\" src=\"https://www.census.gov/CBB/widget/embed_310x175.php\" frameBorder=\"0\" allowtransparency=\"true\"></iframe>", baseURL: nil)
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+  //  @IBOutlet var myWeb: WKWebView!
+    
 }
