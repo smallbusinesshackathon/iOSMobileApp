@@ -25,6 +25,9 @@
 		7B8E4E62227DE925001F9C2F /* AddEditBusinessRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8E4E61227DE925001F9C2F /* AddEditBusinessRequestViewController.swift */; };
 		7B8E4E6C227E1E52001F9C2F /* RequestCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8E4E6B227E1E52001F9C2F /* RequestCollectionViewCell.swift */; };
 		7B8E4E6E227E3885001F9C2F /* OfferCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8E4E6D227E3885001F9C2F /* OfferCollectionViewCell.swift */; };
+		7BD13E84227E7D7B001E758C /* Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD13E83227E7D7B001E758C /* Appearance.swift */; };
+		7BD13E86227E800B001E758C /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD13E85227E800B001E758C /* TabBarViewController.swift */; };
+		7BD13E88227EA724001E758C /* d.json in Resources */ = {isa = PBXBuildFile; fileRef = 7BD13E87227EA724001E758C /* d.json */; };
 		A23F51F0227D2AAB00C729C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23F51EF227D2AAB00C729C7 /* AppDelegate.swift */; };
 		A23F51F5227D2AAB00C729C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A23F51F3227D2AAB00C729C7 /* Main.storyboard */; };
 		A23F51F7227D2AAF00C729C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A23F51F6227D2AAF00C729C7 /* Assets.xcassets */; };
@@ -55,6 +58,9 @@
 		7B8E4E61227DE925001F9C2F /* AddEditBusinessRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditBusinessRequestViewController.swift; sourceTree = "<group>"; };
 		7B8E4E6B227E1E52001F9C2F /* RequestCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestCollectionViewCell.swift; sourceTree = "<group>"; };
 		7B8E4E6D227E3885001F9C2F /* OfferCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferCollectionViewCell.swift; sourceTree = "<group>"; };
+		7BD13E83227E7D7B001E758C /* Appearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appearance.swift; sourceTree = "<group>"; };
+		7BD13E85227E800B001E758C /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		7BD13E87227EA724001E758C /* d.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = d.json; sourceTree = "<group>"; };
 		A23F51EC227D2AAB00C729C7 /* iOSHackathon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSHackathon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A23F51EF227D2AAB00C729C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A23F51F4227D2AAB00C729C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -82,8 +88,10 @@
 		10082B2C227DEFC5002C8D56 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				7BD13E87227EA724001E758C /* d.json */,
 				10082B29227D5E5D002C8D56 /* Extensions.swift */,
 				10082B2D227E187E002C8D56 /* Enums.swift */,
+				7BD13E83227E7D7B001E758C /* Appearance.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -121,6 +129,7 @@
 			children = (
 				7B8E4E5D227DE8C8001F9C2F /* MainViewController.swift */,
 				A23F520C227D549000C729C7 /* BusinessLoginViewController.swift */,
+				7BD13E85227E800B001E758C /* TabBarViewController.swift */,
 				10082B27227D539D002C8D56 /* BusinessMapViewController.swift */,
 				7B8E4E4F227D4EB1001F9C2F /* BusinessOffersViewController.swift */,
 				7B8E4E6D227E3885001F9C2F /* OfferCollectionViewCell.swift */,
@@ -232,6 +241,7 @@
 				A23F51FA227D2AAF00C729C7 /* LaunchScreen.storyboard in Resources */,
 				A23F51F7227D2AAF00C729C7 /* Assets.xcassets in Resources */,
 				7B8E4E47227D42CA001F9C2F /* Business.storyboard in Resources */,
+				7BD13E88227EA724001E758C /* d.json in Resources */,
 				A23F51F5227D2AAB00C729C7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -256,12 +266,14 @@
 				A23F51F0227D2AAB00C729C7 /* AppDelegate.swift in Sources */,
 				7B8E4E50227D4EB1001F9C2F /* BusinessOffersViewController.swift in Sources */,
 				7B8E4E6C227E1E52001F9C2F /* RequestCollectionViewCell.swift in Sources */,
+				7BD13E86227E800B001E758C /* TabBarViewController.swift in Sources */,
 				7B8E4E54227D53DE001F9C2F /* BusinessRequestsViewController.swift in Sources */,
 				7B8E4E52227D501D001F9C2F /* AddEditBusinessOfferViewController.swift in Sources */,
 				A23F5213227DDC3200C729C7 /* Offer.swift in Sources */,
 				A23F520B227D502400C729C7 /* Business.swift in Sources */,
 				A23F5211227DB33A00C729C7 /* OffersRepresentations.swift in Sources */,
 				A23F51F0227D2AAB00C729C7 /* AppDelegate.swift in Sources */,
+				7BD13E84227E7D7B001E758C /* Appearance.swift in Sources */,
 				10C3020F227E2F19006A5CB7 /* NWSResponse.swift in Sources */,
 				10C3020D227E234F006A5CB7 /* WeatherAlert.swift in Sources */,
 				A23F5215227DE13700C729C7 /* Request.swift in Sources */,
