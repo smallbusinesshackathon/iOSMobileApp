@@ -8,7 +8,13 @@
 import UIKit
 
 class BusinessOfferDetailViewController: UIViewController {
-
+    
+    
+    @IBOutlet weak var offerValidtoDateLabel: UILabel!
+    @IBOutlet weak var offerShareTitleLabel: UILabel!
+    @IBOutlet weak var offerDescriptionTextView: UITextView!
+    @IBOutlet weak var offerRedemptionCodeLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -20,6 +26,11 @@ class BusinessOfferDetailViewController: UIViewController {
     }
     private func updateViews() {
         guard let offer = offer else { return }
+        
+        offerValidtoDateLabel.text = offer.validityToDate
+        offerShareTitleLabel.text = offer.shareTitle
+        offerDescriptionTextView.text = "\(offer.offerShortDescription)"
+        offerRedemptionCodeLabel.text = offer.redemptionCode
         
         
     }
