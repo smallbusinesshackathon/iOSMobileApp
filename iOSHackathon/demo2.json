@@ -1,0 +1,2817 @@
+{
+    "returnedResults": 3,
+    "startIndex": 1,
+    "offers": [
+        {
+            "indexNumber": 1,
+            "offerContentId": 105945,
+            "offerId": 61753416,
+            "currentVersion": 1,
+            "activeIndicator": true,
+            "soldOut": false,
+            "offerStatus": "APPROVED",
+            "lastModifiedDatetime": "Tue, 14 Aug 2018 21:33:56 GMT",
+            "programId": 100750,
+            "programName": "VDP Program B",
+            "languageId": 1,
+            "language": "English",
+            "merchantList": [
+                {
+                    "merchantId": 101457,
+                    "merchant": "Your business",
+                    "merchantAddress": [{
+                        "key": 104404,
+                        "address1": "243 SE U St",
+                        "address2": "",
+                        "city": "Washington",
+                        "state": "Washington, D.C.",
+                        "postalCode": "20037",
+                        "countryName": "United States of America",
+                        "languageName": "Simplified Chinese",
+                        "latitude": 38.889321,
+                        "longitude": -77.050166,
+                        "phoneNumbers": [],
+                        "languageIds": [
+                            8,
+                            20,
+                            2,
+                            24,
+                            1,
+                            3,
+                            6,
+                            14,
+                            28,
+                            21,
+                            15,
+                            9,
+                            23,
+                            10,
+                            26,
+                            18,
+                            5,
+                            27,
+                            16,
+                            25,
+                            13,
+                            19,
+                            22,
+                            7,
+                            12,
+                            17,
+                            11,
+                            4
+                        ],
+                        "languages": [
+                            "Simplified Chinese",
+                            "Canadian English",
+                            "Japanese",
+                            "Khmer",
+                            "English",
+                            "Portuguese (Regular)",
+                            "Korean",
+                            "Azeri",
+                            "Croatian",
+                            "Canadian French",
+                            "Kazakh",
+                            "Traditional Chinese (TW)",
+                            "Traditional Chinese (HK)",
+                            "Vietnamese",
+                            "Italian",
+                            "Serbian",
+                            "Russian",
+                            "Hebrew",
+                            "Georgian",
+                            "German",
+                            "French",
+                            "Kinyarwanda",
+                            "Portuguese (Brazillian)",
+                            "Arabic",
+                            "Bahasa Indonesia",
+                            "Ukrainian",
+                            "Thai",
+                            "Spanish"
+                        ]
+                    }],
+                    "merchantImages": [
+                        {
+                            "key": 104058,
+                            "fileName": "placeholder_1134x430.png",
+                            "imageResolution": "High",
+                            "description": "",
+                            "promotionId": 1,
+                            "promotionChannel": "Print",
+                            "promotionIds": [
+                                1,
+                                82,
+                                3,
+                                83,
+                                84,
+                                5,
+                                85,
+                                6
+                            ],
+                            "promotionChannels": [
+                                "Print",
+                                "Email",
+                                "Online",
+                                "Mobile",
+                                "SMS",
+                                "In Store / Offline",
+                                "Social",
+                                "Direct Mail"
+                            ],
+                            "fileLocation": "https://www.visa.com/images/merchantoffers/stage/2016-08/1471388262606.placeholder_1134x430.png",
+                            "defaultMerchImg": false,
+                            "imageFileSize": "8.0 KB",
+                            "imageFileHeight": "430 px",
+                            "imageFileWidth": "1134 px",
+                            "languageIds": [
+                                8,
+                                20,
+                                2,
+                                24,
+                                1,
+                                3,
+                                6,
+                                14,
+                                28,
+                                21,
+                                15,
+                                9,
+                                23,
+                                10,
+                                26,
+                                18,
+                                5,
+                                27,
+                                16,
+                                25,
+                                13,
+                                19,
+                                22,
+                                7,
+                                12,
+                                17,
+                                11,
+                                4
+                            ],
+                            "languages": [
+                                "Simplified Chinese",
+                                "Canadian English",
+                                "Japanese",
+                                "Khmer",
+                                "English",
+                                "Portuguese (Regular)",
+                                "Korean",
+                                "Azeri",
+                                "Croatian",
+                                "Canadian French",
+                                "Kazakh",
+                                "Traditional Chinese (TW)",
+                                "Traditional Chinese (HK)",
+                                "Vietnamese",
+                                "Italian",
+                                "Serbian",
+                                "Russian",
+                                "Hebrew",
+                                "Georgian",
+                                "German",
+                                "French",
+                                "Kinyarwanda",
+                                "Portuguese (Brazillian)",
+                                "Arabic",
+                                "Bahasa Indonesia",
+                                "Ukrainian",
+                                "Thai",
+                                "Spanish"
+                            ],
+                            "logoAltTag": ""
+                        },
+                        {
+                            "key": 104158,
+                            "fileName": "MerchantLogoYellow400x300.png",
+                            "imageResolution": "High",
+                            "description": "",
+                            "promotionId": 1,
+                            "promotionChannel": "Print",
+                            "promotionIds": [
+                                1,
+                                82,
+                                3,
+                                83,
+                                84,
+                                5,
+                                85,
+                                6
+                            ],
+                            "promotionChannels": [
+                                "Print",
+                                "Email",
+                                "Online",
+                                "Mobile",
+                                "SMS",
+                                "In Store / Offline",
+                                "Social",
+                                "Direct Mail"
+                            ],
+                            "fileLocation": "https://www.visa.com/images/merchantoffers/stage/2018-08/1534280052223.MerchantLogoYellow400x300.png",
+                            "defaultMerchImg": true,
+                            "imageFileSize": "9.0 KB",
+                            "imageFileHeight": "300 px",
+                            "imageFileWidth": "400 px",
+                            "languageIds": [
+                                8,
+                                32,
+                                20,
+                                35,
+                                2,
+                                24,
+                                1,
+                                3,
+                                6,
+                                14,
+                                28,
+                                33,
+                                21,
+                                15,
+                                9,
+                                23,
+                                10,
+                                26,
+                                30,
+                                18,
+                                29,
+                                5,
+                                27,
+                                16,
+                                25,
+                                34,
+                                31,
+                                13,
+                                19,
+                                22,
+                                7,
+                                12,
+                                17,
+                                11,
+                                4
+                            ],
+                            "languages": [
+                                "Simplified Chinese",
+                                "Polish",
+                                "Canadian English",
+                                "Romanian",
+                                "Japanese",
+                                "Khmer",
+                                "English",
+                                "Portuguese (Regular)",
+                                "Korean",
+                                "Azeri",
+                                "Croatian",
+                                "UK English",
+                                "Canadian French",
+                                "Kazakh",
+                                "Traditional Chinese (TW)",
+                                "Traditional Chinese (HK)",
+                                "Vietnamese",
+                                "Italian",
+                                "Montenegrin",
+                                "Serbian",
+                                "Bosnian",
+                                "Russian",
+                                "Hebrew",
+                                "Georgian",
+                                "German",
+                                "Mongolian",
+                                "Swedish",
+                                "French",
+                                "Kinyarwanda",
+                                "Portuguese (Brazillian)",
+                                "Arabic",
+                                "Bahasa Indonesia",
+                                "Ukrainian",
+                                "Thai",
+                                "Spanish"
+                            ],
+                            "logoAltTag": ""
+                        }
+                    ]
+                }
+            ],
+            "offerTitle": "Save 20% off your first purchase",
+            "featuredOfferIndicator": false,
+            "validityFromDate": "Jul 1, 2016 GMT",
+            "validityFromMonth": "7",
+            "validityFromDay": "1",
+            "validityFromYear": "2016",
+            "validityFromTimezone": "GMT",
+            "validityToDate": "Sep 1, 2020 GMT",
+            "validityToMonth": "9",
+            "validityToDay": "1",
+            "validityToYear": "2020",
+            "validityToTimezone": "GMT",
+            "promotionFromDate": "Jul 1, 2016 GMT",
+            "promotionFromMonth": "7",
+            "promotionFromDay": "1",
+            "promotionFromYear": "2016",
+            "promotionFromTimezone": "GMT",
+            "promotionToDate": "Sep 1, 2020 GMT",
+            "promotionToMonth": "9",
+            "promotionToDay": "1",
+            "promotionToYear": "2020",
+            "promotionToTimezone": "GMT",
+            "promotionChannelList": [
+                {
+                    "key": 1,
+                    "value": "Print"
+                },
+                {
+                    "key": 3,
+                    "value": "Online"
+                },
+                {
+                    "key": 5,
+                    "value": "In Store / Offline"
+                },
+                {
+                    "key": 6,
+                    "value": "Direct Mail"
+                },
+                {
+                    "key": 82,
+                    "value": "Email"
+                },
+                {
+                    "key": 83,
+                    "value": "Mobile"
+                },
+                {
+                    "key": 84,
+                    "value": "SMS"
+                },
+                {
+                    "key": 85,
+                    "value": "Social"
+                }
+            ],
+            "socialMediaSharingTypes": [
+                {
+                    "key": 122,
+                    "value": "Facebook"
+                }
+            ],
+            "shareTitle": "Save 20% on purchases exceeding $50",
+            "redemptionChannelList": [
+                {
+                    "key": 47,
+                    "value": "In Store / Offline"
+                },
+                {
+                    "key": 48,
+                    "value": "Online /Web/eCommerce"
+                }
+            ],
+            "promotionRestrictions": {
+                "richText": "",
+                "text": ""
+            },
+            "isOfferEvent": false,
+            "isStaging": false,
+            "eventSubTitle": "",
+            "dateLocations": [],
+            "offerShortDescription": {
+                "richText": "Save 20% off on your purchase!",
+                "text": "Save $10 on your purchase!'a0 (LAC/EU ver)"
+            },
+            "offerCopy": {
+                "richText": "&lt;p&gt;Save $10 on purchases that exceed $50 when you use your Visa card.&nbsp;&lt;/p&gt;n&lt;p&gt;adipiscing bibendum est ultricies integer quis auctor elit sed vulputate mi sit amet mauris commodo quis imperdiet massa tincidunt nunc pulvinar sapien et ligula ullamcorper malesuada proin libero nunc consequat interdum varius sit amet mattis vulputate enim nulla aliquet porttitor lacus luctus accumsan tortor posuere ac ut consequat semper viverra nam libero justo laoreet sit amet cursus sit amet dictum sit amet justo donec enim diam vulputate ut pharetra sit amet aliquam id diam maecenas ultricies mi eget mauris pharetra et ultrices neque ornare aenean euismod elementum nisi quis eleifend quam adipiscing vitae proin sagittis nisl rhoncus mattis rhoncus urna&lt;/p&gt;n&lt;p&gt;To redeem, enter or mention promo code VISA at checkout.&nbsp;&lt;/p&gt;",
+                "text": "Save $10 on purchases that exceed $50 when you use your Visa card.'a0 adipiscing bibendum est ultricies integer quis auctor elit sed vulputate mi sit amet mauris commodo quis imperdiet massa tincidunt nunc pulvinar sapien et ligula ullamcorper malesuada proin libero nunc consequat interdum varius sit amet mattis vulputate enim nulla aliquet porttitor lacus luctus accumsan tortor posuere ac ut consequat semper viverra nam libero justo laoreet sit amet cursus sit amet dictum sit amet justo donec enim diam vulputate ut pharetra sit amet aliquam id diam maecenas ultricies mi eget mauris pharetra et ultrices neque ornare aenean euismod elementum nisi quis eleifend quam adipiscing vitae proin sagittis nisl rhoncus mattis rhoncus urna To redeem, enter or mention promo code VISA at checkout.'a0"
+            },
+            "legalCountryExclusions": {
+                "richText": "",
+                "text": ""
+            },
+            "merchantTerms": {
+                "richText": "&lt;p&gt;Only available during the redemption period (July 1, 2016 to September 1, 2020)&lt;/p&gt;",
+                "text": "Only available during the redemption period (July 1, 2016 to September 1, 2020)"
+            },
+            "visaTerms": {
+                "richText": "&lt;p&gt;Eligible for Visa cardholders in LAC &amp; EU only&lt;/p&gt;",
+                "text": "Eligible for Visa cardholders in LAC &amp; EU only"
+            },
+            "fAQs": {
+                "richText": "&lt;p&gt;&lt;strong&gt;Q: How many times may I use this offer?&lt;/strong&gt;&lt;/p&gt;nn&lt;p&gt;A: The redemption code may only be used once per valid card.&lt;/p&gt;nn&lt;p&gt;&lt;strong&gt;Q: Can I use this on a purchase I've already made?&lt;/strong&gt;&lt;/p&gt;nn&lt;p&gt;A: No, the redemption code must be used at time of purchase.&lt;/p&gt;nn&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;",
+                "text": "Q: How many times may I use this offer? A: The redemption code may only be used once per valid card. Q: Can I use this on a purchase I've already made? A: No, the redemption code must be used at time of purchase."
+            },
+            "redemptionTelephone": {
+                "richText": "",
+                "text": ""
+            },
+            "redemptionCode": "VISA",
+            "imageList": [
+                {
+                    "key": 111818,
+                    "imageResolution": "Medium",
+                    "description": "",
+                    "fileLocation": "https://www.visa.com/images/merchantoffers/stage/2018-08/1534281923159.LifestyleImageRetail1600x600.jpg",
+                    "imageFileSize": "274.0 KB",
+                    "imageFileHeight": "600 px",
+                    "imageFileWidth": "1600 px",
+                    "offerImagePromotionChannels": [
+                        "Print",
+                        "Email",
+                        "Online",
+                        "Mobile",
+                        "SMS",
+                        "In Store / Offline",
+                        "Social",
+                        "Direct Mail"
+                    ],
+                    "offerImagePromotionChannelIds": [
+                        1,
+                        82,
+                        3,
+                        83,
+                        84,
+                        5,
+                        85,
+                        6
+                    ],
+                    "imageAltTag": ""
+                },
+                {
+                    "key": 111820,
+                    "imageResolution": "Medium",
+                    "description": "",
+                    "fileLocation": "https://www.visa.com/images/merchantoffers/stage/2018-08/1534281939917.LifestyleImageRetail770x430.jpg",
+                    "imageFileSize": "110.0 KB",
+                    "imageFileHeight": "430 px",
+                    "imageFileWidth": "770 px",
+                    "offerImagePromotionChannels": [
+                        "Print",
+                        "Email",
+                        "Online",
+                        "Mobile",
+                        "SMS",
+                        "In Store / Offline",
+                        "Social",
+                        "Direct Mail"
+                    ],
+                    "offerImagePromotionChannelIds": [
+                        1,
+                        82,
+                        3,
+                        83,
+                        84,
+                        5,
+                        85,
+                        6
+                    ],
+                    "imageAltTag": ""
+                },
+                {
+                    "key": 111821,
+                    "imageResolution": "Medium",
+                    "description": "",
+                    "fileLocation": "https://www.visa.com/images/merchantoffers/stage/2018-08/1534281959177.LifestyleImageRetail400x300.jpg",
+                    "imageFileSize": "49.0 KB",
+                    "imageFileHeight": "300 px",
+                    "imageFileWidth": "400 px",
+                    "offerImagePromotionChannels": [
+                        "Print",
+                        "Email",
+                        "Online",
+                        "Mobile",
+                        "SMS",
+                        "In Store / Offline",
+                        "Social",
+                        "Direct Mail"
+                    ],
+                    "offerImagePromotionChannelIds": [
+                        1,
+                        82,
+                        3,
+                        83,
+                        84,
+                        5,
+                        85,
+                        6
+                    ],
+                    "imageAltTag": ""
+                }
+            ],
+            "barcode": null,
+            "redemptionFormatInstructions": "",
+            "qrCode": null,
+            "offerSource": "Visa Inc",
+            "offerSourceContact": "",
+            "redemptionCountries": [
+                {
+                    "key": 234,
+                    "value": "United States of America"
+                }
+            ],
+            "promotingCountries": [
+                {
+                    "key": 5,
+                    "value": "Andorra"
+                },
+                {
+                    "key": 7,
+                    "value": "Anguilla"
+                },
+                {
+                    "key": 8,
+                    "value": "Antigua & Barbuda"
+                },
+                {
+                    "key": 9,
+                    "value": "Argentina"
+                },
+                {
+                    "key": 11,
+                    "value": "Aruba"
+                },
+                {
+                    "key": 12,
+                    "value": "Ascension Island"
+                },
+                {
+                    "key": 14,
+                    "value": "Austria"
+                },
+                {
+                    "key": 16,
+                    "value": "Bahamas"
+                },
+                {
+                    "key": 19,
+                    "value": "Barbados"
+                },
+                {
+                    "key": 21,
+                    "value": "Belgium"
+                },
+                {
+                    "key": 22,
+                    "value": "Belize"
+                },
+                {
+                    "key": 24,
+                    "value": "Bermuda"
+                },
+                {
+                    "key": 26,
+                    "value": "Bolivia"
+                },
+                {
+                    "key": 30,
+                    "value": "Brazil"
+                },
+                {
+                    "key": 33,
+                    "value": "Bulgaria"
+                },
+                {
+                    "key": 40,
+                    "value": "Cayman Islands"
+                },
+                {
+                    "key": 43,
+                    "value": "Chile"
+                },
+                {
+                    "key": 47,
+                    "value": "Colombia"
+                },
+                {
+                    "key": 52,
+                    "value": "Costa Rica"
+                },
+                {
+                    "key": 55,
+                    "value": "Cuba"
+                },
+                {
+                    "key": 56,
+                    "value": "Cyprus"
+                },
+                {
+                    "key": 57,
+                    "value": "Czech Republic"
+                },
+                {
+                    "key": 58,
+                    "value": "Denmark"
+                },
+                {
+                    "key": 60,
+                    "value": "Dominica"
+                },
+                {
+                    "key": 61,
+                    "value": "Republica Dominicana"
+                },
+                {
+                    "key": 63,
+                    "value": "Ecuador"
+                },
+                {
+                    "key": 65,
+                    "value": "El Salvador"
+                },
+                {
+                    "key": 68,
+                    "value": "Estonia"
+                },
+                {
+                    "key": 70,
+                    "value": "Falkland Islands"
+                },
+                {
+                    "key": 71,
+                    "value": "Faroe Islands"
+                },
+                {
+                    "key": 73,
+                    "value": "Finland"
+                },
+                {
+                    "key": 74,
+                    "value": "France"
+                },
+                {
+                    "key": 75,
+                    "value": "French Guiana"
+                },
+                {
+                    "key": 76,
+                    "value": "French Metropolitan"
+                },
+                {
+                    "key": 82,
+                    "value": "Germany"
+                },
+                {
+                    "key": 84,
+                    "value": "Gibraltar"
+                },
+                {
+                    "key": 86,
+                    "value": "Greece"
+                },
+                {
+                    "key": 88,
+                    "value": "Grenada"
+                },
+                {
+                    "key": 89,
+                    "value": "Guadeloupe"
+                },
+                {
+                    "key": 91,
+                    "value": "Guatemala"
+                },
+                {
+                    "key": 92,
+                    "value": "Guernsey"
+                },
+                {
+                    "key": 95,
+                    "value": "Guyana"
+                },
+                {
+                    "key": 96,
+                    "value": "Haiti"
+                },
+                {
+                    "key": 99,
+                    "value": "Honduras"
+                },
+                {
+                    "key": 101,
+                    "value": "Hungary"
+                },
+                {
+                    "key": 102,
+                    "value": "Iceland"
+                },
+                {
+                    "key": 107,
+                    "value": "Republic of Ireland"
+                },
+                {
+                    "key": 108,
+                    "value": "Isle of Man"
+                },
+                {
+                    "key": 109,
+                    "value": "Israel"
+                },
+                {
+                    "key": 110,
+                    "value": "Italy"
+                },
+                {
+                    "key": 111,
+                    "value": "Jamaica"
+                },
+                {
+                    "key": 113,
+                    "value": "Jersey"
+                },
+                {
+                    "key": 123,
+                    "value": "Latvia"
+                },
+                {
+                    "key": 128,
+                    "value": "Liechtenstein"
+                },
+                {
+                    "key": 129,
+                    "value": "Lithuania"
+                },
+                {
+                    "key": 130,
+                    "value": "Luxembourg"
+                },
+                {
+                    "key": 138,
+                    "value": "Malta"
+                },
+                {
+                    "key": 140,
+                    "value": "Martinique"
+                },
+                {
+                    "key": 144,
+                    "value": "Mexico"
+                },
+                {
+                    "key": 147,
+                    "value": "Monaco"
+                },
+                {
+                    "key": 150,
+                    "value": "Montserrat"
+                },
+                {
+                    "key": 157,
+                    "value": "Netherlands"
+                },
+                {
+                    "key": 158,
+                    "value": "Netherlands Antilles"
+                },
+                {
+                    "key": 161,
+                    "value": "Nicaragua"
+                },
+                {
+                    "key": 167,
+                    "value": "Norway"
+                },
+                {
+                    "key": 172,
+                    "value": "Panama"
+                },
+                {
+                    "key": 174,
+                    "value": "Paraguay"
+                },
+                {
+                    "key": 175,
+                    "value": "Peru"
+                },
+                {
+                    "key": 178,
+                    "value": "Poland"
+                },
+                {
+                    "key": 179,
+                    "value": "Portugal"
+                },
+                {
+                    "key": 180,
+                    "value": "Puerto Rico"
+                },
+                {
+                    "key": 183,
+                    "value": "Romania"
+                },
+                {
+                    "key": 186,
+                    "value": "St. Kitts-Nevis"
+                },
+                {
+                    "key": 187,
+                    "value": "St. Lucia"
+                },
+                {
+                    "key": 188,
+                    "value": "St. Vincent & Grenadines"
+                },
+                {
+                    "key": 190,
+                    "value": "San Marino"
+                },
+                {
+                    "key": 191,
+                    "value": "Sao Tome and Principe"
+                },
+                {
+                    "key": 198,
+                    "value": "Slovakia"
+                },
+                {
+                    "key": 199,
+                    "value": "Slovenia"
+                },
+                {
+                    "key": 203,
+                    "value": "South Georgia and South Sandwich Islands"
+                },
+                {
+                    "key": 204,
+                    "value": "Spain"
+                },
+                {
+                    "key": 209,
+                    "value": "Suriname"
+                },
+                {
+                    "key": 210,
+                    "value": "Svalbard and Jan Mayen Islands"
+                },
+                {
+                    "key": 212,
+                    "value": "Sweden"
+                },
+                {
+                    "key": 213,
+                    "value": "Switzerland"
+                },
+                {
+                    "key": 224,
+                    "value": "Trinidad and Tobago"
+                },
+                {
+                    "key": 226,
+                    "value": "Turkey"
+                },
+                {
+                    "key": 228,
+                    "value": "Turks and Caicos Islands"
+                },
+                {
+                    "key": 233,
+                    "value": "United Kingdom"
+                },
+                {
+                    "key": 236,
+                    "value": "Uruguay"
+                },
+                {
+                    "key": 239,
+                    "value": "Venezuela"
+                },
+                {
+                    "key": 241,
+                    "value": "British Virgin Islands"
+                },
+                {
+                    "key": 242,
+                    "value": "U.S. Virgin Islands"
+                },
+                {
+                    "key": 248,
+                    "value": "Vatican City State"
+                },
+                {
+                    "key": 251,
+                    "value": "Greenland"
+                },
+                {
+                    "key": 252,
+                    "value": "Bes Islands"
+                },
+                {
+                    "key": 253,
+                    "value": "Curacao"
+                },
+                {
+                    "key": 254,
+                    "value": "Sint Maarten"
+                },
+                {
+                    "key": 255,
+                    "value": "St. Barthelemy"
+                }
+            ],
+            "cardProductList": [
+                {
+                    "key": 15,
+                    "value": "Visa Platinum"
+                },
+                {
+                    "key": 16,
+                    "value": "Visa Gold"
+                },
+                {
+                    "key": 17,
+                    "value": "Visa Classic"
+                },
+                {
+                    "key": 41,
+                    "value": "Visa Electron"
+                },
+                {
+                    "key": 42,
+                    "value": "Visa Infinite"
+                },
+                {
+                    "key": 65,
+                    "value": "Visa Signature"
+                },
+                {
+                    "key": 66,
+                    "value": "Visa Signature Preferred"
+                },
+                {
+                    "key": 67,
+                    "value": "Visa Traditional"
+                },
+                {
+                    "key": 68,
+                    "value": "Visa Traditional Rewards"
+                }
+            ],
+            "cardPaymentTypeList": [
+                {
+                    "key": 9,
+                    "value": "Credit"
+                },
+                {
+                    "key": 10,
+                    "value": "Debit"
+                },
+                {
+                    "key": 11,
+                    "value": "Pre-Paid"
+                },
+                {
+                    "key": 86,
+                    "value": "Visa PayWave"
+                }
+            ],
+            "businessSegmentList": [
+                {
+                    "key": 7,
+                    "value": "Commercial"
+                },
+                {
+                    "key": 8,
+                    "value": "Consumer"
+                },
+                {
+                    "key": 39,
+                    "value": "Small Business"
+                }
+            ],
+            "categorySubcategoryList": [
+                {
+                    "key": 97,
+                    "value": "Retail",
+                    "subcategories": [
+                        {
+                            "key": 98,
+                            "value": "Books/Music/Movies"
+                        },
+                        {
+                            "key": 99,
+                            "value": "Fitness & Leisure"
+                        },
+                        {
+                            "key": 100,
+                            "value": "Computers & Electronics"
+                        },
+                        {
+                            "key": 102,
+                            "value": "Apparel & Accessories "
+                        }
+                    ]
+                }
+            ],
+            "offerType": [
+                {
+                    "key": 36,
+                    "value": "% Off"
+                },
+                {
+                    "key": 72,
+                    "value": "Exclusive Offers"
+                }
+            ],
+            "creativeApprovalsEmail": "",
+            "creativeGuidelines": "",
+            "bins": [],
+            "rpins": [],
+            "binstorpins": [],
+            "accountranges": [],
+            "accountrangestorpins": [],
+            "offerMetadata": [],
+            "supData1": {
+                "richText": "",
+                "text": ""
+            },
+            "supData2": {
+                "richText": "",
+                "text": ""
+            },
+            "supData3": {
+                "richText": "",
+                "text": ""
+            },
+            "supData4": {
+                "richText": "",
+                "text": ""
+            }
+        },
+        
+        {
+            "indexNumber": 3,
+            "offerContentId": 105952,
+            "offerId": 102356,
+            "currentVersion": 2,
+            "activeIndicator": true,
+            "soldOut": false,
+            "offerStatus": "APPROVED",
+            "lastModifiedDatetime": "Wed, 15 Aug 2018 17:11:37 GMT",
+            "programId": 100740,
+            "programName": "VDP Program A",
+            "languageId": 1,
+            "language": "English",
+            "merchantList": [
+                {
+                    "merchantId": 101457,
+                    "merchant": "Your business",
+                    "merchantAddress": [
+                        {
+                            "key": 104404,
+                            "address1": "243 SE U St",
+                            "address2": "",
+                            "city": "Washington",
+                            "state": "Washington, D.C.",
+                            "postalCode": "20037",
+                            "countryName": "United States of America",
+                            "languageName": "Simplified Chinese",
+                            "latitude": 38.889321,
+                            "longitude": -77.050166,
+                            "phoneNumbers": [],
+                            "languageIds": [
+                                8,
+                                20,
+                                2,
+                                24,
+                                1,
+                                3,
+                                6,
+                                14,
+                                28,
+                                21,
+                                15,
+                                9,
+                                23,
+                                10,
+                                26,
+                                18,
+                                5,
+                                27,
+                                16,
+                                25,
+                                13,
+                                19,
+                                22,
+                                7,
+                                12,
+                                17,
+                                11,
+                                4
+                            ],
+                            "languages": [
+                                "Simplified Chinese",
+                                "Canadian English",
+                                "Japanese",
+                                "Khmer",
+                                "English",
+                                "Portuguese (Regular)",
+                                "Korean",
+                                "Azeri",
+                                "Croatian",
+                                "Canadian French",
+                                "Kazakh",
+                                "Traditional Chinese (TW)",
+                                "Traditional Chinese (HK)",
+                                "Vietnamese",
+                                "Italian",
+                                "Serbian",
+                                "Russian",
+                                "Hebrew",
+                                "Georgian",
+                                "German",
+                                "French",
+                                "Kinyarwanda",
+                                "Portuguese (Brazillian)",
+                                "Arabic",
+                                "Bahasa Indonesia",
+                                "Ukrainian",
+                                "Thai",
+                                "Spanish"
+                            ]
+                        }
+                    ],
+                    "merchantImages": []
+                }
+            ],
+            "offerTitle": "Save on your emergency supplies",
+            "featuredOfferIndicator": false,
+            "validityFromDate": "Jul 1, 2016 GMT",
+            "validityFromMonth": "7",
+            "validityFromDay": "1",
+            "validityFromYear": "2016",
+            "validityFromTimezone": "GMT",
+            "validityToDate": "Sep 1, 2020 GMT",
+            "validityToMonth": "9",
+            "validityToDay": "1",
+            "validityToYear": "2020",
+            "validityToTimezone": "GMT",
+            "promotionFromDate": "Mar 1, 2016 GMT",
+            "promotionFromMonth": "3",
+            "promotionFromDay": "1",
+            "promotionFromYear": "2016",
+            "promotionFromTimezone": "GMT",
+            "promotionToDate": "Sep 1, 2020 GMT",
+            "promotionToMonth": "9",
+            "promotionToDay": "1",
+            "promotionToYear": "2020",
+            "promotionToTimezone": "GMT",
+            "promotionChannelList": [
+                {
+                    "key": 3,
+                    "value": "Online"
+                },
+                {
+                    "key": 82,
+                    "value": "Email"
+                },
+                {
+                    "key": 83,
+                    "value": "Mobile"
+                },
+                {
+                    "key": 84,
+                    "value": "SMS"
+                },
+                {
+                    "key": 85,
+                    "value": "Social"
+                }
+            ],
+            "socialMediaSharingTypes": [
+                {
+                    "key": 122,
+                    "value": "Facebook"
+                }
+            ],
+            "shareTitle": "Save $10 on purchases exceeding $50",
+            "redemptionChannelList": [
+                {
+                    "key": 47,
+                    "value": "In Store / Offline"
+                },
+                {
+                    "key": 48,
+                    "value": "Online /Web/eCommerce"
+                }
+            ],
+            "promotionRestrictions": {
+                "richText": "",
+                "text": ""
+            },
+            "isOfferEvent": false,
+            "isStaging": false,
+            "eventSubTitle": "",
+            "dateLocations": [],
+            "offerShortDescription": {
+                "richText": "&lt;p&gt;Save $10 on your purchase!&lt;/p&gt;",
+                "text": "Save $10 on your purchase!"
+            },
+            "offerCopy": {
+                "richText": "&lt;p&gt;Save $10 on purchases that exceed $50 when you use your Visa card&lt;/p&gt;n&lt;p&gt;velit laoreet id donec ultrices tincidunt arcu non sodales neque sodales ut etiam sit amet nisl purus in mollis nunc sed id semper risus in hendrerit gravida rutrum quisque non tellus orci ac auctor augue mauris augue neque gravida in fermentum et sollicitudin ac orci phasellus egestas tellus rutrum tellus pellentesque eu tincidunt tortor aliquam nulla facilisi cras fermentum odio eu feugiat pretium nibh ipsum consequat nisl vel pretium lectus quam id leo in vitae turpis massa sed elementum tempus egestas sed sed risus pretium quam vulputate dignissim suspendisse in est ante in nibh mauris cursus mattis molestie a iaculis&lt;/p&gt;n&lt;p&gt;Redeem using promotion code REDEEM.&nbsp;&lt;/p&gt;",
+                "text": "Save $10 on purchases that exceed $50 when you use your Visa card velit laoreet id donec ultrices tincidunt arcu non sodales neque sodales ut etiam sit amet nisl purus in mollis nunc sed id semper risus in hendrerit gravida rutrum quisque non tellus orci ac auctor augue mauris augue neque gravida in fermentum et sollicitudin ac orci phasellus egestas tellus rutrum tellus pellentesque eu tincidunt tortor aliquam nulla facilisi cras fermentum odio eu feugiat pretium nibh ipsum consequat nisl vel pretium lectus quam id leo in vitae turpis massa sed elementum tempus egestas sed sed risus pretium quam vulputate dignissim suspendisse in est ante in nibh mauris cursus mattis molestie a iaculis Redeem using promotion code REDEEM.'a0"
+            },
+            "legalCountryExclusions": {
+                "richText": "",
+                "text": ""
+            },
+            "merchantTerms": {
+                "richText": "&lt;p&gt;Only available during the redemption period (July 1, 2016 to September 1, 2020)&lt;/p&gt;",
+                "text": "Only available during the redemption period (July 1, 2016 to September 1, 2020)"
+            },
+            "visaTerms": {
+                "richText": "&lt;p&gt;Eligible for Visa cardholders only&lt;/p&gt;",
+                "text": "Eligible for Visa cardholders only"
+            },
+            "fAQs": {
+                "richText": "&lt;p&gt;&lt;strong&gt;Q: How many times may I use this offer?&lt;/strong&gt;&lt;/p&gt;nn&lt;p&gt;A: The redemption code may only be used once per valid card.&lt;/p&gt;nn&lt;p&gt;&lt;strong&gt;Q: Can I use this on a purchase I've already made?&lt;/strong&gt;&lt;/p&gt;nn&lt;p&gt;A: No, the redemption code must be used at time of purchase.&lt;/p&gt;nn&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;",
+                "text": "Q: How many times may I use this offer? A: The redemption code may only be used once per valid card. Q: Can I use this on a purchase I've already made? A: No, the redemption code must be used at time of purchase."
+            },
+            "redemptionTelephone": {
+                "richText": "",
+                "text": ""
+            },
+            "redemptionUrl": "https://www.visa.com",
+            "redemptionEmail": "",
+            "redemptionCode": "REDEEM",
+            "imageList": [
+                {
+                    "key": 111831,
+                    "imageResolution": "Medium",
+                    "description": "",
+                    "fileLocation": "https://www.visa.com/images/merchantoffers/stage/2018-08/1534352984036.LifestyleImageRetail770x430.jpg",
+                    "imageFileSize": "110.0 KB",
+                    "imageFileHeight": "430 px",
+                    "imageFileWidth": "770 px",
+                    "offerImagePromotionChannels": [
+                        "Email",
+                        "Online",
+                        "Mobile"
+                    ],
+                    "offerImagePromotionChannelIds": [
+                        82,
+                        3,
+                        83
+                    ],
+                    "imageAltTag": ""
+                },
+                {
+                    "key": 111832,
+                    "imageResolution": "Medium",
+                    "description": "",
+                    "fileLocation": "https://www.visa.com/images/merchantoffers/stage/2018-08/1534353002143.LifestyleImageRetail400x300.jpg",
+                    "imageFileSize": "49.0 KB",
+                    "imageFileHeight": "300 px",
+                    "imageFileWidth": "400 px",
+                    "offerImagePromotionChannels": [
+                        "Mobile",
+                        "SMS",
+                        "Social"
+                    ],
+                    "offerImagePromotionChannelIds": [
+                        83,
+                        84,
+                        85
+                    ],
+                    "imageAltTag": ""
+                },
+                {
+                    "key": 111833,
+                    "imageResolution": "Medium",
+                    "description": "",
+                    "fileLocation": "https://www.visa.com/images/merchantoffers/stage/2018-08/1534353018283.LifestyleImageRetail1600x600.jpg",
+                    "imageFileSize": "274.0 KB",
+                    "imageFileHeight": "600 px",
+                    "imageFileWidth": "1600 px",
+                    "offerImagePromotionChannels": [
+                        "Online",
+                        "Mobile",
+                        "SMS",
+                        "Social"
+                    ],
+                    "offerImagePromotionChannelIds": [
+                        3,
+                        83,
+                        84,
+                        85
+                    ],
+                    "imageAltTag": ""
+                }
+            ],
+            "barcode": null,
+            "redemptionFormatInstructions": "",
+            "qrCode": null,
+            "offerSource": "Visa Inc",
+            "offerSourceContact": "",
+            "redemptionCountries": [
+                {
+                    "key": 1,
+                    "value": "Afghanistan"
+                },
+                {
+                    "key": 2,
+                    "value": "Albania"
+                },
+                {
+                    "key": 3,
+                    "value": "Algeria"
+                },
+                {
+                    "key": 6,
+                    "value": "Angola"
+                },
+                {
+                    "key": 10,
+                    "value": "Armenia"
+                },
+                {
+                    "key": 15,
+                    "value": "Azerbaijan"
+                },
+                {
+                    "key": 17,
+                    "value": "Bahrain"
+                },
+                {
+                    "key": 20,
+                    "value": "Belarus"
+                },
+                {
+                    "key": 23,
+                    "value": "Benin"
+                },
+                {
+                    "key": 27,
+                    "value": "Bosnia and Herzegovina"
+                },
+                {
+                    "key": 28,
+                    "value": "Botswana"
+                },
+                {
+                    "key": 34,
+                    "value": "Burkina Faso"
+                },
+                {
+                    "key": 35,
+                    "value": "Burundi"
+                },
+                {
+                    "key": 37,
+                    "value": "Cameroon"
+                },
+                {
+                    "key": 39,
+                    "value": "Cape Verde"
+                },
+                {
+                    "key": 41,
+                    "value": "Central African Republic"
+                },
+                {
+                    "key": 42,
+                    "value": "Chad"
+                },
+                {
+                    "key": 48,
+                    "value": "Comoros"
+                },
+                {
+                    "key": 49,
+                    "value": "Democratic Republic Congo"
+                },
+                {
+                    "key": 50,
+                    "value": "Congo"
+                },
+                {
+                    "key": 53,
+                    "value": "Cote D'Ivoire"
+                },
+                {
+                    "key": 54,
+                    "value": "Croatia"
+                },
+                {
+                    "key": 59,
+                    "value": "Djibouti"
+                },
+                {
+                    "key": 64,
+                    "value": "Egypt"
+                },
+                {
+                    "key": 66,
+                    "value": "Equatorial Guinea"
+                },
+                {
+                    "key": 67,
+                    "value": "Eritrea"
+                },
+                {
+                    "key": 69,
+                    "value": "Ethiopia"
+                },
+                {
+                    "key": 78,
+                    "value": "French Southern Territories"
+                },
+                {
+                    "key": 79,
+                    "value": "Gabon"
+                },
+                {
+                    "key": 80,
+                    "value": "Gambia"
+                },
+                {
+                    "key": 81,
+                    "value": "Georgia"
+                },
+                {
+                    "key": 83,
+                    "value": "Ghana"
+                },
+                {
+                    "key": 93,
+                    "value": "Guinea"
+                },
+                {
+                    "key": 94,
+                    "value": "Guinea-Bissau"
+                },
+                {
+                    "key": 105,
+                    "value": "Islamic Republic of Iran"
+                },
+                {
+                    "key": 106,
+                    "value": "Iraq"
+                },
+                {
+                    "key": 114,
+                    "value": "Jordan"
+                },
+                {
+                    "key": 115,
+                    "value": "Kazakhstan"
+                },
+                {
+                    "key": 116,
+                    "value": "Kenya"
+                },
+                {
+                    "key": 120,
+                    "value": "Kuwait"
+                },
+                {
+                    "key": 121,
+                    "value": "Kyrgyzstan"
+                },
+                {
+                    "key": 124,
+                    "value": "Lebanon"
+                },
+                {
+                    "key": 125,
+                    "value": "Lesotho"
+                },
+                {
+                    "key": 126,
+                    "value": "Liberia"
+                },
+                {
+                    "key": 127,
+                    "value": "Libyan Arab Jamahiriya"
+                },
+                {
+                    "key": 132,
+                    "value": "Macedonia"
+                },
+                {
+                    "key": 133,
+                    "value": "Madagascar"
+                },
+                {
+                    "key": 134,
+                    "value": "Malawi"
+                },
+                {
+                    "key": 137,
+                    "value": "Mali"
+                },
+                {
+                    "key": 141,
+                    "value": "Mauritania"
+                },
+                {
+                    "key": 142,
+                    "value": "Mauritius"
+                },
+                {
+                    "key": 143,
+                    "value": "Mayotte"
+                },
+                {
+                    "key": 146,
+                    "value": "Moldova, Republic of"
+                },
+                {
+                    "key": 149,
+                    "value": "Montenegro"
+                },
+                {
+                    "key": 151,
+                    "value": "Morocco"
+                },
+                {
+                    "key": 152,
+                    "value": "Mozambique"
+                },
+                {
+                    "key": 154,
+                    "value": "Namibia"
+                },
+                {
+                    "key": 162,
+                    "value": "Niger"
+                },
+                {
+                    "key": 163,
+                    "value": "Nigeria"
+                },
+                {
+                    "key": 168,
+                    "value": "Oman"
+                },
+                {
+                    "key": 169,
+                    "value": "Pakistan"
+                },
+                {
+                    "key": 171,
+                    "value": "Palestine"
+                },
+                {
+                    "key": 177,
+                    "value": "Pitcairn Island"
+                },
+                {
+                    "key": 181,
+                    "value": "Qatar"
+                },
+                {
+                    "key": 182,
+                    "value": "Reunion Island"
+                },
+                {
+                    "key": 184,
+                    "value": "Russian Federation"
+                },
+                {
+                    "key": 185,
+                    "value": "Rwanda"
+                },
+                {
+                    "key": 192,
+                    "value": "Saudi Arabia"
+                },
+                {
+                    "key": 193,
+                    "value": "Senegal"
+                },
+                {
+                    "key": 194,
+                    "value": "Republic of Serbia"
+                },
+                {
+                    "key": 195,
+                    "value": "Seychelles"
+                },
+                {
+                    "key": 196,
+                    "value": "Sierra Leone"
+                },
+                {
+                    "key": 201,
+                    "value": "Somalia"
+                },
+                {
+                    "key": 202,
+                    "value": "South Africa"
+                },
+                {
+                    "key": 206,
+                    "value": "Saint Helena"
+                },
+                {
+                    "key": 208,
+                    "value": "Sudan"
+                },
+                {
+                    "key": 211,
+                    "value": "Swaziland"
+                },
+                {
+                    "key": 214,
+                    "value": "Syrian Arab Republic"
+                },
+                {
+                    "key": 216,
+                    "value": "Tajikistan"
+                },
+                {
+                    "key": 217,
+                    "value": "United Rep. of Tanzania"
+                },
+                {
+                    "key": 221,
+                    "value": "Togo"
+                },
+                {
+                    "key": 225,
+                    "value": "Tunisia"
+                },
+                {
+                    "key": 227,
+                    "value": "Turkmenistan"
+                },
+                {
+                    "key": 230,
+                    "value": "Uganda"
+                },
+                {
+                    "key": 231,
+                    "value": "Ukraine"
+                },
+                {
+                    "key": 232,
+                    "value": "United Arab Emirates"
+                },
+                {
+                    "key": 234,
+                    "value": "United States of America"
+                },
+                {
+                    "key": 237,
+                    "value": "Uzbekistan"
+                },
+                {
+                    "key": 244,
+                    "value": "Western Sahara"
+                },
+                {
+                    "key": 245,
+                    "value": "Yemen Arab Republic"
+                },
+                {
+                    "key": 246,
+                    "value": "Zambia"
+                },
+                {
+                    "key": 247,
+                    "value": "Zimbabwe"
+                },
+                {
+                    "key": 249,
+                    "value": "Kosovo"
+                },
+                {
+                    "key": 250,
+                    "value": "South Sudan"
+                }
+            ],
+            "promotingCountries": [
+                {
+                    "key": 1,
+                    "value": "Afghanistan"
+                },
+                {
+                    "key": 2,
+                    "value": "Albania"
+                },
+                {
+                    "key": 3,
+                    "value": "Algeria"
+                },
+                {
+                    "key": 4,
+                    "value": "American Samoa"
+                },
+                {
+                    "key": 5,
+                    "value": "Andorra"
+                },
+                {
+                    "key": 6,
+                    "value": "Angola"
+                },
+                {
+                    "key": 7,
+                    "value": "Anguilla"
+                },
+                {
+                    "key": 8,
+                    "value": "Antigua & Barbuda"
+                },
+                {
+                    "key": 9,
+                    "value": "Argentina"
+                },
+                {
+                    "key": 10,
+                    "value": "Armenia"
+                },
+                {
+                    "key": 11,
+                    "value": "Aruba"
+                },
+                {
+                    "key": 12,
+                    "value": "Ascension Island"
+                },
+                {
+                    "key": 13,
+                    "value": "Australia"
+                },
+                {
+                    "key": 14,
+                    "value": "Austria"
+                },
+                {
+                    "key": 15,
+                    "value": "Azerbaijan"
+                },
+                {
+                    "key": 16,
+                    "value": "Bahamas"
+                },
+                {
+                    "key": 17,
+                    "value": "Bahrain"
+                },
+                {
+                    "key": 18,
+                    "value": "Bangladesh"
+                },
+                {
+                    "key": 19,
+                    "value": "Barbados"
+                },
+                {
+                    "key": 20,
+                    "value": "Belarus"
+                },
+                {
+                    "key": 21,
+                    "value": "Belgium"
+                },
+                {
+                    "key": 22,
+                    "value": "Belize"
+                },
+                {
+                    "key": 23,
+                    "value": "Benin"
+                },
+                {
+                    "key": 24,
+                    "value": "Bermuda"
+                },
+                {
+                    "key": 25,
+                    "value": "Bhutan"
+                },
+                {
+                    "key": 26,
+                    "value": "Bolivia"
+                },
+                {
+                    "key": 27,
+                    "value": "Bosnia and Herzegovina"
+                },
+                {
+                    "key": 28,
+                    "value": "Botswana"
+                },
+                {
+                    "key": 29,
+                    "value": "Bouvet Island"
+                },
+                {
+                    "key": 30,
+                    "value": "Brazil"
+                },
+                {
+                    "key": 31,
+                    "value": "British Indian Ocean Territory"
+                },
+                {
+                    "key": 32,
+                    "value": "Brunei Darussalam"
+                },
+                {
+                    "key": 33,
+                    "value": "Bulgaria"
+                },
+                {
+                    "key": 34,
+                    "value": "Burkina Faso"
+                },
+                {
+                    "key": 35,
+                    "value": "Burundi"
+                },
+                {
+                    "key": 36,
+                    "value": "Cambodia"
+                },
+                {
+                    "key": 37,
+                    "value": "Cameroon"
+                },
+                {
+                    "key": 38,
+                    "value": "Canada"
+                },
+                {
+                    "key": 39,
+                    "value": "Cape Verde"
+                },
+                {
+                    "key": 40,
+                    "value": "Cayman Islands"
+                },
+                {
+                    "key": 41,
+                    "value": "Central African Republic"
+                },
+                {
+                    "key": 42,
+                    "value": "Chad"
+                },
+                {
+                    "key": 43,
+                    "value": "Chile"
+                },
+                {
+                    "key": 44,
+                    "value": "China"
+                },
+                {
+                    "key": 45,
+                    "value": "Christmas Island"
+                },
+                {
+                    "key": 46,
+                    "value": "Cocos (Keeling) Islands"
+                },
+                {
+                    "key": 47,
+                    "value": "Colombia"
+                },
+                {
+                    "key": 48,
+                    "value": "Comoros"
+                },
+                {
+                    "key": 49,
+                    "value": "Democratic Republic Congo"
+                },
+                {
+                    "key": 50,
+                    "value": "Congo"
+                },
+                {
+                    "key": 51,
+                    "value": "Cook Islands"
+                },
+                {
+                    "key": 52,
+                    "value": "Costa Rica"
+                },
+                {
+                    "key": 53,
+                    "value": "Cote D'Ivoire"
+                },
+                {
+                    "key": 54,
+                    "value": "Croatia"
+                },
+                {
+                    "key": 55,
+                    "value": "Cuba"
+                },
+                {
+                    "key": 56,
+                    "value": "Cyprus"
+                },
+                {
+                    "key": 57,
+                    "value": "Czech Republic"
+                },
+                {
+                    "key": 58,
+                    "value": "Denmark"
+                },
+                {
+                    "key": 59,
+                    "value": "Djibouti"
+                },
+                {
+                    "key": 60,
+                    "value": "Dominica"
+                },
+                {
+                    "key": 61,
+                    "value": "Republica Dominicana"
+                },
+                {
+                    "key": 62,
+                    "value": "East Timor"
+                },
+                {
+                    "key": 63,
+                    "value": "Ecuador"
+                },
+                {
+                    "key": 64,
+                    "value": "Egypt"
+                },
+                {
+                    "key": 65,
+                    "value": "El Salvador"
+                },
+                {
+                    "key": 66,
+                    "value": "Equatorial Guinea"
+                },
+                {
+                    "key": 67,
+                    "value": "Eritrea"
+                },
+                {
+                    "key": 68,
+                    "value": "Estonia"
+                },
+                {
+                    "key": 69,
+                    "value": "Ethiopia"
+                },
+                {
+                    "key": 70,
+                    "value": "Falkland Islands"
+                },
+                {
+                    "key": 71,
+                    "value": "Faroe Islands"
+                },
+                {
+                    "key": 72,
+                    "value": "Fiji"
+                },
+                {
+                    "key": 73,
+                    "value": "Finland"
+                },
+                {
+                    "key": 74,
+                    "value": "France"
+                },
+                {
+                    "key": 75,
+                    "value": "French Guiana"
+                },
+                {
+                    "key": 76,
+                    "value": "French Metropolitan"
+                },
+                {
+                    "key": 77,
+                    "value": "French Polynesia"
+                },
+                {
+                    "key": 78,
+                    "value": "French Southern Territories"
+                },
+                {
+                    "key": 79,
+                    "value": "Gabon"
+                },
+                {
+                    "key": 80,
+                    "value": "Gambia"
+                },
+                {
+                    "key": 81,
+                    "value": "Georgia"
+                },
+                {
+                    "key": 82,
+                    "value": "Germany"
+                },
+                {
+                    "key": 83,
+                    "value": "Ghana"
+                },
+                {
+                    "key": 84,
+                    "value": "Gibraltar"
+                },
+                {
+                    "key": 86,
+                    "value": "Greece"
+                },
+                {
+                    "key": 88,
+                    "value": "Grenada"
+                },
+                {
+                    "key": 89,
+                    "value": "Guadeloupe"
+                },
+                {
+                    "key": 90,
+                    "value": "Guam"
+                },
+                {
+                    "key": 91,
+                    "value": "Guatemala"
+                },
+                {
+                    "key": 92,
+                    "value": "Guernsey"
+                },
+                {
+                    "key": 93,
+                    "value": "Guinea"
+                },
+                {
+                    "key": 94,
+                    "value": "Guinea-Bissau"
+                },
+                {
+                    "key": 95,
+                    "value": "Guyana"
+                },
+                {
+                    "key": 96,
+                    "value": "Haiti"
+                },
+                {
+                    "key": 97,
+                    "value": "Heard and Mc Donald Islands"
+                },
+                {
+                    "key": 98,
+                    "value": "Holy See"
+                },
+                {
+                    "key": 99,
+                    "value": "Honduras"
+                },
+                {
+                    "key": 100,
+                    "value": "Hong Kong, China"
+                },
+                {
+                    "key": 101,
+                    "value": "Hungary"
+                },
+                {
+                    "key": 102,
+                    "value": "Iceland"
+                },
+                {
+                    "key": 103,
+                    "value": "India"
+                },
+                {
+                    "key": 104,
+                    "value": "Indonesia"
+                },
+                {
+                    "key": 105,
+                    "value": "Islamic Republic of Iran"
+                },
+                {
+                    "key": 106,
+                    "value": "Iraq"
+                },
+                {
+                    "key": 107,
+                    "value": "Republic of Ireland"
+                },
+                {
+                    "key": 108,
+                    "value": "Isle of Man"
+                },
+                {
+                    "key": 109,
+                    "value": "Israel"
+                },
+                {
+                    "key": 110,
+                    "value": "Italy"
+                },
+                {
+                    "key": 111,
+                    "value": "Jamaica"
+                },
+                {
+                    "key": 112,
+                    "value": "Japan"
+                },
+                {
+                    "key": 113,
+                    "value": "Jersey"
+                },
+                {
+                    "key": 114,
+                    "value": "Jordan"
+                },
+                {
+                    "key": 115,
+                    "value": "Kazakhstan"
+                },
+                {
+                    "key": 116,
+                    "value": "Kenya"
+                },
+                {
+                    "key": 117,
+                    "value": "Kiribati"
+                },
+                {
+                    "key": 118,
+                    "value": "North Korea"
+                },
+                {
+                    "key": 119,
+                    "value": "South Korea"
+                },
+                {
+                    "key": 120,
+                    "value": "Kuwait"
+                },
+                {
+                    "key": 121,
+                    "value": "Kyrgyzstan"
+                },
+                {
+                    "key": 122,
+                    "value": "Lao People's Dem. Rep."
+                },
+                {
+                    "key": 123,
+                    "value": "Latvia"
+                },
+                {
+                    "key": 124,
+                    "value": "Lebanon"
+                },
+                {
+                    "key": 125,
+                    "value": "Lesotho"
+                },
+                {
+                    "key": 126,
+                    "value": "Liberia"
+                },
+                {
+                    "key": 127,
+                    "value": "Libyan Arab Jamahiriya"
+                },
+                {
+                    "key": 128,
+                    "value": "Liechtenstein"
+                },
+                {
+                    "key": 129,
+                    "value": "Lithuania"
+                },
+                {
+                    "key": 130,
+                    "value": "Luxembourg"
+                },
+                {
+                    "key": 131,
+                    "value": "Macau, China"
+                },
+                {
+                    "key": 132,
+                    "value": "Macedonia"
+                },
+                {
+                    "key": 133,
+                    "value": "Madagascar"
+                },
+                {
+                    "key": 134,
+                    "value": "Malawi"
+                },
+                {
+                    "key": 135,
+                    "value": "Malaysia"
+                },
+                {
+                    "key": 136,
+                    "value": "Maldives"
+                },
+                {
+                    "key": 137,
+                    "value": "Mali"
+                },
+                {
+                    "key": 138,
+                    "value": "Malta"
+                },
+                {
+                    "key": 139,
+                    "value": "Marshall Islands"
+                },
+                {
+                    "key": 140,
+                    "value": "Martinique"
+                },
+                {
+                    "key": 141,
+                    "value": "Mauritania"
+                },
+                {
+                    "key": 142,
+                    "value": "Mauritius"
+                },
+                {
+                    "key": 143,
+                    "value": "Mayotte"
+                },
+                {
+                    "key": 144,
+                    "value": "Mexico"
+                },
+                {
+                    "key": 145,
+                    "value": "Micronesia"
+                },
+                {
+                    "key": 146,
+                    "value": "Moldova, Republic of"
+                },
+                {
+                    "key": 147,
+                    "value": "Monaco"
+                },
+                {
+                    "key": 148,
+                    "value": "Mongolia"
+                },
+                {
+                    "key": 149,
+                    "value": "Montenegro"
+                },
+                {
+                    "key": 150,
+                    "value": "Montserrat"
+                },
+                {
+                    "key": 151,
+                    "value": "Morocco"
+                },
+                {
+                    "key": 152,
+                    "value": "Mozambique"
+                },
+                {
+                    "key": 153,
+                    "value": "Myanmar"
+                },
+                {
+                    "key": 154,
+                    "value": "Namibia"
+                },
+                {
+                    "key": 155,
+                    "value": "Nauru"
+                },
+                {
+                    "key": 156,
+                    "value": "Nepal"
+                },
+                {
+                    "key": 157,
+                    "value": "Netherlands"
+                },
+                {
+                    "key": 158,
+                    "value": "Netherlands Antilles"
+                },
+                {
+                    "key": 159,
+                    "value": "New Caledonia"
+                },
+                {
+                    "key": 160,
+                    "value": "New Zealand"
+                },
+                {
+                    "key": 161,
+                    "value": "Nicaragua"
+                },
+                {
+                    "key": 162,
+                    "value": "Niger"
+                },
+                {
+                    "key": 163,
+                    "value": "Nigeria"
+                },
+                {
+                    "key": 164,
+                    "value": "Niue"
+                },
+                {
+                    "key": 165,
+                    "value": "Norfolk Island"
+                },
+                {
+                    "key": 166,
+                    "value": "Northern Mariana Islands"
+                },
+                {
+                    "key": 167,
+                    "value": "Norway"
+                },
+                {
+                    "key": 168,
+                    "value": "Oman"
+                },
+                {
+                    "key": 169,
+                    "value": "Pakistan"
+                },
+                {
+                    "key": 170,
+                    "value": "Palau"
+                },
+                {
+                    "key": 171,
+                    "value": "Palestine"
+                },
+                {
+                    "key": 172,
+                    "value": "Panama"
+                },
+                {
+                    "key": 173,
+                    "value": "Papua New Guinea"
+                },
+                {
+                    "key": 174,
+                    "value": "Paraguay"
+                },
+                {
+                    "key": 175,
+                    "value": "Peru"
+                },
+                {
+                    "key": 176,
+                    "value": "Philippines"
+                },
+                {
+                    "key": 177,
+                    "value": "Pitcairn Island"
+                },
+                {
+                    "key": 178,
+                    "value": "Poland"
+                },
+                {
+                    "key": 179,
+                    "value": "Portugal"
+                },
+                {
+                    "key": 180,
+                    "value": "Puerto Rico"
+                },
+                {
+                    "key": 181,
+                    "value": "Qatar"
+                },
+                {
+                    "key": 182,
+                    "value": "Reunion Island"
+                },
+                {
+                    "key": 183,
+                    "value": "Romania"
+                },
+                {
+                    "key": 184,
+                    "value": "Russian Federation"
+                },
+                {
+                    "key": 185,
+                    "value": "Rwanda"
+                },
+                {
+                    "key": 186,
+                    "value": "St. Kitts-Nevis"
+                },
+                {
+                    "key": 187,
+                    "value": "St. Lucia"
+                },
+                {
+                    "key": 188,
+                    "value": "St. Vincent & Grenadines"
+                },
+                {
+                    "key": 189,
+                    "value": "Samoa"
+                },
+                {
+                    "key": 190,
+                    "value": "San Marino"
+                },
+                {
+                    "key": 191,
+                    "value": "Sao Tome and Principe"
+                },
+                {
+                    "key": 192,
+                    "value": "Saudi Arabia"
+                },
+                {
+                    "key": 193,
+                    "value": "Senegal"
+                },
+                {
+                    "key": 194,
+                    "value": "Republic of Serbia"
+                },
+                {
+                    "key": 195,
+                    "value": "Seychelles"
+                },
+                {
+                    "key": 196,
+                    "value": "Sierra Leone"
+                },
+                {
+                    "key": 197,
+                    "value": "Singapore"
+                },
+                {
+                    "key": 198,
+                    "value": "Slovakia"
+                },
+                {
+                    "key": 199,
+                    "value": "Slovenia"
+                },
+                {
+                    "key": 200,
+                    "value": "Solomon Islands"
+                },
+                {
+                    "key": 201,
+                    "value": "Somalia"
+                },
+                {
+                    "key": 202,
+                    "value": "South Africa"
+                },
+                {
+                    "key": 203,
+                    "value": "South Georgia and South Sandwich Islands"
+                },
+                {
+                    "key": 204,
+                    "value": "Spain"
+                },
+                {
+                    "key": 205,
+                    "value": "Sri Lanka"
+                },
+                {
+                    "key": 206,
+                    "value": "Saint Helena"
+                },
+                {
+                    "key": 208,
+                    "value": "Sudan"
+                },
+                {
+                    "key": 209,
+                    "value": "Suriname"
+                },
+                {
+                    "key": 210,
+                    "value": "Svalbard and Jan Mayen Islands"
+                },
+                {
+                    "key": 211,
+                    "value": "Swaziland"
+                },
+                {
+                    "key": 212,
+                    "value": "Sweden"
+                },
+                {
+                    "key": 213,
+                    "value": "Switzerland"
+                },
+                {
+                    "key": 214,
+                    "value": "Syrian Arab Republic"
+                },
+                {
+                    "key": 215,
+                    "value": "Taiwan"
+                },
+                {
+                    "key": 216,
+                    "value": "Tajikistan"
+                },
+                {
+                    "key": 217,
+                    "value": "United Rep. of Tanzania"
+                },
+                {
+                    "key": 218,
+                    "value": "Thailand"
+                },
+                {
+                    "key": 220,
+                    "value": "Timor-Leste"
+                },
+                {
+                    "key": 221,
+                    "value": "Togo"
+                },
+                {
+                    "key": 222,
+                    "value": "Tokelau"
+                },
+                {
+                    "key": 223,
+                    "value": "Tonga"
+                },
+                {
+                    "key": 224,
+                    "value": "Trinidad and Tobago"
+                },
+                {
+                    "key": 225,
+                    "value": "Tunisia"
+                },
+                {
+                    "key": 226,
+                    "value": "Turkey"
+                },
+                {
+                    "key": 227,
+                    "value": "Turkmenistan"
+                },
+                {
+                    "key": 228,
+                    "value": "Turks and Caicos Islands"
+                },
+                {
+                    "key": 229,
+                    "value": "Tuvalu"
+                },
+                {
+                    "key": 230,
+                    "value": "Uganda"
+                },
+                {
+                    "key": 231,
+                    "value": "Ukraine"
+                },
+                {
+                    "key": 232,
+                    "value": "United Arab Emirates"
+                },
+                {
+                    "key": 233,
+                    "value": "United Kingdom"
+                },
+                {
+                    "key": 234,
+                    "value": "United States of America"
+                },
+                {
+                    "key": 235,
+                    "value": "U.S. Minor Outlying Islands"
+                },
+                {
+                    "key": 236,
+                    "value": "Uruguay"
+                },
+                {
+                    "key": 237,
+                    "value": "Uzbekistan"
+                },
+                {
+                    "key": 238,
+                    "value": "Vanuatu"
+                },
+                {
+                    "key": 239,
+                    "value": "Venezuela"
+                },
+                {
+                    "key": 240,
+                    "value": "Vietnam"
+                },
+                {
+                    "key": 241,
+                    "value": "British Virgin Islands"
+                },
+                {
+                    "key": 242,
+                    "value": "U.S. Virgin Islands"
+                },
+                {
+                    "key": 243,
+                    "value": "Wallis and Futuna Islands"
+                },
+                {
+                    "key": 244,
+                    "value": "Western Sahara"
+                },
+                {
+                    "key": 245,
+                    "value": "Yemen Arab Republic"
+                },
+                {
+                    "key": 246,
+                    "value": "Zambia"
+                },
+                {
+                    "key": 247,
+                    "value": "Zimbabwe"
+                },
+                {
+                    "key": 248,
+                    "value": "Vatican City State"
+                },
+                {
+                    "key": 249,
+                    "value": "Kosovo"
+                },
+                {
+                    "key": 250,
+                    "value": "South Sudan"
+                },
+                {
+                    "key": 251,
+                    "value": "Greenland"
+                },
+                {
+                    "key": 252,
+                    "value": "Bes Islands"
+                },
+                {
+                    "key": 253,
+                    "value": "Curacao"
+                },
+                {
+                    "key": 254,
+                    "value": "Sint Maarten"
+                },
+                {
+                    "key": 255,
+                    "value": "St. Barthelemy"
+                }
+            ],
+            "cardProductList": [
+                {
+                    "key": 15,
+                    "value": "Visa Platinum"
+                },
+                {
+                    "key": 16,
+                    "value": "Visa Gold"
+                },
+                {
+                    "key": 17,
+                    "value": "Visa Classic"
+                },
+                {
+                    "key": 41,
+                    "value": "Visa Electron"
+                },
+                {
+                    "key": 42,
+                    "value": "Visa Infinite"
+                },
+                {
+                    "key": 65,
+                    "value": "Visa Signature"
+                },
+                {
+                    "key": 66,
+                    "value": "Visa Signature Preferred"
+                },
+                {
+                    "key": 67,
+                    "value": "Visa Traditional"
+                },
+                {
+                    "key": 68,
+                    "value": "Visa Traditional Rewards"
+                }
+            ],
+            "cardPaymentTypeList": [
+                {
+                    "key": 9,
+                    "value": "Credit"
+                },
+                {
+                    "key": 10,
+                    "value": "Debit"
+                },
+                {
+                    "key": 11,
+                    "value": "Pre-Paid"
+                },
+                {
+                    "key": 86,
+                    "value": "Visa PayWave"
+                }
+            ],
+            "businessSegmentList": [
+                {
+                    "key": 7,
+                    "value": "Commercial"
+                },
+                {
+                    "key": 8,
+                    "value": "Consumer"
+                },
+                {
+                    "key": 39,
+                    "value": "Small Business"
+                }
+            ],
+            "categorySubcategoryList": [
+                {
+                    "key": 97,
+                    "value": "Retail",
+                    "subcategories": [
+                        {
+                            "key": 98,
+                            "value": "Books/Music/Movies"
+                        },
+                        {
+                            "key": 99,
+                            "value": "Fitness & Leisure"
+                        },
+                        {
+                            "key": 100,
+                            "value": "Computers & Electronics"
+                        },
+                        {
+                            "key": 102,
+                            "value": "Apparel & Accessories "
+                        }
+                    ]
+                }
+            ],
+            "offerType": [
+                {
+                    "key": 35,
+                    "value": "$$ Off"
+                }
+            ],
+            "creativeApprovalsEmail": "",
+            "creativeGuidelines": "",
+            "bins": [],
+            "rpins": [],
+            "binstorpins": [],
+            "accountranges": [],
+            "accountrangestorpins": [],
+            "offerMetadata": [],
+            "supData1": {
+                "richText": "",
+                "text": ""
+            },
+            "supData2": {
+                "richText": "",
+                "text": ""
+            },
+            "supData3": {
+                "richText": "",
+                "text": ""
+            },
+            "supData4": {
+                "richText": "",
+                "text": ""
+            }
+        }
+    ],
+    "TotalFoundResults": 3
+}
