@@ -18,17 +18,15 @@ class Request: NSObject, MKAnnotation, Codable {
     var caseStatus: Bool
     var id: UUID
     
+    var latitude: Double
+    var longitude: Double
+    
     var coordinate: CLLocationCoordinate2D {
-        var location = CLLocationCoordinate2D()
-        CLGeocoder().geocodeAddressString(address) { (results, _) in
-            guard let coordinates = results?.first?.location?.coordinate else {return}
-            location = coordinates
-        }
-        return location
+        return CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
     }
     
 
-    init(title: String, requestDescription: String, category: String, address: String, date: Date, caseStatus: Bool, id: UUID){
+    init(title: String, requestDescription: String, category: String, address: String, date: Date, caseStatus: Bool, id: UUID, latitude: Double, longitude: Double){
         self.title = title
         self.requestDescription = requestDescription
         self.category = category
@@ -36,6 +34,8 @@ class Request: NSObject, MKAnnotation, Codable {
         self.date = date
         self.caseStatus = caseStatus
         self.id = id
+        self.latitude = latitude
+        self.longitude = longitude
     }
 }
 

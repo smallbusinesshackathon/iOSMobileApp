@@ -32,10 +32,10 @@ class BusinessMapViewController: UIViewController, MKMapViewDelegate, CLLocation
         updateAlertLabel(alerts: [])
         
         loadAllOffers() {
-            print("done")
+            self.mapView.addAnnotations(self.offers)
         }
         //        self.mapView.addAnnotations(requests)
-        self.mapView.addAnnotations(offers)
+        
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
