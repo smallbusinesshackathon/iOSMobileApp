@@ -60,10 +60,8 @@ class AddEditBusinessRequestViewController: UIViewController {
     
     private func postRequest(title: String, description: String, category: String, address: String, caseStatus: Bool) {
         
-
         let helpRequest = Request(title: title, requestDescription: description, category: category, address: address, date: Date(), caseStatus: caseStatus, id: UUID())
 
-        
         let url = URL(string: "https://smallbusinesshackathon.firebaseio.com/requests")!.appendingPathComponent(helpRequest.id.uuidString).appendingPathExtension("json")
         
         var request = URLRequest(url: url)
