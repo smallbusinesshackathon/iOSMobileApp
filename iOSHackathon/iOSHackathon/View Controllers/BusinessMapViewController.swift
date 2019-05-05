@@ -70,8 +70,17 @@ class BusinessMapViewController: UIViewController, MKMapViewDelegate, CLLocation
         
         dequeued.canShowCallout = true
         
-        //TODO: Implement detailView
         return dequeued
+    }
+    
+    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+        let overlay = overlay as! MKPolygon
+            let renderer = MKPolygonRenderer(polygon: overlay)
+            renderer.fillColor = UIColor.orange.withAlphaComponent(0.5)
+            renderer.lineWidth = 2
+            renderer.strokeColor = UIColor.orange
+        
+        return renderer
     }
     
 
@@ -112,6 +121,7 @@ class BusinessMapViewController: UIViewController, MKMapViewDelegate, CLLocation
             guard let results = results else {return}
             DispatchQueue.main.async {
                 self.updateAlertLabel(alerts: results)
+                self.addOverlayToMap(alert: results[0])
             }
         }
     }
@@ -190,6 +200,15 @@ class BusinessMapViewController: UIViewController, MKMapViewDelegate, CLLocation
         view.addSubview(statusBarView)
     }
     
+    private func addOverlayToMap(alert:WeatherAlert){
+        guard let area = alert.affectedArea else {
+            return
+        }
+        let polygon = MKPolygon(coordinates: area, count: area.count)
+        mapView.addOverlay(polygon, level: .aboveRoads)
+        
+        
+    }
     //MARK: - Private Networking Functions
     
     
