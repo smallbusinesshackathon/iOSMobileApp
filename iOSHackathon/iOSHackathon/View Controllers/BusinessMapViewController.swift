@@ -29,17 +29,20 @@ class BusinessMapViewController: UIViewController, MKMapViewDelegate, CLLocation
         
         alertLabel.textColor = .white
         
-        let color = severityRating["none"]!.color
-        updateStatusBarColor(color: color)
-        alertView.backgroundColor = color
+        updateAlertLabel(alerts: [])
+        
+        loadAllOffers() {
+            print("done")
+        }
+        //        self.mapView.addAnnotations(requests)
+        self.mapView.addAnnotations(offers)
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         //        tableView.reloadData()
         
-        mapView.delegate = self
-        mapView.register(MKMarkerAnnotationView.self, forAnnotationViewWithReuseIdentifier: "MapAnnotation")
+        
     }
     
     //MARK: CLLocationManagerDelegate
@@ -56,14 +59,14 @@ class BusinessMapViewController: UIViewController, MKMapViewDelegate, CLLocation
     
     //MARK: MapViewDelegate Method
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        let businessAnnotation = mapView.dequeueReusableAnnotationView(withIdentifier: "BusinessAnnotation", for: annotation) as! MKMarkerAnnotationView
-        businessAnnotation.markerTintColor = .darkGray
-        businessAnnotation.glyphTintColor = .white
+        let annotation = mapView.dequeueReusableAnnotationView(withIdentifier: "MapAnnotation", for: annotation) as! MKMarkerAnnotationView
+        annotation.markerTintColor = .darkGray
+        annotation.glyphTintColor = .white
         
-        businessAnnotation.canShowCallout = true
+        annotation.canShowCallout = true
         
         //TODO: Implement detailView
-        return businessAnnotation
+        return annotation
     }
     
     //MARK: - Private
@@ -74,10 +77,13 @@ class BusinessMapViewController: UIViewController, MKMapViewDelegate, CLLocation
         //        guard let location = location else {return}
         //        let location = demoLocationDC
         
-        let viewRegion = MKCoordinateRegion(center: demoLocationDC, latitudinalMeters: 2000, longitudinalMeters: 2000)
+        let viewRegion = MKCoordinateRegion(center: demoLocationDC, latitudinalMeters: 20000, longitudinalMeters: 20000)
         mapView.setRegion(viewRegion, animated: true)
         
         //TODO: - make API calls for Requests/Offers and handle the response
+        
+        //make API request to load offers
+        //        loadAllOffers()
         
         //Find local alerts
         getAlertFromNWSAPI(coordinate: location) { (results, error) in
@@ -94,15 +100,20 @@ class BusinessMapViewController: UIViewController, MKMapViewDelegate, CLLocation
     }
     
     private func updateAlertLabel(alerts: [WeatherAlert]){
+        var backgroundColor = UIColor()
+        var labelText = ""
+        
         if alerts.isEmpty{
-            alertLabel.text = "There are no weather alerts in your current area"
+            labelText = "There are no weather alerts in your current area"
+            backgroundColor = severityRating["none"]!.color
         } else {
             guard let mostSevere = getMostSevereAlert(alerts: alerts) else {return}
-            alertLabel.text = "\(mostSevere.severity): \(mostSevere.event)"
-            let backgroundColor = severityRating[mostSevere.severity.lowercased()]!.color
-            alertView.backgroundColor = backgroundColor
-            updateStatusBarColor(color: backgroundColor)
+            labelText = "\(mostSevere.severity): \(mostSevere.event)"
+            backgroundColor = severityRating[mostSevere.severity.lowercased()]!.color
         }
+        alertLabel.text = labelText
+        alertView.backgroundColor = backgroundColor
+        updateStatusBarColor(color: backgroundColor)
     }
     
     private func getMostSevereAlert(alerts: [WeatherAlert]) -> WeatherAlert? {
@@ -178,8 +189,86 @@ class BusinessMapViewController: UIViewController, MKMapViewDelegate, CLLocation
         return urlComponents.url
     }
     
+    private func loadAllOffers(completion:@escaping ()->Void) {
+        let url = URL(string: "https://smallbusinesshackathon.firebaseio.com/offers.json")!
+        
+        var request = URLRequest(url: url)
+        
+        request.httpMethod = "GET"
+        
+        URLSession.shared.dataTask(with: request) { (data, _, error) in
+            
+            if let error = error {
+                NSLog("Error getting offers: \(error)")
+                return
+            }
+            
+            //            guard let data = data else {
+            //                NSLog("Error getting offers data: \(NSError())")
+            //                return
+            //            }
+            
+            //begin demo Code
+            
+            guard let url = Bundle.main.url(forResource: "demoOfferData", withExtension: "json") else {return}
+            
+            
+            do {
+                let demoData = try Data(contentsOf: url)
+//                                let convertedString = String(data: demoData, encoding: String.Encoding.utf8)
+//                                print(convertedString!)
+//                
+                let offerResult = try JSONDecoder().decode(Response.self, from: demoData)
+                let offers = offerResult.offers
+//                print(offerResult)
+//                self.offers = offerResult.compactMap({ $0.value })
+                self.offers = offers.compactMap({ $0})
+//                self.offers = offers
+                completion()
+            } catch {
+                NSLog("Error decoding offer representations: \(error)")
+            }
+            
+            }.resume()
+        
+    }
     
-    
+    private func loadAllRequests(completion:@escaping ()->Void) {
+        
+        let url = URL(string: "https://smallbusinesshackathon.firebaseio.com/requests.json")!
+        
+        var request = URLRequest(url: url)
+        
+        request.httpMethod = "GET"
+        
+        URLSession.shared.dataTask(with: request) { (data, _, error) in
+            
+            if let error = error {
+                NSLog("Error getting request: \(error)")
+                return
+            }
+            
+            guard let data = data else {
+                NSLog("Error getting request data: \(NSError())")
+                return
+            }
+            
+            do {
+                
+                //                let convertedString = String(data: data, encoding: String.Encoding.utf8)
+                //                print(convertedString!)
+                let requestResult = try JSONDecoder().decode([String: Request].self, from: data)
+                
+                print(requestResult)
+                self.requests = requestResult.compactMap({ $0.value })
+                completion()
+            } catch {
+                NSLog("Error decoding requests: \(error)")
+            }
+            
+            }.resume()
+        
+    }
     
     //MARK: - Properties
     private var locationManager  = CLLocationManager()

@@ -8,67 +8,58 @@
 import Foundation
 import MapKit
 
+
+struct Response: Codable{
+    var offers: [Offer]
+}
+
 class Offer: NSObject, MKAnnotation, Codable {
-    var coordinate: CLLocationCoordinate2D {
-        var location = CLLocationCoordinate2D()
-        CLGeocoder().geocodeAddressString(merchantList.first?.merchantAddress.first ?? "") { (results, _) in
-            guard let coordinates = results?.first?.location?.coordinate else {return}
-            location = coordinates
-        }
-        return location
-    }
-    
-    var title: String?{
-        return offerTitle
-    }
-    
     var offerId: Int
-    var activeIndicator, soldOut: Bool
-    var merchantList: [MerchantList]
+    var activeIndicator: Bool
+    var merchantList: [Merchant]
     var offerTitle: String
-    var validityFromDate, validityToDate: String
-    var shareTitle: String
-    var offerShortDescription, offerCopy, merchantTerms: FAQs
+    var validityToDate: String
+    var validityFromDate: String
+    var shareTitle:String
     var redemptionCode: String
-    var barcode: String?
-    var qrCode: String?
+    var offerShortDescription: ShortDescription?
     
-    
-    init(offerRepresentation: OfferRepresentation) {
-        
-        offerId = offerRepresentation.offerId
-        activeIndicator = offerRepresentation.activeIndicator
-        soldOut = offerRepresentation.soldOut
-        merchantList = offerRepresentation.merchantList
-        offerTitle = offerRepresentation.offerTitle
-        validityFromDate = offerRepresentation.validityFromDate
-        validityToDate = offerRepresentation.validityToDate
-        shareTitle = offerRepresentation.shareTitle
-        offerShortDescription = offerRepresentation.offerShortDescription
-        offerCopy = offerRepresentation.offerCopy
-        merchantTerms = offerRepresentation.merchantTerms
-        redemptionCode = offerRepresentation.redemptionCode
-        barcode = offerRepresentation.barcode
-        qrCode = offerRepresentation.qrCode
-        
-    
+    struct ShortDescription: Codable{
+        var text:String
     }
     
+    var coordinate: CLLocationCoordinate2D {
+        let latitude = merchantList[0].merchantAddress[0].latitude
+        let longitude = merchantList[0].merchantAddress[0].longitude
+        
+        return CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+    }
+    
+    struct Merchant: Codable {
+        var merchantID: Int?
+        var merchant: String?
+        var merchantAddress: [MerchantAddress]
+        
+        struct MerchantAddress: Codable{
+            var address1: String
+            var latitude: Double
+            var longitude: Double
+        }
+    }
+
     init(title: String, description: String, id: Int) {
-        self.offerTitle = title
-        self.offerId = id
-        self.activeIndicator = true
-        self.soldOut = false
-        self.merchantList = [MerchantList(merchantId: 0, merchant: "", merchantAddress: [""], merchantImages: [MerchantImage(fileLocation: "")])]
-        self.validityToDate = ""
-        self.validityFromDate = ""
-        self.shareTitle = ""
-        self.offerShortDescription = FAQs(text: "")
-        self.offerCopy = FAQs(text: "")
-        self.merchantTerms = FAQs(text: "")
-        self.barcode = ""
-        self.qrCode = ""
-        self.redemptionCode = ""
+        offerId = 0
+        activeIndicator = true
+        merchantList = []
+        offerTitle = ""
+        validityToDate = ""
+        validityFromDate = ""
+        shareTitle = ""
+        offerShortDescription = ShortDescription(text: "")
+        redemptionCode = ""
+        self.merchantList = []
+        
+        
     }
     
 }
