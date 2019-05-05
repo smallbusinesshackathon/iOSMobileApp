@@ -12,8 +12,10 @@ class BusinessOfferDetailViewController: UIViewController {
     
     @IBOutlet weak var offerValidtoDateLabel: UILabel!
     @IBOutlet weak var offerShareTitleLabel: UILabel!
-    @IBOutlet weak var offerDescriptionTextView: UITextView!
+    @IBOutlet weak var merchantLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var offerRedemptionCodeLabel: UILabel!
+    @IBOutlet weak var locationLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,9 +31,9 @@ class BusinessOfferDetailViewController: UIViewController {
         
         offerValidtoDateLabel.text = offer.validityToDate
         offerShareTitleLabel.text = offer.shareTitle
-        offerDescriptionTextView.text = "\(offer.offerShortDescription)"
+        descriptionLabel.text = offer.offerShortDescription?.text ?? "Check it out!"
         offerRedemptionCodeLabel.text = offer.redemptionCode
-        
+        locationLabel.text = offer.merchantList.first?.merchantAddress.first?.address1 ?? "123 Main St"
         
     }
 
@@ -39,6 +41,7 @@ class BusinessOfferDetailViewController: UIViewController {
     
     var offer: Offer? {
         didSet {
+            guard isViewLoaded else { return }
             updateViews()
         }
     }

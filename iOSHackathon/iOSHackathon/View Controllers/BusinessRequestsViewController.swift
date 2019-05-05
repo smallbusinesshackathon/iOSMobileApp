@@ -118,7 +118,7 @@ class BusinessRequestsViewController: UIViewController, UICollectionViewDelegate
 //                print(convertedString!)
                 let requestResult = try JSONDecoder().decode([String: Request].self, from: data)
                 
-                print(requestResult)
+                //print(requestResult)
                 self.requests = requestResult.compactMap({ $0.value })
             } catch {
                 NSLog("Error decoding requests: \(error)")
