@@ -26,9 +26,10 @@ class Request: NSObject, MKAnnotation, Codable {
         }
         return location
     }
-    
+
 
     init(title: String, requestDescription: String, category: String, address: String, date: Date, caseStatus: Bool, id: UUID) {
+
 
         self.title = title
         self.requestDescription = requestDescription
