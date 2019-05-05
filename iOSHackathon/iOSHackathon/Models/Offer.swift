@@ -8,77 +8,54 @@
 import Foundation
 import MapKit
 
+
+struct Response: Codable{
+    var offers: [Offer]
+}
+
 class Offer: NSObject, MKAnnotation, Codable {
-//    var coordinate: CLLocationCoordinate2D {
-//        var location = CLLocationCoordinate2D()
-//
-//        let semaphore = DispatchSemaphore(value: 0)
-//        CLGeocoder().geocodeAddressString(merchantList.first?.merchantAddress.first ?? "") { (results, _) in
-//            guard let coordinates = results?.first?.location?.coordinate else {return}
-//            location = coordinates
-//
-//            semaphore.signal()
-//        }
-//        return location
-//    }
-    var coordinate: CLLocationCoordinate2D{
+    var offerId: Int
+    var activeIndicator: Bool
+    var merchantList: [Merchant]
+    var offerTitle: String
+    var validityToDate: String
+    var validityFromDate: String
+    var shareTitle:String
+    var offerShortDescription: String
+    var redemptionCode: String
+    
+    var coordinate: CLLocationCoordinate2D {
+        let latitude = merchantList[0].merchantAddress[0].latitude
+        let longitude = merchantList[0].merchantAddress[0].longitude
+        
         return CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
     }
-    var title: String?{
-        return offerTitle
-    }
     
-    var offerId: Int
-    var activeIndicator, soldOut: Bool
-    var merchantList: [MerchantList]
-    var offerTitle: String
-    var validityFromDate, validityToDate: String
-    var shareTitle: String
-    var offerShortDescription, offerCopy, merchantTerms: FAQs
-    var redemptionCode: String
-    var barcode: String?
-    var qrCode: String?
-    var latitude: Double
-    var longitude: Double
-    
-    init(offerRepresentation: OfferRepresentation) {
+    struct Merchant: Codable {
+        var merchantID: Int
+        var merchant: String
+        var merchantAddress: [MerchantAddress]
         
-        offerId = offerRepresentation.offerId
-        activeIndicator = offerRepresentation.activeIndicator
-        soldOut = offerRepresentation.soldOut
-        merchantList = offerRepresentation.merchantList
-        offerTitle = offerRepresentation.offerTitle
-        validityFromDate = offerRepresentation.validityFromDate
-        validityToDate = offerRepresentation.validityToDate
-        shareTitle = offerRepresentation.shareTitle
-        offerShortDescription = offerRepresentation.offerShortDescription
-        offerCopy = offerRepresentation.offerCopy
-        merchantTerms = offerRepresentation.merchantTerms
-        redemptionCode = offerRepresentation.redemptionCode
-        barcode = offerRepresentation.barcode
-        qrCode = offerRepresentation.qrCode
-        latitude = offerRepresentation.merchantList[0].latitude
-        longitude = offerRepresentation.merchantList[0].longitude
-        
+        struct MerchantAddress: Codable{
+            var address1: String
+            var latitude: Double
+            var longitude: Double
+        }
     }
-    
+
     init(title: String, description: String, id: Int) {
-        self.offerTitle = title
-        self.offerId = id
-        self.activeIndicator = true
-        self.soldOut = false
+        offerId = 0
+        activeIndicator = true
+        merchantList = []
+        offerTitle = ""
+        validityToDate = ""
+        validityFromDate = ""
+        shareTitle = ""
+        offerShortDescription = ""
+        redemptionCode = ""
         self.merchantList = []
-        self.validityToDate = ""
-        self.validityFromDate = ""
-        self.shareTitle = ""
-        self.offerShortDescription = FAQs(text: "")
-        self.offerCopy = FAQs(text: "")
-        self.merchantTerms = FAQs(text: "")
-        self.barcode = ""
-        self.qrCode = ""
-        self.redemptionCode = ""
-        self.longitude = 0.0
-        self.latitude = 0.0
+        
+        
     }
     
 }

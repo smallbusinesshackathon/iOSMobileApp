@@ -30,31 +30,19 @@ class BusinessMapViewController: UIViewController, MKMapViewDelegate, CLLocation
         alertLabel.textColor = .white
         
         updateAlertLabel(alerts: [])
-        let group = DispatchGroup()
-        group.enter()
-        loadAllRequests(){
-            group.leave()
+        
+        loadAllOffers() {
+            print("done")
         }
-        
-//        group.enter()
-//        loadAllOffers(){
-//            group.leave()
-//        }
-        mapView.delegate = self
-        mapView.register(MKMarkerAnnotationView.self, forAnnotationViewWithReuseIdentifier: "MapAnnotation")
-        
-        group.notify(queue: .main){
-        
-            self.mapView.addAnnotations(self.requests)
-            self.mapView.addAnnotations(self.offers)
-        }
+        //        self.mapView.addAnnotations(requests)
+        self.mapView.addAnnotations(offers)
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         //        tableView.reloadData()
         
-
+        
     }
     
     //MARK: CLLocationManagerDelegate
@@ -95,7 +83,7 @@ class BusinessMapViewController: UIViewController, MKMapViewDelegate, CLLocation
         //TODO: - make API calls for Requests/Offers and handle the response
         
         //make API request to load offers
-//        loadAllOffers()
+        //        loadAllOffers()
         
         //Find local alerts
         getAlertFromNWSAPI(coordinate: location) { (results, error) in
@@ -215,19 +203,27 @@ class BusinessMapViewController: UIViewController, MKMapViewDelegate, CLLocation
                 return
             }
             
-            guard let data = data else {
-                NSLog("Error getting offers data: \(NSError())")
-                return
-            }
+            //            guard let data = data else {
+            //                NSLog("Error getting offers data: \(NSError())")
+            //                return
+            //            }
+            
+            //begin demo Code
+            
+            guard let url = Bundle.main.url(forResource: "demoOfferData", withExtension: "json") else {return}
+            
             
             do {
-                
-                //                let convertedString = String(data: data, encoding: String.Encoding.utf8)
-                //                print(convertedString!)
-                let offerResult = try JSONDecoder().decode([String: Offer].self, from: data)
-                
-                print(offerResult)
-                self.offers = offerResult.compactMap({ $0.value })
+                let demoData = try Data(contentsOf: url)
+//                                let convertedString = String(data: demoData, encoding: String.Encoding.utf8)
+//                                print(convertedString!)
+//                
+                let offerResult = try JSONDecoder().decode(Response.self, from: demoData)
+                let offers = offerResult.offers
+//                print(offerResult)
+//                self.offers = offerResult.compactMap({ $0.value })
+                self.offers = offers.compactMap({ $0})
+//                self.offers = offers
                 completion()
             } catch {
                 NSLog("Error decoding offer representations: \(error)")
