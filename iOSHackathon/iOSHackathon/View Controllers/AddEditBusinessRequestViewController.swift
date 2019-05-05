@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreLocation
 
 class AddEditBusinessRequestViewController: UIViewController {
 
@@ -39,8 +40,19 @@ class AddEditBusinessRequestViewController: UIViewController {
             // UPDATE REQUEST
             
         } else {
+            CLGeocoder().geocodeAddressString(requestAddress) { (placemarks, error) in
+                if let error = error {
+                    NSLog("Error geocoding address: \(error)")
+                    return
+                }
+                guard let placemark = placemarks?.first,
+                let location = placemark.location else {return}
+                self.postRequest(title: requestTitle, description: requestDescription, category: requestCategory, address: requestAddress, caseStatus: requestCaseStatus, latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+                
+            }
+            
             // POST REQUEST
-            postRequest(title: requestTitle, description: requestDescription, category: requestCategory, address: requestAddress, caseStatus: requestCaseStatus)
+
         }
     }
     
@@ -60,9 +72,9 @@ class AddEditBusinessRequestViewController: UIViewController {
         
     }
     
-    private func postRequest(title: String, description: String, category: String, address: String, caseStatus: Bool) {
+    private func postRequest(title: String, description: String, category: String, address: String, caseStatus: Bool, latitude: Double, longitude: Double) {
         
-        let helpRequest = Request(title: title, requestDescription: description, category: category, address: address, date: Date(), caseStatus: caseStatus, id: UUID())
+        let helpRequest = Request(title: title, requestDescription: description, category: category, address: address, date: Date(), caseStatus: caseStatus, id: UUID(),latitude: latitude, longitude: longitude)
 
         let url = URL(string: "https://smallbusinesshackathon.firebaseio.com/requests")!.appendingPathComponent(helpRequest.id.uuidString).appendingPathExtension("json")
         
