@@ -35,6 +35,7 @@ class Offer: NSObject, MKAnnotation, Codable {
         return CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
     }
     
+
     struct Merchant: Codable {
         var merchantID: Int?
         var merchant: String?
@@ -58,8 +59,6 @@ class Offer: NSObject, MKAnnotation, Codable {
         offerShortDescription = ShortDescription(text: "")
         redemptionCode = ""
         self.merchantList = []
-        
-        
     }
     
 }

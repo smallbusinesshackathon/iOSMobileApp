@@ -24,9 +24,9 @@ class Request: NSObject, MKAnnotation, Codable {
     var coordinate: CLLocationCoordinate2D {
         return CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
     }
-    
 
     init(title: String, requestDescription: String, category: String, address: String, date: Date, caseStatus: Bool, id: UUID, latitude: Double, longitude: Double){
+
         self.title = title
         self.requestDescription = requestDescription
         self.category = category
