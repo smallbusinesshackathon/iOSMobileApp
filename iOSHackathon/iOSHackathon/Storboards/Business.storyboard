@@ -929,7 +929,7 @@
                                 <rect key="frame" x="20" y="80" width="34" height="30"/>
                                 <state key="normal" title="Back"/>
                                 <connections>
-                                    <action selector="goBack:" destination="15T-ih-HLt" eventType="touchUpInside" id="PiH-vc-h9x"/>
+                                    <action selector="goBack:" destination="15T-ih-HLt" eventType="touchUpInside" id="9ey-Wt-0S8"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -967,7 +967,7 @@
         <image name="store-1" width="256" height="256"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="C1S-Xk-03J"/>
+        <segue reference="nEc-2m-eFD"/>
         <segue reference="zQq-mt-0QA"/>
     </inferredMetricsTieBreakers>
 </document>

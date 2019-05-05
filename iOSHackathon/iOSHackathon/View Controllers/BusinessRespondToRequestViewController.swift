@@ -12,7 +12,7 @@ class BusinessRespondToRequestViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        updateViews()
     }
     
     private func updateViews() {
@@ -23,7 +23,7 @@ class BusinessRespondToRequestViewController: UIViewController {
         }
         
         titleLabel.text = request.title
-        descriptionLabel.text = request.description
+        descriptionLabel.text = request.requestDescription
         dateLabel.text = request.date.dateFormatter()
         categoryLabel.text = request.category
         addressLabel.text = request.address
@@ -41,6 +41,7 @@ class BusinessRespondToRequestViewController: UIViewController {
     
     var request: Request? {
         didSet {
+            guard isViewLoaded else { return }
             updateViews()
         }
     }

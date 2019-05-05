@@ -18,6 +18,8 @@ class AddEditBusinessRequestViewController: UIViewController {
         requestDescriptionTextView.layer.borderWidth = 1
         
         submitButton.layer.cornerRadius = 5
+        
+        loadRequest()
 
     }
     @IBAction func goBack(_ sender: Any) {
@@ -101,6 +103,7 @@ class AddEditBusinessRequestViewController: UIViewController {
     
     var request: Request? {
         didSet {
+            guard isViewLoaded else {return}
             loadRequest()
         }
     }

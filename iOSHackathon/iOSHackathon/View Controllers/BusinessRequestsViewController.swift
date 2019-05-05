@@ -40,15 +40,36 @@ class BusinessRequestsViewController: UIViewController, UICollectionViewDelegate
             ], for: .selected)
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        switch requestSegmentedControl.selectedSegmentIndex {
+        case 0:
+            self.performSegue(withIdentifier: "EditRequest", sender: self)
+        case 1:
+            self.performSegue(withIdentifier: "ViewRequest", sender: self)
+        default:
+            break
+        }
+    }
 
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destinationVC = segue.destination as? AddEditBusinessRequestViewController {
+        
+        if segue.identifier == "ViewRequest" {
+            guard let destinationVC = segue.destination as? BusinessRespondToRequestViewController,
+                let indexPath = collectionView.indexPathsForSelectedItems?.first else { return }
             
-        } else if let destinationVC = segue.destination as? BusinessRespondToRequestViewController {
+            destinationVC.request = self.requests[indexPath.row]
+        } else if segue.identifier == "EditRequest" {
+            guard let destinationVC = segue.destination as? AddEditBusinessRequestViewController,
+                let indexPath = collectionView.indexPathsForSelectedItems?.first else { return }
             
+            destinationVC.request = self.requests[indexPath.row]
+        } else if segue.identifier == "EditRequest" {
+            guard let destinationVC = segue.destination as? AddEditBusinessRequestViewController else { return }
+            
+            destinationVC.request = nil
         }
     }
     
