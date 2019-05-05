@@ -34,14 +34,9 @@ class BusinessMapViewController: UIViewController, MKMapViewDelegate, CLLocation
         loadAllOffers() {
             self.mapView.addAnnotations(self.offers)
         }
-        //        self.mapView.addAnnotations(requests)
-        
-    }
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        //        tableView.reloadData()
-        
+        loadAllRequests {
+            self.mapView.addAnnotations(self.requests)
+        }
         
     }
     
