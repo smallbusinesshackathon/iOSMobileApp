@@ -12,6 +12,9 @@ import MapKit
 let demoLocationDC = CLLocationCoordinate2D(latitude: 38.907192, longitude: -77.036873)
 
 class BusinessMapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -24,6 +27,7 @@ class BusinessMapViewController: UIViewController, MKMapViewDelegate, CLLocation
         locationManager.requestLocation()
         
         alertLabel.textColor = .white
+        updateStatusBarColor(color: .green)
         alertView.backgroundColor = .green
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -91,8 +95,10 @@ class BusinessMapViewController: UIViewController, MKMapViewDelegate, CLLocation
             alertLabel.text = "There are no weather alerts in your current area"
         } else {
             guard let mostSevere = getMostSevereAlert(alerts: alerts) else {return}
-            alertLabel.text = mostSevere.headline
-            alertView.backgroundColor = severityRating[mostSevere.severity.lowercased()]!.color
+            alertLabel.text = "\(mostSevere.severity): \(mostSevere.event)"
+            let backgroundColor = severityRating[mostSevere.severity.lowercased()]!.color
+            alertView.backgroundColor = backgroundColor
+            updateStatusBarColor(color: backgroundColor)
         }
     }
     
@@ -100,6 +106,13 @@ class BusinessMapViewController: UIViewController, MKMapViewDelegate, CLLocation
         let sorted = alerts.sorted{ severityRating[$0.severity.lowercased()]!.rating > severityRating [$1.severity.lowercased()]!.rating}
         
         return sorted.first
+    }
+    
+    private func updateStatusBarColor(color: UIColor){
+        let statusBarView = UIView(frame: UIApplication.shared.statusBarFrame)
+        
+        statusBarView.backgroundColor = color
+        view.addSubview(statusBarView)
     }
     
     //MARK: - Private Networking Functions
@@ -179,6 +192,5 @@ class BusinessMapViewController: UIViewController, MKMapViewDelegate, CLLocation
     @IBOutlet weak var alertView: UIView!
     @IBOutlet weak var alertLabel: UILabel!
     @IBOutlet weak var mapView: MKMapView!
-    @IBOutlet weak var tableView: UITableView!
     
 }

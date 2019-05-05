@@ -21,6 +21,7 @@ struct WeatherAlert: Decodable{
         self.instruction = try propertyContainer.decode(String.self, forKey: .instruction)
         self.effective = try propertyContainer.decode(String.self, forKey: .effective)
         self.expires = try propertyContainer.decode(String.self, forKey: .expires)
+        self.event = try propertyContainer.decode(String.self, forKey: .event)
         
         do {
             //Set affectedArea property using values from geometryContainer
@@ -69,6 +70,7 @@ struct WeatherAlert: Decodable{
             
         }
         enum PropertiesCodingKeys: String, CodingKey{
+            case event
             case severity
             case headline
             case description
@@ -77,7 +79,7 @@ struct WeatherAlert: Decodable{
             case expires
         }
     }
-    
+    let event: String
     let severity: String
     let headline: String
     let description: String
