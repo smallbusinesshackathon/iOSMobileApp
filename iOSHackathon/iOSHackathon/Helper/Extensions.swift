@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import MapKit
 
 
 extension Date{
@@ -44,3 +45,4 @@ extension Offer: HelpAnnotation{
 extension UIColor{
     static let darkGreen = UIColor(red: 11.0/255.0, green: 102.0/255.0, blue: 35.0/255.0, alpha: 1.0)
 }
+

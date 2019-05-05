@@ -75,15 +75,15 @@ class BusinessMapViewController: UIViewController, MKMapViewDelegate, CLLocation
     
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
         let overlay = overlay as! MKPolygon
-            let renderer = MKPolygonRenderer(polygon: overlay)
-            renderer.fillColor = UIColor.orange.withAlphaComponent(0.5)
-            renderer.lineWidth = 2
-            renderer.strokeColor = UIColor.orange
+        let renderer = MKPolygonRenderer(polygon: overlay)
+        renderer.fillColor = alertColor.withAlphaComponent(0.5)
+        renderer.lineWidth = 2
+        renderer.strokeColor = alertColor
         
         return renderer
     }
     
-
+    
     
     
     //MARK: - DEMO functions
@@ -120,6 +120,9 @@ class BusinessMapViewController: UIViewController, MKMapViewDelegate, CLLocation
             }
             guard let results = results else {return}
             DispatchQueue.main.async {
+                
+                guard let mostSevereAlert = self.getMostSevereAlert(alerts: results) else {return}
+                self.alertColor = self.severityRating[mostSevereAlert.severity.lowercased()]!.color
                 self.updateAlertLabel(alerts: results)
                 self.addOverlayToMap(alert: results[0])
             }
@@ -348,9 +351,9 @@ class BusinessMapViewController: UIViewController, MKMapViewDelegate, CLLocation
     private var locationManager  = CLLocationManager()
     private var location: CLLocationCoordinate2D? {
         didSet{
-//            updateWithLocation()
-//            demoUpdateWithLocationDC()
-            demoUpdateWithHazard(fileName: .TX, coordinates: CLLocationCoordinate2D(latitude: 29.300131, longitude: -94.795853))
+            //            updateWithLocation()
+            //            demoUpdateWithLocationDC()
+            demoUpdateWithHazard(fileName: .TX, coordinates: CLLocationCoordinate2D(latitude: 29.384020, longitude: -94.902550))
         }
     }
     
@@ -362,6 +365,8 @@ class BusinessMapViewController: UIViewController, MKMapViewDelegate, CLLocation
     
     private var offers = [Offer]()
     private var requests = [Request]()
+    
+    private var alertColor:UIColor = UIColor.darkGreen
     
     @IBOutlet weak var alertView: UIView!
     @IBOutlet weak var alertLabel: UILabel!
