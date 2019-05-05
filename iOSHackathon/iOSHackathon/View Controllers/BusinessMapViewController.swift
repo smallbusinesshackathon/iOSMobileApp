@@ -30,14 +30,31 @@ class BusinessMapViewController: UIViewController, MKMapViewDelegate, CLLocation
         alertLabel.textColor = .white
         
         updateAlertLabel(alerts: [])
+        let group = DispatchGroup()
+        group.enter()
+        loadAllRequests(){
+            group.leave()
+        }
+        
+//        group.enter()
+//        loadAllOffers(){
+//            group.leave()
+//        }
+        mapView.delegate = self
+        mapView.register(MKMarkerAnnotationView.self, forAnnotationViewWithReuseIdentifier: "MapAnnotation")
+        
+        group.notify(queue: .main){
+        
+            self.mapView.addAnnotations(self.requests)
+            self.mapView.addAnnotations(self.offers)
+        }
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         //        tableView.reloadData()
         
-        mapView.delegate = self
-        mapView.register(MKMarkerAnnotationView.self, forAnnotationViewWithReuseIdentifier: "MapAnnotation")
+
     }
     
     //MARK: CLLocationManagerDelegate
@@ -54,14 +71,14 @@ class BusinessMapViewController: UIViewController, MKMapViewDelegate, CLLocation
     
     //MARK: MapViewDelegate Method
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        let businessAnnotation = mapView.dequeueReusableAnnotationView(withIdentifier: "BusinessAnnotation", for: annotation) as! MKMarkerAnnotationView
-        businessAnnotation.markerTintColor = .darkGray
-        businessAnnotation.glyphTintColor = .white
+        let annotation = mapView.dequeueReusableAnnotationView(withIdentifier: "MapAnnotation", for: annotation) as! MKMarkerAnnotationView
+        annotation.markerTintColor = .darkGray
+        annotation.glyphTintColor = .white
         
-        businessAnnotation.canShowCallout = true
+        annotation.canShowCallout = true
         
         //TODO: Implement detailView
-        return businessAnnotation
+        return annotation
     }
     
     //MARK: - Private
@@ -72,13 +89,13 @@ class BusinessMapViewController: UIViewController, MKMapViewDelegate, CLLocation
         //        guard let location = location else {return}
         //        let location = demoLocationDC
         
-        let viewRegion = MKCoordinateRegion(center: demoLocationDC, latitudinalMeters: 2000, longitudinalMeters: 2000)
+        let viewRegion = MKCoordinateRegion(center: demoLocationDC, latitudinalMeters: 20000, longitudinalMeters: 20000)
         mapView.setRegion(viewRegion, animated: true)
         
         //TODO: - make API calls for Requests/Offers and handle the response
         
         //make API request to load offers
-        loadAllOffers()
+//        loadAllOffers()
         
         //Find local alerts
         getAlertFromNWSAPI(coordinate: location) { (results, error) in
@@ -184,7 +201,7 @@ class BusinessMapViewController: UIViewController, MKMapViewDelegate, CLLocation
         return urlComponents.url
     }
     
-    private func loadAllOffers() {
+    private func loadAllOffers(completion:@escaping ()->Void) {
         let url = URL(string: "https://smallbusinesshackathon.firebaseio.com/offers.json")!
         
         var request = URLRequest(url: url)
@@ -211,6 +228,7 @@ class BusinessMapViewController: UIViewController, MKMapViewDelegate, CLLocation
                 
                 print(offerResult)
                 self.offers = offerResult.compactMap({ $0.value })
+                completion()
             } catch {
                 NSLog("Error decoding offer representations: \(error)")
             }
@@ -219,7 +237,7 @@ class BusinessMapViewController: UIViewController, MKMapViewDelegate, CLLocation
         
     }
     
-    private func loadAllRequests() {
+    private func loadAllRequests(completion:@escaping ()->Void) {
         
         let url = URL(string: "https://smallbusinesshackathon.firebaseio.com/requests.json")!
         
@@ -247,6 +265,7 @@ class BusinessMapViewController: UIViewController, MKMapViewDelegate, CLLocation
                 
                 print(requestResult)
                 self.requests = requestResult.compactMap({ $0.value })
+                completion()
             } catch {
                 NSLog("Error decoding requests: \(error)")
             }
@@ -270,16 +289,8 @@ class BusinessMapViewController: UIViewController, MKMapViewDelegate, CLLocation
                                    "extreme" : (rating: 4, color: UIColor.red)]
     
     
-    private var offers = [Offer](){
-        didSet{
-            mapView.addAnnotations(offers)
-        }
-    }
-    private var requests = [Request]() {
-        didSet{
-            mapView.addAnnotations(requests)
-        }
-    }
+    private var offers = [Offer]()
+    private var requests = [Request]()
     
     @IBOutlet weak var alertView: UIView!
     @IBOutlet weak var alertLabel: UILabel!
