@@ -21,7 +21,7 @@ class OfferCollectionViewCell: UICollectionViewCell {
         offerTitleLabel.text = offer.offerTitle
         offerMerchantNameLabel.text = "\(offer.merchantList.first?.merchant ?? "Local Works")"
         
-        if let address = offer.merchantList.first?.merchantAddress {
+        if let address = offer.merchantList.first?.merchantAddress.first {
             offerLocationLabel.text = "\(address)"
         } else {
             offerLocationLabel.text = "123 Main St"
