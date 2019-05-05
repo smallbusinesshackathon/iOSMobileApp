@@ -168,7 +168,11 @@ class BusinessMapViewController: UIViewController, MKMapViewDelegate, CLLocation
             }
             guard let results = results else {return}
             DispatchQueue.main.async {
+                guard let mostSevereAlert = self.getMostSevereAlert(alerts: results) else {return}
+                self.weatherAlert = mostSevereAlert
+                self.alertColor = self.severityRating[mostSevereAlert.severity.lowercased()]!.color
                 self.updateAlertLabel(alerts: results)
+                self.addOverlayToMap(alert: results[0])
             }
         }
         
@@ -368,7 +372,7 @@ class BusinessMapViewController: UIViewController, MKMapViewDelegate, CLLocation
         
         myAlert.setValue(attrString, forKey: "attributedMessage")
         
-        myAlert.addAction(UIAlertAction(title: "Done", style:.default))
+        myAlert.addAction(UIAlertAction(title: "Close", style:.default))
         
         self.present(myAlert, animated: true)
     }
