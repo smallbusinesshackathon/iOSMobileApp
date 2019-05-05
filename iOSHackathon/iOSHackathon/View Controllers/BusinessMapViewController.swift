@@ -12,6 +12,7 @@ import MapKit
 let demoLocationDC = CLLocationCoordinate2D(latitude: 38.907192, longitude: -77.036873)
 
 class BusinessMapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
+    
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
@@ -27,13 +28,15 @@ class BusinessMapViewController: UIViewController, MKMapViewDelegate, CLLocation
         locationManager.requestLocation()
         
         alertLabel.textColor = .white
-        updateStatusBarColor(color: .green)
-        alertView.backgroundColor = .green
+        
+        let color = severityRating["none"]!.color
+        updateStatusBarColor(color: color)
+        alertView.backgroundColor = color
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-//        tableView.reloadData()
+        //        tableView.reloadData()
         
         mapView.delegate = self
         mapView.register(MKMarkerAnnotationView.self, forAnnotationViewWithReuseIdentifier: "MapAnnotation")
@@ -66,10 +69,10 @@ class BusinessMapViewController: UIViewController, MKMapViewDelegate, CLLocation
     //MARK: - Private
     private func updateWithLocation(demo:Bool = false){
         //Zoom to user location
-    
+        
         let location = demo ? demoLocationDC : self.location! 
-//        guard let location = location else {return}
-//        let location = demoLocationDC
+        //        guard let location = location else {return}
+        //        let location = demoLocationDC
         
         let viewRegion = MKCoordinateRegion(center: demoLocationDC, latitudinalMeters: 2000, longitudinalMeters: 2000)
         mapView.setRegion(viewRegion, animated: true)
@@ -145,7 +148,7 @@ class BusinessMapViewController: UIViewController, MKMapViewDelegate, CLLocation
                 return
             }
             
-        }.resume()
+            }.resume()
         
     }
     
@@ -185,6 +188,13 @@ class BusinessMapViewController: UIViewController, MKMapViewDelegate, CLLocation
             updateWithLocation(demo: true)
         }
     }
+    
+    private let severityRating = [ "none": (rating: 0, color: UIColor(red: 11.0/255.0, green: 102.0/255.0, blue: 35.0/255.0, alpha: 1.0)),
+                                   "minor": (rating: 1, color: UIColor.green),
+                                   "moderate" : (rating: 2, color: UIColor.yellow),
+                                   "severe" : (rating: 3, color: UIColor.orange),
+                                   "extreme" : (rating: 4, color: UIColor.red)]
+    
     
     private var offers = [Offer]()
     private var requests = [Request]()
