@@ -31,7 +31,6 @@
 		A23F51FA227D2AAF00C729C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A23F51F8227D2AAF00C729C7 /* LaunchScreen.storyboard */; };
 		A23F520B227D502400C729C7 /* Business.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23F520A227D502400C729C7 /* Business.swift */; };
 		A23F520D227D549000C729C7 /* BusinessLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23F520C227D549000C729C7 /* BusinessLoginViewController.swift */; };
-		A23F5211227DB33A00C729C7 /* OffersRepresentations.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23F5210227DB33A00C729C7 /* OffersRepresentations.swift */; };
 		A23F5213227DDC3200C729C7 /* Offer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23F5212227DDC3200C729C7 /* Offer.swift */; };
 		A23F5215227DE13700C729C7 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23F5214227DE13700C729C7 /* Request.swift */; };
 /* End PBXBuildFile section */
@@ -63,7 +62,6 @@
 		A23F51FB227D2AAF00C729C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A23F520A227D502400C729C7 /* Business.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Business.swift; sourceTree = "<group>"; };
 		A23F520C227D549000C729C7 /* BusinessLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessLoginViewController.swift; sourceTree = "<group>"; };
-		A23F5210227DB33A00C729C7 /* OffersRepresentations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffersRepresentations.swift; sourceTree = "<group>"; };
 		A23F5212227DDC3200C729C7 /* Offer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Offer.swift; sourceTree = "<group>"; };
 		A23F5214227DE13700C729C7 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -161,7 +159,6 @@
 			isa = PBXGroup;
 			children = (
 				A23F520A227D502400C729C7 /* Business.swift */,
-				A23F5210227DB33A00C729C7 /* OffersRepresentations.swift */,
 				A23F5212227DDC3200C729C7 /* Offer.swift */,
 				A23F5214227DE13700C729C7 /* Request.swift */,
 				10C3020C227E234F006A5CB7 /* WeatherAlert.swift */,
@@ -260,7 +257,6 @@
 				7B8E4E52227D501D001F9C2F /* AddEditBusinessOfferViewController.swift in Sources */,
 				A23F5213227DDC3200C729C7 /* Offer.swift in Sources */,
 				A23F520B227D502400C729C7 /* Business.swift in Sources */,
-				A23F5211227DB33A00C729C7 /* OffersRepresentations.swift in Sources */,
 				A23F51F0227D2AAB00C729C7 /* AppDelegate.swift in Sources */,
 				10C3020F227E2F19006A5CB7 /* NWSResponse.swift in Sources */,
 				10C3020D227E234F006A5CB7 /* WeatherAlert.swift in Sources */,
