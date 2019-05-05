@@ -89,7 +89,37 @@ class BusinessRequestsViewController: UIViewController, UICollectionViewDelegate
     }
     
     private func loadMyRequests() {
-        loadAllRequests()
+        let url = URL(string: "https://smallbusinesshackathon.firebaseio.com/requests.json")!
+        
+        var request = URLRequest(url: url)
+        
+        request.httpMethod = "GET"
+        
+        URLSession.shared.dataTask(with: request) { (data, _, error) in
+            
+            if let error = error {
+                NSLog("Error getting request: \(error)")
+                return
+            }
+            
+            guard let data = data else {
+                NSLog("Error getting request data: \(NSError())")
+                return
+            }
+            
+            do {
+                
+                //                let convertedString = String(data: data, encoding: String.Encoding.utf8)
+                //                print(convertedString!)
+                let requestResult = try JSONDecoder().decode([String: Request].self, from: data)
+                
+                let array = requestResult.compactMap({ $0.value })
+                self.requests.append(array.first!)
+            } catch {
+                NSLog("Error decoding requests: \(error)")
+            }
+            
+            }.resume()
     }
     
     private func loadAllRequests() {
