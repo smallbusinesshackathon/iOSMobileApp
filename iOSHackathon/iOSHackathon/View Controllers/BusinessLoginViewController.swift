@@ -15,14 +15,13 @@ class BusinessLoginViewController: UIViewController {
 
     
     @IBAction func buttonClick(sender: UIButton) {
-//        guard let businessName = businessNameInput.text,
-//            let businessPhoneNum = businessPhoneNumInput.text else { return }
-//
+
     }
 
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        signInButton.layer.cornerRadius = 5
 
         // Do any additional setup after loading the view.
         
@@ -67,5 +66,10 @@ class BusinessLoginViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    
+    // MARK - Properties
+    
+    @IBOutlet weak var signInButton: UIButton!
+    @IBOutlet weak var signUpButton: UIButton!
+    
 }
