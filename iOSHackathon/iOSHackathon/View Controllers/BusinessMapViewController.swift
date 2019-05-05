@@ -106,14 +106,14 @@ class BusinessMapViewController: UIViewController, MKMapViewDelegate, CLLocation
         }
     }
     
-    private func demoUpdateWithHazard(fileName: DemoJson, coordinates: CLLocationCoordinate2D){
+    private func demoUpdateWithHazard(demoData: DemoJson, coordinates: CLLocationCoordinate2D){
         let location = coordinates
         
         let viewRegion = MKCoordinateRegion(center: location, latitudinalMeters: 20000, longitudinalMeters: 20000)
         mapView.setRegion(viewRegion, animated: true)
         
         //Find local alerts
-        demoGetAlertFromNWSAPI(fileName: fileName.rawValue){ (results, error) in
+        demoGetAlertFromNWSAPI(fileName: demoData.rawValue){ (results, error) in
             if let error = error {
                 NSLog("Error decoding API request: \(error)")
                 return
@@ -168,7 +168,11 @@ class BusinessMapViewController: UIViewController, MKMapViewDelegate, CLLocation
             }
             guard let results = results else {return}
             DispatchQueue.main.async {
+                guard let mostSevereAlert = self.getMostSevereAlert(alerts: results) else {return}
+                self.weatherAlert = mostSevereAlert
+                self.alertColor = self.severityRating[mostSevereAlert.severity.lowercased()]!.color
                 self.updateAlertLabel(alerts: results)
+                self.addOverlayToMap(alert: results[0])
             }
         }
         
@@ -368,7 +372,7 @@ class BusinessMapViewController: UIViewController, MKMapViewDelegate, CLLocation
         
         myAlert.setValue(attrString, forKey: "attributedMessage")
         
-        myAlert.addAction(UIAlertAction(title: "Done", style:.default))
+        myAlert.addAction(UIAlertAction(title: "Close", style:.default))
         
         self.present(myAlert, animated: true)
     }
@@ -379,7 +383,8 @@ class BusinessMapViewController: UIViewController, MKMapViewDelegate, CLLocation
         didSet{
             //            updateWithLocation()
             //            demoUpdateWithLocationDC()
-            demoUpdateWithHazard(fileName: .TX, coordinates: CLLocationCoordinate2D(latitude: 29.384020, longitude: -94.902550))
+//            demoUpdateWithHazard(fileName: .TX, coordinates: CLLocationCoordinate2D(latitude: 29.384020, longitude: -94.902550))
+            demoUpdateWithHazard(demoData: .DC, coordinates: demoLocationDC)
         }
     }
     
