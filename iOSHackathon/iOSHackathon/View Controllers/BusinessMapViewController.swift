@@ -122,6 +122,7 @@ class BusinessMapViewController: UIViewController, MKMapViewDelegate, CLLocation
             DispatchQueue.main.async {
                 
                 guard let mostSevereAlert = self.getMostSevereAlert(alerts: results) else {return}
+                self.weatherAlert = mostSevereAlert
                 self.alertColor = self.severityRating[mostSevereAlert.severity.lowercased()]!.color
                 self.updateAlertLabel(alerts: results)
                 self.addOverlayToMap(alert: results[0])
@@ -180,8 +181,10 @@ class BusinessMapViewController: UIViewController, MKMapViewDelegate, CLLocation
         if alerts.isEmpty{
             labelText = "There are no weather alerts in your current area"
             backgroundColor = severityRating["none"]!.color
+            alertButton.isHidden = true
         } else {
             guard let mostSevere = getMostSevereAlert(alerts: alerts) else {return}
+            alertButton.isHidden = false
             labelText = "\(mostSevere.severity): \(mostSevere.event)"
             backgroundColor = severityRating[mostSevere.severity.lowercased()]!.color
         }
@@ -347,6 +350,23 @@ class BusinessMapViewController: UIViewController, MKMapViewDelegate, CLLocation
         
     }
     
+    //MARK: - IBAction
+    
+    @IBAction func seeAlert(_ sender: Any) {
+        guard let weatherAlert = weatherAlert else {
+            return
+        }
+        
+        let messageText = "\(weatherAlert.description) \n\(weatherAlert.instruction)\nCheck your local weather channel for more information"
+        
+        
+        let myAlert = UIAlertController(title: weatherAlert.event, message: messageText, preferredStyle: .alert)
+        
+      myAlert.addAction(UIAlertAction(title: "Done", style:.default))
+        
+        self.present(myAlert, animated: true)
+    }
+    
     //MARK: - Properties
     private var locationManager  = CLLocationManager()
     private var location: CLLocationCoordinate2D? {
@@ -366,8 +386,10 @@ class BusinessMapViewController: UIViewController, MKMapViewDelegate, CLLocation
     private var offers = [Offer]()
     private var requests = [Request]()
     
+    private var weatherAlert:WeatherAlert?
     private var alertColor:UIColor = UIColor.darkGreen
     
+    @IBOutlet weak var alertButton: UIButton!
     @IBOutlet weak var alertView: UIView!
     @IBOutlet weak var alertLabel: UILabel!
     @IBOutlet weak var mapView: MKMapView!
