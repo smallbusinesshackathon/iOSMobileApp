@@ -15,15 +15,41 @@ class BusinessRespondToRequestViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func updateViews() {
+        guard let request = request else { return }
+        
+        if request.category == "finance" {
+            financeStackView.isHidden = false
+        }
+        
+        titleLabel.text = request.title
+        descriptionLabel.text = request.description
+        dateLabel.text = request.date.dateFormatter()
+        categoryLabel.text = request.category
+        addressLabel.text = request.address
+        
     }
-    */
-
+    
+    @IBAction func goBack(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func respondToRequest(_ sender: Any) {
+        // POP UP WINDOW?
+        
+    }
+    
+    var request: Request? {
+        didSet {
+            updateViews()
+        }
+    }
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var categoryLabel: UILabel!
+    @IBOutlet weak var addressLabel: UILabel!
+    
+    @IBOutlet weak var financeStackView: UIStackView!
+    
 }
