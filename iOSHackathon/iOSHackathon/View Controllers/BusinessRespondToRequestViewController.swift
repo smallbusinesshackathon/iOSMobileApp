@@ -35,8 +35,22 @@ class BusinessRespondToRequestViewController: UIViewController {
     }
     
     @IBAction func respondToRequest(_ sender: Any) {
-        // POP UP WINDOW?
         
+        guard let request = request else { return }
+        if request.category != "finance" {
+            let alertController = UIAlertController(title: "Send a message", message: "Write your message", preferredStyle: .alert)
+            
+            alertController.addTextField(configurationHandler: nil)
+            
+            let alertAction = UIAlertAction(title: "Send", style: .default, handler: nil)
+            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+            
+            alertController.addAction(alertAction)
+            alertController.addAction(cancelAction)
+            
+            
+            present((alertController), animated: true, completion: nil)
+        }
     }
     
     var request: Request? {
