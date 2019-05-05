@@ -1,0 +1,135 @@
+{
+    "id": "https://api.weather.gov/alerts/NWS-IDP-PROD-3527315-3078728",
+    "type": "Feature",
+    "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+            [
+                [
+                    -94.7099999,
+                    29.390000000000001
+                ],
+                [
+                    -95.299999999999997,
+                    29.25
+                ],
+                [
+                    -95.379999999999995,
+                    29.800000000000001
+                ],
+                [
+                    -95.009999999999991,
+                    29.900000000000002
+                ],
+                [
+                    -94.919999999999987,
+                    29.750000000000004
+                ],
+                [
+                    -94.939999999999984,
+                    29.720000000000002
+                ],
+                [
+                    -94.919999999999987,
+                    29.700000000000003
+                ],
+                [
+                    -94.929999999999993,
+                    29.670000000000002
+                ],
+                [
+                    -94.919999999999987,
+                    29.66
+                ],
+                [
+                    -94.86999999999999,
+                    29.670000000000002
+                ],
+                [
+                    -94.7099999,
+                    29.390000000000001
+                ]
+            ]
+        ]
+    },
+    "properties": {
+        "@id": "https://api.weather.gov/alerts/NWS-IDP-PROD-3527315-3078728",
+        "@type": "wx:Alert",
+        "id": "NWS-IDP-PROD-3527315-3078728",
+        "areaDesc": "Galveston, TX; Harris, TX; Brazoria, TX",
+        "geocode": {
+            "UGC": [
+                "TXC167",
+                "TXC201",
+                "TXC039"
+            ],
+            "SAME": [
+                "048167",
+                "048201",
+                "048039"
+            ]
+        },
+        "affectedZones": [
+            "https://api.weather.gov/zones/county/TXC167",
+            "https://api.weather.gov/zones/county/TXC201",
+            "https://api.weather.gov/zones/county/TXC039"
+        ],
+        "references": [
+            {
+                "@id": "https://api.weather.gov/alerts/NWS-IDP-PROD-3527282-3078707",
+                "identifier": "NWS-IDP-PROD-3527282-3078707",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "sent": "2019-05-04T02:18:00-05:00"
+            }
+        ],
+        "sent": "2019-05-04T02:41:00-05:00",
+        "effective": "2019-05-04T02:41:00-05:00",
+        "onset": "2019-05-04T02:41:00-05:00",
+        "expires": "2019-05-04T03:00:00-05:00",
+        "ends": "2019-05-04T03:00:00-05:00",
+        "status": "Actual",
+        "messageType": "Update",
+        "category": "Met",
+        "severity": "Severe",
+        "certainty": "Observed",
+        "urgency": "Immediate",
+        "event": "Severe Thunderstorm Warning",
+        "sender": "w-nws.webmaster@noaa.gov",
+        "senderName": "NWS Houston/Galveston TX",
+        "headline": "Severe Thunderstorm Warning issued May 4 at 2:41AM CDT until May 4 at 3:00AM CDT by NWS Houston/Galveston TX",
+        "description": "At 241 AM CDT, a severe thunderstorm was located over southeastern\nClear Lake, moving east at 25 mph.\n\nHAZARD...60 mph wind gusts.\n\nSOURCE...Radar indicated.\n\nIMPACT...Expect damage to roofs, siding, and trees.\n\nLocations impacted include...\nPasadena, Pearland, League City, Baytown, Texas City, Friendswood, La\nPorte, Deer Park, Alvin, Dickinson, South Houston, La Marque, Santa\nFe, Seabrook, Galena Park, Jacinto City, Webster, Hitchcock, eastern\nManvel and Beach City.",
+        "instruction": "For your protection move to an interior room on the lowest floor of a\nbuilding.",
+        "response": "Shelter",
+        "parameters": {
+            "eventMotionDescription": [
+                "2019-05-04T02:41:00.000-05:00...storm...257DEG...21KT...29.55,-95.09"
+            ],
+            "hailSize": [
+                "Up to 0.75"
+            ],
+            "windGust": [
+                "60 MPH"
+            ],
+            "NWSheadline": [
+                "A SEVERE THUNDERSTORM WARNING REMAINS IN EFFECT UNTIL 300 AM CDT FOR GALVESTON...NORTHEASTERN BRAZORIA AND SOUTHEASTERN HARRIS COUNTIES"
+            ],
+            "VTEC": [
+                "/O.CON.KHGX.SV.W.0076.000000T0000Z-190504T0800Z/"
+            ],
+            "EAS-ORG": [
+                "WXR"
+            ],
+            "PIL": [
+                "HGXSVSHGX"
+            ],
+            "BLOCKCHANNEL": [
+                "CMAS",
+                "EAS",
+                "NWEM"
+            ],
+            "eventEndingTime": [
+                "2019-05-04T03:00:00-05:00"
+            ]
+        }
+    }
+}

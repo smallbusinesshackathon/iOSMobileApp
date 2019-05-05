@@ -31,17 +31,14 @@ class BusinessMapViewController: UIViewController, MKMapViewDelegate, CLLocation
         
         updateAlertLabel(alerts: [])
         
+        mapView.delegate = self
+        mapView.register(MKMarkerAnnotationView.self, forAnnotationViewWithReuseIdentifier: "MapAnnotation")
         loadAllOffers() {
             self.mapView.addAnnotations(self.offers)
         }
-        //        self.mapView.addAnnotations(requests)
-        
-    }
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        //        tableView.reloadData()
-        
+        loadAllRequests {
+            self.mapView.addAnnotations(self.requests)
+        }
         
     }
     
@@ -59,31 +56,42 @@ class BusinessMapViewController: UIViewController, MKMapViewDelegate, CLLocation
     
     //MARK: MapViewDelegate Method
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        let annotation = mapView.dequeueReusableAnnotationView(withIdentifier: "MapAnnotation", for: annotation) as! MKMarkerAnnotationView
-        annotation.markerTintColor = .darkGray
-        annotation.glyphTintColor = .white
+        guard let annotation = annotation as? HelpAnnotation else {return nil}
+        var color = UIColor.red
         
-        annotation.canShowCallout = true
+        if annotation.type == .offer {
+            color = UIColor.darkGreen
+        }
         
-        //TODO: Implement detailView
-        return annotation
+        let dequeued = mapView.dequeueReusableAnnotationView(withIdentifier: "MapAnnotation", for: annotation) as! MKMarkerAnnotationView
+        
+        dequeued.markerTintColor = color
+        dequeued.glyphTintColor = .white
+        
+        dequeued.canShowCallout = true
+        
+        return dequeued
     }
     
-    //MARK: - Private
-    private func updateWithLocation(demo:Bool = false){
-        //Zoom to user location
+    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+        let overlay = overlay as! MKPolygon
+        let renderer = MKPolygonRenderer(polygon: overlay)
+        renderer.fillColor = alertColor.withAlphaComponent(0.5)
+        renderer.lineWidth = 2
+        renderer.strokeColor = alertColor
         
-        let location = demo ? demoLocationDC : self.location! 
-        //        guard let location = location else {return}
-        //        let location = demoLocationDC
+        return renderer
+    }
+    
+    
+    
+    
+    //MARK: - DEMO functions
+    private func demoUpdateWithLocationDC(){
+        let location = demoLocationDC
         
-        let viewRegion = MKCoordinateRegion(center: demoLocationDC, latitudinalMeters: 20000, longitudinalMeters: 20000)
+        let viewRegion = MKCoordinateRegion(center: location, latitudinalMeters: 20000, longitudinalMeters: 20000)
         mapView.setRegion(viewRegion, animated: true)
-        
-        //TODO: - make API calls for Requests/Offers and handle the response
-        
-        //make API request to load offers
-        //        loadAllOffers()
         
         //Find local alerts
         getAlertFromNWSAPI(coordinate: location) { (results, error) in
@@ -96,6 +104,77 @@ class BusinessMapViewController: UIViewController, MKMapViewDelegate, CLLocation
                 self.updateAlertLabel(alerts: results)
             }
         }
+    }
+    
+    private func demoUpdateWithHazard(demoData: DemoJson, coordinates: CLLocationCoordinate2D){
+        let location = coordinates
+        
+        let viewRegion = MKCoordinateRegion(center: location, latitudinalMeters: 20000, longitudinalMeters: 20000)
+        mapView.setRegion(viewRegion, animated: true)
+        
+        //Find local alerts
+        demoGetAlertFromNWSAPI(fileName: demoData.rawValue){ (results, error) in
+            if let error = error {
+                NSLog("Error decoding API request: \(error)")
+                return
+            }
+            guard let results = results else {return}
+            DispatchQueue.main.async {
+                
+                guard let mostSevereAlert = self.getMostSevereAlert(alerts: results) else {return}
+                self.weatherAlert = mostSevereAlert
+                self.alertColor = self.severityRating[mostSevereAlert.severity.lowercased()]!.color
+                self.updateAlertLabel(alerts: results)
+                self.addOverlayToMap(alert: results[0])
+            }
+        }
+    }
+    
+    private func demoGetAlertFromNWSAPI(fileName:String, completion:@escaping ([WeatherAlert]?, Error?)->Void){
+        
+        guard let url = Bundle.main.url(forResource: fileName, withExtension: "json") else {return}
+        
+        
+        do {
+            let demoData = try Data(contentsOf: url)
+            
+            let response = try JSONDecoder().decode(WeatherAlert.self, from: demoData)
+            completion([response],nil)
+            return
+        } catch {
+            completion(nil,error)
+            return
+        }
+        
+        
+        
+    }
+    
+    //MARK: - Private
+    private func updateWithLocation(){
+        //Zoom to user location
+        
+        guard let location = location else {return}
+        //        let location = demoLocationDC
+        
+        let viewRegion = MKCoordinateRegion(center: location, latitudinalMeters: 20000, longitudinalMeters: 20000)
+        mapView.setRegion(viewRegion, animated: true)
+        
+        //Find local alerts
+        getAlertFromNWSAPI(coordinate: location) { (results, error) in
+            if let error = error {
+                NSLog("Error sending API request: \(error)")
+                return
+            }
+            guard let results = results else {return}
+            DispatchQueue.main.async {
+                guard let mostSevereAlert = self.getMostSevereAlert(alerts: results) else {return}
+                self.weatherAlert = mostSevereAlert
+                self.alertColor = self.severityRating[mostSevereAlert.severity.lowercased()]!.color
+                self.updateAlertLabel(alerts: results)
+                self.addOverlayToMap(alert: results[0])
+            }
+        }
         
     }
     
@@ -106,8 +185,10 @@ class BusinessMapViewController: UIViewController, MKMapViewDelegate, CLLocation
         if alerts.isEmpty{
             labelText = "There are no weather alerts in your current area"
             backgroundColor = severityRating["none"]!.color
+            alertButton.isHidden = true
         } else {
             guard let mostSevere = getMostSevereAlert(alerts: alerts) else {return}
+            alertButton.isHidden = false
             labelText = "\(mostSevere.severity): \(mostSevere.event)"
             backgroundColor = severityRating[mostSevere.severity.lowercased()]!.color
         }
@@ -129,6 +210,15 @@ class BusinessMapViewController: UIViewController, MKMapViewDelegate, CLLocation
         view.addSubview(statusBarView)
     }
     
+    private func addOverlayToMap(alert:WeatherAlert){
+        guard let area = alert.affectedArea else {
+            return
+        }
+        let polygon = MKPolygon(coordinates: area, count: area.count)
+        mapView.addOverlay(polygon, level: .aboveRoads)
+        
+        
+    }
     //MARK: - Private Networking Functions
     
     
@@ -215,15 +305,9 @@ class BusinessMapViewController: UIViewController, MKMapViewDelegate, CLLocation
             
             do {
                 let demoData = try Data(contentsOf: url)
-//                                let convertedString = String(data: demoData, encoding: String.Encoding.utf8)
-//                                print(convertedString!)
-//                
                 let offerResult = try JSONDecoder().decode(Response.self, from: demoData)
                 let offers = offerResult.offers
-//                print(offerResult)
-//                self.offers = offerResult.compactMap({ $0.value })
                 self.offers = offers.compactMap({ $0})
-//                self.offers = offers
                 completion()
             } catch {
                 NSLog("Error decoding offer representations: \(error)")
@@ -270,26 +354,56 @@ class BusinessMapViewController: UIViewController, MKMapViewDelegate, CLLocation
         
     }
     
+    //MARK: - IBAction
+    
+    @IBAction func seeAlert(_ sender: Any) {
+        guard let weatherAlert = weatherAlert else {
+            return
+        }
+        
+        let paragraph = NSMutableParagraphStyle()
+        paragraph.alignment = .left
+        paragraph.paragraphSpacing = 10
+        
+        let attributes: [NSAttributedString.Key : Any] = [NSAttributedString.Key.paragraphStyle: paragraph]
+        let attrString = NSAttributedString(string:"\(weatherAlert.headline) \n\(weatherAlert.instruction)\nCheck your local weather channel for more information", attributes: attributes)
+        
+        let myAlert = UIAlertController(title: weatherAlert.event, message: "", preferredStyle: .alert)
+        
+        myAlert.setValue(attrString, forKey: "attributedMessage")
+        
+        myAlert.addAction(UIAlertAction(title: "Close", style:.default))
+        
+        self.present(myAlert, animated: true)
+    }
+    
     //MARK: - Properties
     private var locationManager  = CLLocationManager()
     private var location: CLLocationCoordinate2D? {
         didSet{
-            updateWithLocation(demo: true)
+            //            updateWithLocation()
+            //            demoUpdateWithLocationDC()
+//            demoUpdateWithHazard(fileName: .TX, coordinates: CLLocationCoordinate2D(latitude: 29.384020, longitude: -94.902550))
+            demoUpdateWithHazard(demoData: .DC, coordinates: demoLocationDC)
         }
     }
     
-    private let severityRating = [ "none": (rating: 0, color: UIColor(red: 11.0/255.0, green: 102.0/255.0, blue: 35.0/255.0, alpha: 1.0)),
+    private let severityRating = [ "none": (rating: 0, color: UIColor.darkGreen),
                                    "minor": (rating: 1, color: UIColor.green),
                                    "moderate" : (rating: 2, color: UIColor.yellow),
                                    "severe" : (rating: 3, color: UIColor.orange),
                                    "extreme" : (rating: 4, color: UIColor.red)]
     
-    
     private var offers = [Offer]()
     private var requests = [Request]()
     
+    private var weatherAlert:WeatherAlert?
+    private var alertColor:UIColor = UIColor.darkGreen
+    
+    @IBOutlet weak var alertButton: UIButton!
     @IBOutlet weak var alertView: UIView!
     @IBOutlet weak var alertLabel: UILabel!
     @IBOutlet weak var mapView: MKMapView!
     
 }
+

@@ -1,0 +1,100 @@
+{
+    "id": "https://api.weather.gov/alerts/NWS-IDP-PROD-3529003",
+    "type": "Feature",
+    "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+            [
+                [
+                    -84.659999999999997,
+                    29.809999999999999
+                ],
+                [
+                    -84.840000000000003,
+                    30.099999999999998
+                ],
+                [
+                    -84.329999999999998,
+                    30.259999999999998
+                ],
+                [
+                    -84.239999999999995,
+                    29.979999999999997
+                ],
+                [
+                    -84.25,
+                    29.949999999999996
+                ],
+                [
+                    -84.659999999999997,
+                    29.809999999999999
+                ]
+            ]
+        ]
+    },
+    "properties": {
+        "@id": "https://api.weather.gov/alerts/NWS-IDP-PROD-3529003",
+        "@type": "wx:Alert",
+        "id": "NWS-IDP-PROD-3529003",
+        "areaDesc": "Inland Franklin; Coastal Wakulla; Liberty; Coastal Franklin; Inland Wakulla",
+        "geocode": {
+            "UGC": [
+                "FLZ015",
+                "FLZ127",
+                "FLZ026",
+                "FLZ115",
+                "FLZ027"
+            ],
+            "SAME": [
+                "012037",
+                "012129",
+                "012077"
+            ]
+        },
+        "affectedZones": [
+            "https://api.weather.gov/zones/forecast/FLZ015",
+            "https://api.weather.gov/zones/forecast/FLZ127",
+            "https://api.weather.gov/zones/forecast/FLZ026",
+            "https://api.weather.gov/zones/forecast/FLZ115",
+            "https://api.weather.gov/zones/forecast/FLZ027"
+        ],
+        "references": [],
+        "sent": "2019-05-04T20:55:00-04:00",
+        "effective": "2019-05-04T20:55:00-04:00",
+        "onset": "2019-05-04T20:55:00-04:00",
+        "expires": "2019-05-04T21:45:00-04:00",
+        "ends": null,
+        "status": "Actual",
+        "messageType": "Alert",
+        "category": "Met",
+        "severity": "Moderate",
+        "certainty": "Observed",
+        "urgency": "Expected",
+        "event": "Special Weather Statement",
+        "sender": "w-nws.webmaster@noaa.gov",
+        "senderName": "NWS Tallahassee FL",
+        "headline": "Special Weather Statement issued May 4 at 8:55PM EDT by NWS Tallahassee FL",
+        "description": "At 854 PM EDT, Doppler radar was tracking a strong thunderstorm near\nCarrabelle, moving northeast at 30 mph.\n\nWinds in excess of 40 mph will be possible with this storm.\n\nLocations impacted include...\nCarrabelle, Crawfordville, Sopchoppy, Alligator Point, Morgan Place,\nSaint Teresa, Turkey Point, Bald Point, Panacea-Wakulla Airport,\nArran, Mcintyre, Sanborn, Tully, Panacea, Shell Point, Poplar Camp,\nMedart, Buckhorn, Spring Creek and Lanark Village.",
+        "instruction": "",
+        "response": "Execute",
+        "parameters": {
+            "eventMotionDescription": [
+                "2019-05-04T20:54:00.000-04:00...storm...244DEG...27KT...29.95,-84.68"
+            ],
+            "NWSheadline": [
+                "SIGNIFICANT WEATHER ADVISORY FOR CENTRAL WAKULLA...SOUTHEASTERN LIBERTY AND NORTHEASTERN FRANKLIN COUNTIES IN THE FLORIDA BIG BEND UNTIL 945 PM EDT"
+            ],
+            "EAS-ORG": [
+                "WXR"
+            ],
+            "PIL": [
+                "TAESPSTAE"
+            ],
+            "BLOCKCHANNEL": [
+                "CMAS",
+                "EAS",
+                "NWEM"
+            ]
+        }
+    }
+}

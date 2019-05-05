@@ -10,9 +10,14 @@
 		10082B28227D539D002C8D56 /* BusinessMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10082B27227D539D002C8D56 /* BusinessMapViewController.swift */; };
 		10082B2A227D5E5D002C8D56 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10082B29227D5E5D002C8D56 /* Extensions.swift */; };
 		10082B2E227E187E002C8D56 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10082B2D227E187E002C8D56 /* Enums.swift */; };
+		106A6EA8227F02AE00129982 /* demoDCPolgyon.json in Resources */ = {isa = PBXBuildFile; fileRef = 106A6EA7227F02AE00129982 /* demoDCPolgyon.json */; };
 		10C1D7AE227E9EFC00A1A427 /* demoOfferData.json in Resources */ = {isa = PBXBuildFile; fileRef = 10C1D7AD227E9EFB00A1A427 /* demoOfferData.json */; };
 		10C3020D227E234F006A5CB7 /* WeatherAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C3020C227E234F006A5CB7 /* WeatherAlert.swift */; };
 		10C3020F227E2F19006A5CB7 /* NWSResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C3020E227E2F19006A5CB7 /* NWSResponse.swift */; };
+		10DD837A227ECE8E00107378 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DD8379227ECE8E00107378 /* Protocols.swift */; };
+		10DD8384227ED8CB00107378 /* severeThunderstormGalvestonTX.json in Resources */ = {isa = PBXBuildFile; fileRef = 10DD8381227ED8CB00107378 /* severeThunderstormGalvestonTX.json */; };
+		10DD8385227ED8CB00107378 /* flashfloodWVandSWVa.json in Resources */ = {isa = PBXBuildFile; fileRef = 10DD8382227ED8CB00107378 /* flashfloodWVandSWVa.json */; };
+		10DD8386227ED8CB00107378 /* specialWeatherWakullaFL.json in Resources */ = {isa = PBXBuildFile; fileRef = 10DD8383227ED8CB00107378 /* specialWeatherWakullaFL.json */; };
 		7B8E4E47227D42CA001F9C2F /* Business.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B8E4E46227D42CA001F9C2F /* Business.storyboard */; };
 		7B8E4E49227D42D0001F9C2F /* Customer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B8E4E48227D42D0001F9C2F /* Customer.storyboard */; };
 		7B8E4E50227D4EB1001F9C2F /* BusinessOffersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8E4E4F227D4EB1001F9C2F /* BusinessOffersViewController.swift */; };
@@ -44,9 +49,14 @@
 		10082B27227D539D002C8D56 /* BusinessMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessMapViewController.swift; sourceTree = "<group>"; };
 		10082B29227D5E5D002C8D56 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = iOSHackathon/Helper/Extensions.swift; sourceTree = "<group>"; };
 		10082B2D227E187E002C8D56 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		106A6EA7227F02AE00129982 /* demoDCPolgyon.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = demoDCPolgyon.json; sourceTree = "<group>"; };
 		10C1D7AD227E9EFB00A1A427 /* demoOfferData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = demoOfferData.json; sourceTree = "<group>"; };
 		10C3020C227E234F006A5CB7 /* WeatherAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAlert.swift; sourceTree = "<group>"; };
 		10C3020E227E2F19006A5CB7 /* NWSResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NWSResponse.swift; sourceTree = "<group>"; };
+		10DD8379227ECE8E00107378 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		10DD8381227ED8CB00107378 /* severeThunderstormGalvestonTX.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = severeThunderstormGalvestonTX.json; sourceTree = "<group>"; };
+		10DD8382227ED8CB00107378 /* flashfloodWVandSWVa.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = flashfloodWVandSWVa.json; sourceTree = "<group>"; };
+		10DD8383227ED8CB00107378 /* specialWeatherWakullaFL.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = specialWeatherWakullaFL.json; sourceTree = "<group>"; };
 		7B8E4E46227D42CA001F9C2F /* Business.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Business.storyboard; sourceTree = "<group>"; };
 		7B8E4E48227D42D0001F9C2F /* Customer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Customer.storyboard; sourceTree = "<group>"; };
 		7B8E4E4F227D4EB1001F9C2F /* BusinessOffersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessOffersViewController.swift; sourceTree = "<group>"; };
@@ -95,6 +105,7 @@
 				10082B29227D5E5D002C8D56 /* Extensions.swift */,
 				10082B2D227E187E002C8D56 /* Enums.swift */,
 				7BD13E83227E7D7B001E758C /* Appearance.swift */,
+				10DD8379227ECE8E00107378 /* Protocols.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -170,6 +181,10 @@
 		A23F5203227D2B0900C729C7 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				10DD8382227ED8CB00107378 /* flashfloodWVandSWVa.json */,
+				106A6EA7227F02AE00129982 /* demoDCPolgyon.json */,
+				10DD8381227ED8CB00107378 /* severeThunderstormGalvestonTX.json */,
+				10DD8383227ED8CB00107378 /* specialWeatherWakullaFL.json */,
 				7BD13E89227ED6F3001E758C /* demo2.json */,
 				10C1D7AD227E9EFB00A1A427 /* demoOfferData.json */,
 				A23F51EF227D2AAB00C729C7 /* AppDelegate.swift */,
@@ -250,7 +265,11 @@
 			files = (
 				7B8E4E49227D42D0001F9C2F /* Customer.storyboard in Resources */,
 				7BD13E8A227ED6F3001E758C /* demo2.json in Resources */,
+				106A6EA8227F02AE00129982 /* demoDCPolgyon.json in Resources */,
 				10C1D7AE227E9EFC00A1A427 /* demoOfferData.json in Resources */,
+				10DD8386227ED8CB00107378 /* specialWeatherWakullaFL.json in Resources */,
+				10DD8384227ED8CB00107378 /* severeThunderstormGalvestonTX.json in Resources */,
+				10DD8385227ED8CB00107378 /* flashfloodWVandSWVa.json in Resources */,
 				A23F51FA227D2AAF00C729C7 /* LaunchScreen.storyboard in Resources */,
 				A23F51F7227D2AAF00C729C7 /* Assets.xcassets in Resources */,
 				7B8E4E47227D42CA001F9C2F /* Business.storyboard in Resources */,
@@ -271,6 +290,7 @@
 				7B8E4E62227DE925001F9C2F /* AddEditBusinessRequestViewController.swift in Sources */,
 				10082B2A227D5E5D002C8D56 /* Extensions.swift in Sources */,
 				7B8E4E6E227E3885001F9C2F /* OfferCollectionViewCell.swift in Sources */,
+				10DD837A227ECE8E00107378 /* Protocols.swift in Sources */,
 				A23F520B227D502400C729C7 /* Business.swift in Sources */,
 				7B8E4E60227DE913001F9C2F /* BusinessOfferDetailViewController.swift in Sources */,
 				7B8E4E5C227D6182001F9C2F /* BusinessSettingsViewController.swift in Sources */,
