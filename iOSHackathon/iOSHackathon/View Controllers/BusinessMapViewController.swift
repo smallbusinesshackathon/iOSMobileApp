@@ -29,9 +29,7 @@ class BusinessMapViewController: UIViewController, MKMapViewDelegate, CLLocation
         
         alertLabel.textColor = .white
         
-        let color = severityRating["none"]!.color
-        updateStatusBarColor(color: color)
-        alertView.backgroundColor = color
+        updateAlertLabel(alerts: [])
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -94,15 +92,20 @@ class BusinessMapViewController: UIViewController, MKMapViewDelegate, CLLocation
     }
     
     private func updateAlertLabel(alerts: [WeatherAlert]){
+        var backgroundColor = UIColor()
+        var labelText = ""
+        
         if alerts.isEmpty{
-            alertLabel.text = "There are no weather alerts in your current area"
+            labelText = "There are no weather alerts in your current area"
+            backgroundColor = severityRating["none"]!.color
         } else {
             guard let mostSevere = getMostSevereAlert(alerts: alerts) else {return}
-            alertLabel.text = "\(mostSevere.severity): \(mostSevere.event)"
-            let backgroundColor = severityRating[mostSevere.severity.lowercased()]!.color
-            alertView.backgroundColor = backgroundColor
-            updateStatusBarColor(color: backgroundColor)
+            labelText = "\(mostSevere.severity): \(mostSevere.event)"
+            backgroundColor = severityRating[mostSevere.severity.lowercased()]!.color
         }
+        alertLabel.text = labelText
+        alertView.backgroundColor = backgroundColor
+        updateStatusBarColor(color: backgroundColor)
     }
     
     private func getMostSevereAlert(alerts: [WeatherAlert]) -> WeatherAlert? {
