@@ -76,20 +76,14 @@ class BusinessMapViewController: UIViewController, MKMapViewDelegate, CLLocation
     
     
     //MARK: - Private
-    private func updateWithLocation(demo:Bool = false){
+    private func updateWithLocation(){
         //Zoom to user location
         
-        let location = demo ? demoLocationDC : self.location! 
-        //        guard let location = location else {return}
+        guard let location = location else {return}
         //        let location = demoLocationDC
         
-        let viewRegion = MKCoordinateRegion(center: demoLocationDC, latitudinalMeters: 20000, longitudinalMeters: 20000)
+        let viewRegion = MKCoordinateRegion(center: location, latitudinalMeters: 20000, longitudinalMeters: 20000)
         mapView.setRegion(viewRegion, animated: true)
-        
-        //TODO: - make API calls for Requests/Offers and handle the response
-        
-        //make API request to load offers
-        //        loadAllOffers()
         
         //Find local alerts
         getAlertFromNWSAPI(coordinate: location) { (results, error) in
@@ -104,6 +98,65 @@ class BusinessMapViewController: UIViewController, MKMapViewDelegate, CLLocation
         }
         
     }
+    
+    private func demoUpdateWithLocationDC(){
+        let location = demoLocationDC
+        
+        let viewRegion = MKCoordinateRegion(center: location, latitudinalMeters: 20000, longitudinalMeters: 20000)
+        mapView.setRegion(viewRegion, animated: true)
+        
+        //Find local alerts
+        getAlertFromNWSAPI(coordinate: location) { (results, error) in
+            if let error = error {
+                NSLog("Error sending API request: \(error)")
+                return
+            }
+            guard let results = results else {return}
+            DispatchQueue.main.async {
+                self.updateAlertLabel(alerts: results)
+            }
+        }
+    }
+    
+    private func demoUpdateWithHazard(fileName: DemoJson){
+        let location = demoLocationDC
+        
+        let viewRegion = MKCoordinateRegion(center: location, latitudinalMeters: 20000, longitudinalMeters: 20000)
+        mapView.setRegion(viewRegion, animated: true)
+        
+        //Find local alerts
+        demoGetAlertFromNWSAPI(fileName: fileName.rawValue){ (results, error) in
+            if let error = error {
+                NSLog("Error sending API request: \(error)")
+                return
+            }
+            guard let results = results else {return}
+            DispatchQueue.main.async {
+                self.updateAlertLabel(alerts: results)
+            }
+        }
+    }
+    
+    private func demoGetAlertFromNWSAPI(fileName:String, completion:@escaping ([WeatherAlert]?, Error?)->Void){
+        
+        guard let url = Bundle.main.url(forResource: fileName, withExtension: "json") else {return}
+        
+        
+        do {
+            let demoData = try Data(contentsOf: url)
+            
+            let response = try JSONDecoder().decode(NWSResponse.self, from: demoData)
+            completion(response.features,nil)
+            return
+        } catch {
+            completion(nil,error)
+            return
+        }
+        
+        
+        
+    }
+    
     
     private func updateAlertLabel(alerts: [WeatherAlert]){
         var backgroundColor = UIColor()
@@ -221,15 +274,9 @@ class BusinessMapViewController: UIViewController, MKMapViewDelegate, CLLocation
             
             do {
                 let demoData = try Data(contentsOf: url)
-//                                let convertedString = String(data: demoData, encoding: String.Encoding.utf8)
-//                                print(convertedString!)
-//                
                 let offerResult = try JSONDecoder().decode(Response.self, from: demoData)
                 let offers = offerResult.offers
-//                print(offerResult)
-//                self.offers = offerResult.compactMap({ $0.value })
                 self.offers = offers.compactMap({ $0})
-//                self.offers = offers
                 completion()
             } catch {
                 NSLog("Error decoding offer representations: \(error)")
@@ -280,7 +327,9 @@ class BusinessMapViewController: UIViewController, MKMapViewDelegate, CLLocation
     private var locationManager  = CLLocationManager()
     private var location: CLLocationCoordinate2D? {
         didSet{
-            updateWithLocation(demo: true)
+//            updateWithLocation()
+//            demoUpdateWithLocationDC()
+            demoUpdateWithHazard(fileName: .TX)
         }
     }
     
@@ -298,3 +347,4 @@ class BusinessMapViewController: UIViewController, MKMapViewDelegate, CLLocation
     @IBOutlet weak var mapView: MKMapView!
     
 }
+

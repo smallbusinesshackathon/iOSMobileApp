@@ -1,0 +1,161 @@
+{
+    "id": "https://api.weather.gov/alerts/NWS-IDP-PROD-3526666",
+    "type": "Feature",
+    "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+            [
+                [
+                    -80.430000000000007,
+                    38.259999999999998
+                ],
+                [
+                    -80.319999900000013,
+                    38.079999999999998
+                ],
+                [
+                    -80.660000000000011,
+                    37.729999899999996
+                ],
+                [
+                    -80.860000000000014,
+                    37.429999999999993
+                ],
+                [
+                    -80.850000000000009,
+                    37.349999999999994
+                ],
+                [
+                    -81.010000000000005,
+                    37.269999999999996
+                ],
+                [
+                    -80.940000000000012,
+                    37.209999999999994
+                ],
+                [
+                    -81.260000000000005,
+                    37.029999999999994
+                ],
+                [
+                    -81.310000000000002,
+                    37.159999899999995
+                ],
+                [
+                    -81.230000000000004,
+                    37.229999899999996
+                ],
+                [
+                    -81.359999999999999,
+                    37.339999999999996
+                ],
+                [
+                    -81.280000000000001,
+                    37.419999999999995
+                ],
+                [
+                    -81.310000000000002,
+                    37.459999999999994
+                ],
+                [
+                    -80.969999999999999,
+                    37.719999999999992
+                ],
+                [
+                    -80.879999999999995,
+                    37.679999999999993
+                ],
+                [
+                    -80.939999999999998,
+                    37.819999999999993
+                ],
+                [
+                    -80.75,
+                    37.86999999999999
+                ],
+                [
+                    -80.799999999999997,
+                    38.059999999999988
+                ],
+                [
+                    -80.879999999999995,
+                    38.099999999999987
+                ],
+                [
+                    -80.7099999,
+                    38.079999999999984
+                ],
+                [
+                    -80.430000000000007,
+                    38.259999999999998
+                ]
+            ]
+        ]
+    },
+    "properties": {
+        "@id": "https://api.weather.gov/alerts/NWS-IDP-PROD-3526666",
+        "@type": "wx:Alert",
+        "id": "NWS-IDP-PROD-3526666",
+        "areaDesc": "Western Greenbrier; Bland; Mercer; Eastern Greenbrier; Summers",
+        "geocode": {
+            "UGC": [
+                "WVZ508",
+                "VAZ010",
+                "WVZ042",
+                "WVZ507",
+                "WVZ043"
+            ],
+            "SAME": [
+                "054025",
+                "051021",
+                "054055",
+                "054089"
+            ]
+        },
+        "affectedZones": [
+            "https://api.weather.gov/zones/forecast/WVZ508",
+            "https://api.weather.gov/zones/forecast/VAZ010",
+            "https://api.weather.gov/zones/forecast/WVZ042",
+            "https://api.weather.gov/zones/forecast/WVZ507",
+            "https://api.weather.gov/zones/forecast/WVZ043"
+        ],
+        "references": [],
+        "sent": "2019-05-03T21:02:00-04:00",
+        "effective": "2019-05-03T21:02:00-04:00",
+        "onset": "2019-05-03T21:02:00-04:00",
+        "expires": "2019-05-03T22:00:00-04:00",
+        "ends": null,
+        "status": "Actual",
+        "messageType": "Alert",
+        "category": "Met",
+        "severity": "Moderate",
+        "certainty": "Observed",
+        "urgency": "Expected",
+        "event": "Special Weather Statement",
+        "sender": "w-nws.webmaster@noaa.gov",
+        "senderName": "NWS Blacksburg VA",
+        "headline": "Special Weather Statement issued May 3 at 9:02PM EDT by NWS Blacksburg VA",
+        "description": "AT 902 PM EDT...A STRONG THUNDERSTORM WAS over Jumping Branch...\nMOVING EAST AT 20 MPH.\n\nWINDS IN EXCESS OF 40 MPH AND DIME SIZE HAIL ARE POSSIBLE WITH THIS\nSTORM.\n\nLOCATIONS IMPACTED INCLUDE...\nBluefield...\nPrinceton...\nHinton...\nRainelle...\nAND Athens.\n\nTORRENTIAL RAINFALL IS ALSO OCCURRING WITH THIS STORM...AND MAY CAUSE\nLOCALIZED FLOODING. DO NOT DRIVE YOUR VEHICLE THROUGH FLOODED\nROADWAYS.\n\nTHIS STORM MAY INTENSIFY...SO BE CERTAIN TO MONITOR LOCAL RADIO AND\nTV STATIONS...AS WELL AS LOCAL CABLE TV OUTLETS...FOR ADDITIONAL\nINFORMATION AND POSSIBLE WARNINGS FROM THE NATIONAL WEATHER SERVICE.\n\nA SEVERE THUNDERSTORM WATCH REMAINS IN EFFECT UNTIL 1000 PM EDT FOR\nWest Virginia.",
+        "instruction": "",
+        "response": "Execute",
+        "parameters": {
+            "eventMotionDescription": [
+                "2019-05-03T21:02:00.000-04:00...storm...260DEG...16KT...37.63,-80.97"
+            ],
+            "NWSheadline": [
+                "A STRONG THUNDERSTORM WILL AFFECT EASTERN Bland...WESTERN Greenbrier...Summers AND Mercer Counties"
+            ],
+            "EAS-ORG": [
+                "WXR"
+            ],
+            "PIL": [
+                "RNKSPSRNK"
+            ],
+            "BLOCKCHANNEL": [
+                "CMAS",
+                "EAS",
+                "NWEM"
+            ]
+        }
+    }
+}
