@@ -77,6 +77,9 @@ class BusinessMapViewController: UIViewController, MKMapViewDelegate, CLLocation
         
         //TODO: - make API calls for Requests/Offers and handle the response
         
+        //make API request to load offers
+        loadAllOffers()
+        
         //Find local alerts
         getAlertFromNWSAPI(coordinate: location) { (results, error) in
             if let error = error {
@@ -216,6 +219,41 @@ class BusinessMapViewController: UIViewController, MKMapViewDelegate, CLLocation
         
     }
     
+    private func loadAllRequests() {
+        
+        let url = URL(string: "https://smallbusinesshackathon.firebaseio.com/requests.json")!
+        
+        var request = URLRequest(url: url)
+        
+        request.httpMethod = "GET"
+        
+        URLSession.shared.dataTask(with: request) { (data, _, error) in
+            
+            if let error = error {
+                NSLog("Error getting request: \(error)")
+                return
+            }
+            
+            guard let data = data else {
+                NSLog("Error getting request data: \(NSError())")
+                return
+            }
+            
+            do {
+                
+                //                let convertedString = String(data: data, encoding: String.Encoding.utf8)
+                //                print(convertedString!)
+                let requestResult = try JSONDecoder().decode([String: Request].self, from: data)
+                
+                print(requestResult)
+                self.requests = requestResult.compactMap({ $0.value })
+            } catch {
+                NSLog("Error decoding requests: \(error)")
+            }
+            
+            }.resume()
+        
+    }
     
     //MARK: - Properties
     private var locationManager  = CLLocationManager()
@@ -237,7 +275,11 @@ class BusinessMapViewController: UIViewController, MKMapViewDelegate, CLLocation
             mapView.addAnnotations(offers)
         }
     }
-    private var requests = [Request]()
+    private var requests = [Request]() {
+        didSet{
+            mapView.addAnnotations(requests)
+        }
+    }
     
     @IBOutlet weak var alertView: UIView!
     @IBOutlet weak var alertLabel: UILabel!

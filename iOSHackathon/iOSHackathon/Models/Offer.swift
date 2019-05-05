@@ -11,9 +11,13 @@ import MapKit
 class Offer: NSObject, MKAnnotation, Codable {
     var coordinate: CLLocationCoordinate2D {
         var location = CLLocationCoordinate2D()
+        
+        let semaphore = DispatchSemaphore(value: 0)
         CLGeocoder().geocodeAddressString(merchantList.first?.merchantAddress.first ?? "") { (results, _) in
             guard let coordinates = results?.first?.location?.coordinate else {return}
             location = coordinates
+            
+            semaphore.signal()
         }
         return location
     }
@@ -51,7 +55,7 @@ class Offer: NSObject, MKAnnotation, Codable {
         barcode = offerRepresentation.barcode
         qrCode = offerRepresentation.qrCode
         
-    
+        
     }
     
     init(title: String, description: String, id: Int) {
