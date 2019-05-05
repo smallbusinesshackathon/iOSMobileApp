@@ -143,11 +143,10 @@
                                             </subviews>
                                         </view>
                                         <connections>
-                                            <outlet property="OfferTitleLabel" destination="Aka-n0-LvX" id="X5e-K2-17E"/>
                                             <outlet property="offerActiveIndicatorLabel" destination="XS8-yI-CBP" id="017-Jc-ae4"/>
                                             <outlet property="offerLocationLabel" destination="dK1-b3-0oV" id="Xxk-sX-k3U"/>
                                             <outlet property="offerMerchantNameLabel" destination="BUd-mH-yW4" id="Xqa-iV-SEd"/>
-                                            <outlet property="titleLabel" destination="Aka-n0-LvX" id="8Ys-T7-f6Q"/>
+                                            <outlet property="offerTitleLabel" destination="Aka-n0-LvX" id="cl9-LB-tHr"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>

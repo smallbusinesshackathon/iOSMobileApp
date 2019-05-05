@@ -19,8 +19,8 @@ class OfferCollectionViewCell: UICollectionViewCell {
         guard let offer = offer else { return }
         
         offerTitleLabel.text = offer.offerTitle
-        offerMerchantNameLabel.text = "\(offer.merchantList[1])"
-        offerLocationLabel.text = "\(offer.merchantList[2])"
+        offerMerchantNameLabel.text = "\(offer.merchantList)"
+        offerLocationLabel.text = "\(offer.merchantList)"
         if offer.activeIndicator == true {
             offerActiveIndicatorLabel.text = "Active"
         } else {
