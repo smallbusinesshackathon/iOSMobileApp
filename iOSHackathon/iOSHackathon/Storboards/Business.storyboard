@@ -1087,6 +1087,7 @@
         <image name="005-danger" width="24" height="24"/>
         <image name="007-plus" width="32" height="32"/>
         <image name="1488302913578" width="230" height="130"/>
+        <image name="alert" width="16" height="16"/>
         <image name="store-1" width="256" height="256"/>
     </resources>
     <inferredMetricsTieBreakers>
