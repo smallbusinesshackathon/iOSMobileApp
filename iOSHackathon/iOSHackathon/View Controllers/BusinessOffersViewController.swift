@@ -9,6 +9,7 @@ import UIKit
 
 class BusinessOffersViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -172,9 +173,9 @@ class BusinessOffersViewController: UIViewController, UICollectionViewDataSource
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         switch offerSegmentedControl.selectedSegmentIndex {
-        case 0:
-            performSegue(withIdentifier: "EditOffer", sender: self)
         case 1:
+            performSegue(withIdentifier: "EditOffer", sender: self)
+        case 0:
             performSegue(withIdentifier: "ViewOffer", sender: self)
         default:
             break
