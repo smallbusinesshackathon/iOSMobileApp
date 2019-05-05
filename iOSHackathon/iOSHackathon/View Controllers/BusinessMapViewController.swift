@@ -74,6 +74,67 @@ class BusinessMapViewController: UIViewController, MKMapViewDelegate, CLLocation
         return dequeued
     }
     
+
+    
+    
+    //MARK: - DEMO functions
+    private func demoUpdateWithLocationDC(){
+        let location = demoLocationDC
+        
+        let viewRegion = MKCoordinateRegion(center: location, latitudinalMeters: 20000, longitudinalMeters: 20000)
+        mapView.setRegion(viewRegion, animated: true)
+        
+        //Find local alerts
+        getAlertFromNWSAPI(coordinate: location) { (results, error) in
+            if let error = error {
+                NSLog("Error sending API request: \(error)")
+                return
+            }
+            guard let results = results else {return}
+            DispatchQueue.main.async {
+                self.updateAlertLabel(alerts: results)
+            }
+        }
+    }
+    
+    private func demoUpdateWithHazard(fileName: DemoJson, coordinates: CLLocationCoordinate2D){
+        let location = coordinates
+        
+        let viewRegion = MKCoordinateRegion(center: location, latitudinalMeters: 20000, longitudinalMeters: 20000)
+        mapView.setRegion(viewRegion, animated: true)
+        
+        //Find local alerts
+        demoGetAlertFromNWSAPI(fileName: fileName.rawValue){ (results, error) in
+            if let error = error {
+                NSLog("Error decoding API request: \(error)")
+                return
+            }
+            guard let results = results else {return}
+            DispatchQueue.main.async {
+                self.updateAlertLabel(alerts: results)
+            }
+        }
+    }
+    
+    private func demoGetAlertFromNWSAPI(fileName:String, completion:@escaping ([WeatherAlert]?, Error?)->Void){
+        
+        guard let url = Bundle.main.url(forResource: fileName, withExtension: "json") else {return}
+        
+        
+        do {
+            let demoData = try Data(contentsOf: url)
+            
+            let response = try JSONDecoder().decode(WeatherAlert.self, from: demoData)
+            completion([response],nil)
+            return
+        } catch {
+            completion(nil,error)
+            return
+        }
+        
+        
+        
+    }
     
     //MARK: - Private
     private func updateWithLocation(){
@@ -98,65 +159,6 @@ class BusinessMapViewController: UIViewController, MKMapViewDelegate, CLLocation
         }
         
     }
-    
-    private func demoUpdateWithLocationDC(){
-        let location = demoLocationDC
-        
-        let viewRegion = MKCoordinateRegion(center: location, latitudinalMeters: 20000, longitudinalMeters: 20000)
-        mapView.setRegion(viewRegion, animated: true)
-        
-        //Find local alerts
-        getAlertFromNWSAPI(coordinate: location) { (results, error) in
-            if let error = error {
-                NSLog("Error sending API request: \(error)")
-                return
-            }
-            guard let results = results else {return}
-            DispatchQueue.main.async {
-                self.updateAlertLabel(alerts: results)
-            }
-        }
-    }
-    
-    private func demoUpdateWithHazard(fileName: DemoJson){
-        let location = demoLocationDC
-        
-        let viewRegion = MKCoordinateRegion(center: location, latitudinalMeters: 20000, longitudinalMeters: 20000)
-        mapView.setRegion(viewRegion, animated: true)
-        
-        //Find local alerts
-        demoGetAlertFromNWSAPI(fileName: fileName.rawValue){ (results, error) in
-            if let error = error {
-                NSLog("Error sending API request: \(error)")
-                return
-            }
-            guard let results = results else {return}
-            DispatchQueue.main.async {
-                self.updateAlertLabel(alerts: results)
-            }
-        }
-    }
-    
-    private func demoGetAlertFromNWSAPI(fileName:String, completion:@escaping ([WeatherAlert]?, Error?)->Void){
-        
-        guard let url = Bundle.main.url(forResource: fileName, withExtension: "json") else {return}
-        
-        
-        do {
-            let demoData = try Data(contentsOf: url)
-            
-            let response = try JSONDecoder().decode(NWSResponse.self, from: demoData)
-            completion(response.features,nil)
-            return
-        } catch {
-            completion(nil,error)
-            return
-        }
-        
-        
-        
-    }
-    
     
     private func updateAlertLabel(alerts: [WeatherAlert]){
         var backgroundColor = UIColor()
@@ -329,7 +331,7 @@ class BusinessMapViewController: UIViewController, MKMapViewDelegate, CLLocation
         didSet{
 //            updateWithLocation()
 //            demoUpdateWithLocationDC()
-            demoUpdateWithHazard(fileName: .TX)
+            demoUpdateWithHazard(fileName: .TX, coordinates: CLLocationCoordinate2D(latitude: 29.300131, longitude: -94.795853))
         }
     }
     
