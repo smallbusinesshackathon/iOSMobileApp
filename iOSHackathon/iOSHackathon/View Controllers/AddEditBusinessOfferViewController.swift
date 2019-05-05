@@ -40,7 +40,8 @@ class AddEditBusinessOfferViewController: UIViewController {
         }
         
         offerTitleTextField.text = offer.offerTitle
-        offerDescriptionTextView.text = offer.offerShortDescription.text
+        offerDescriptionTextView.text = "\(offer.offerShortDescription)"
+        
     }
     
     private func postOffer(title: String, description: String, id: Int = UUID().hashValue) {

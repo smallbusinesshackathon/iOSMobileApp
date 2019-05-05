@@ -143,11 +143,10 @@
                                             </subviews>
                                         </view>
                                         <connections>
-                                            <outlet property="OfferTitleLabel" destination="Aka-n0-LvX" id="X5e-K2-17E"/>
                                             <outlet property="offerActiveIndicatorLabel" destination="XS8-yI-CBP" id="017-Jc-ae4"/>
                                             <outlet property="offerLocationLabel" destination="dK1-b3-0oV" id="Xxk-sX-k3U"/>
                                             <outlet property="offerMerchantNameLabel" destination="BUd-mH-yW4" id="Xqa-iV-SEd"/>
-                                            <outlet property="titleLabel" destination="Aka-n0-LvX" id="8Ys-T7-f6Q"/>
+                                            <outlet property="offerTitleLabel" destination="Aka-n0-LvX" id="cl9-LB-tHr"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -206,25 +205,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ZDg-al-6Fb">
-                                <rect key="frame" x="87" y="188" width="240" height="185"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ZDg-al-6Fb">
+                                <rect key="frame" x="87" y="188" width="254" height="242"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Share Title Share Title Share Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H9T-Dt-N70">
+                                        <rect key="frame" x="0.0" y="0.0" width="254" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O77-yW-yeE">
-                                        <rect key="frame" x="0.0" y="0.0" width="88" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="28.5" width="254" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="jUT-UP-WuL">
-                                        <rect key="frame" x="0.0" y="28.5" width="240" height="128"/>
+                                        <rect key="frame" x="0.0" y="57" width="254" height="128"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ia2-5Y-GgZ">
-                                        <rect key="frame" x="0.0" y="164.5" width="65.5" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Redemption Code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JdE-bR-RB6">
+                                        <rect key="frame" x="0.0" y="193" width="254" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="RedemptionCodePlaceHolder" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vZi-gk-lZ6">
+                                        <rect key="frame" x="0.0" y="221.5" width="254" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -239,8 +250,8 @@
                                     <action selector="goBack:" destination="EgT-rv-fDs" eventType="touchUpInside" id="7qU-uy-nGS"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Valid Until Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kef-hn-c9Z">
-                                <rect key="frame" x="277" y="134" width="117" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Validity To Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kef-hn-c9Z">
+                                <rect key="frame" x="277" y="134" width="119" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -250,10 +261,16 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="JeF-eZ-DF3"/>
                     </view>
+                    <connections>
+                        <outlet property="offerDescriptionTextView" destination="jUT-UP-WuL" id="gke-3k-xLb"/>
+                        <outlet property="offerRedemptionCodeLabel" destination="vZi-gk-lZ6" id="nnS-5R-Yls"/>
+                        <outlet property="offerShareTitleLabel" destination="H9T-Dt-N70" id="v86-CY-w41"/>
+                        <outlet property="offerValidtoDateLabel" destination="kef-hn-c9Z" id="SDb-Y2-Trq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vEH-2P-NAN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="249" y="2401"/>
+            <point key="canvasLocation" x="247.82608695652175" y="2400.6696428571427"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="THC-cF-Ccf">
