@@ -54,9 +54,9 @@ class Offer: NSObject, MKAnnotation, Codable {
     
     }
     
-    init(title: String, description: String) {
+    init(title: String, description: String, id: Int) {
         self.offerTitle = title
-        self.offerId = UUID().hashValue
+        self.offerId = id
         self.activeIndicator = true
         self.soldOut = false
         self.merchantList = [MerchantList(merchantId: 0, merchant: "", merchantAddress: [""], merchantImages: [MerchantImage(fileLocation: "")])]

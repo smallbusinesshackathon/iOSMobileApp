@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import MapKit
 
 enum Severity:String {
     case minor
@@ -17,3 +18,4 @@ enum Severity:String {
 enum DecodingError: Error{
     case invalidResponse
 }
+

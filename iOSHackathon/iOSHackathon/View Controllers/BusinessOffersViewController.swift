@@ -25,9 +25,14 @@ class BusinessOffersViewController: UIViewController, UICollectionViewDataSource
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destinationVC = segue.destination as? AddEditBusinessOfferViewController {
+            if let indexPath = collectionView.indexPathsForSelectedItems?.first {
+                destinationVC.offer = offers[indexPath.row]
+            }
             
         } else if let destinationVC = segue.destination as? BusinessOfferDetailViewController {
-        
+            if let indexPath = collectionView.indexPathsForSelectedItems?.first {
+                destinationVC.offer = offers[indexPath.row]
+            }
         }
     }
     
@@ -45,7 +50,7 @@ class BusinessOffersViewController: UIViewController, UICollectionViewDataSource
     }
     
     private func loadMyOffers() {
-        
+        loadAllOffers()
     }
     
     private func loadAllOffers() {
@@ -146,6 +151,16 @@ class BusinessOffersViewController: UIViewController, UICollectionViewDataSource
         return cell
     }
 
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        switch offerSegmentedControl.selectedSegmentIndex {
+        case 0:
+            performSegue(withIdentifier: "EditOffer", sender: self)
+        case 1:
+            performSegue(withIdentifier: "ViewOffer", sender: self)
+        default:
+            break
+        }
+    }
     
     // MARK - Properties
     

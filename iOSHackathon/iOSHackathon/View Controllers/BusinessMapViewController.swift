@@ -8,7 +8,14 @@
 import UIKit
 import MapKit
 
+
+let demoLocationDC = CLLocationCoordinate2D(latitude: 38.907192, longitude: -77.036873)
+
 class BusinessMapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -19,14 +26,17 @@ class BusinessMapViewController: UIViewController, MKMapViewDelegate, CLLocation
         // Check for Location Services
         locationManager.requestWhenInUseAuthorization()
         locationManager.requestLocation()
-        //        guard let avgCoordinate =  storeController.averageStoreCoordinate() else {return}
-        //        let viewRegion = MKCoordinateRegion(center: avgCoordinate, latitudinalMeters: 2000, longitudinalMeters: 2000)
-        //        mapView.setRegion(viewRegion, animated: false)
+        
+        alertLabel.textColor = .white
+        
+        let color = severityRating["none"]!.color
+        updateStatusBarColor(color: color)
+        alertView.backgroundColor = color
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-//        tableView.reloadData()
+        //        tableView.reloadData()
         
         mapView.delegate = self
         mapView.register(MKMarkerAnnotationView.self, forAnnotationViewWithReuseIdentifier: "MapAnnotation")
@@ -57,16 +67,55 @@ class BusinessMapViewController: UIViewController, MKMapViewDelegate, CLLocation
     }
     
     //MARK: - Private
-    private func updateWithLocation(){
+    private func updateWithLocation(demo:Bool = false){
         //Zoom to user location
-        guard let location = location else {return}
-        let viewRegion = MKCoordinateRegion(center: location, latitudinalMeters: 2000, longitudinalMeters: 2000)
+        
+        let location = demo ? demoLocationDC : self.location! 
+        //        guard let location = location else {return}
+        //        let location = demoLocationDC
+        
+        let viewRegion = MKCoordinateRegion(center: demoLocationDC, latitudinalMeters: 2000, longitudinalMeters: 2000)
         mapView.setRegion(viewRegion, animated: true)
         
         //TODO: - make API calls for Requests/Offers and handle the response
         
         //Find local alerts
+        getAlertFromNWSAPI(coordinate: location) { (results, error) in
+            if let error = error {
+                NSLog("Error sending API request: \(error)")
+                return
+            }
+            guard let results = results else {return}
+            DispatchQueue.main.async {
+                self.updateAlertLabel(alerts: results)
+            }
+        }
         
+    }
+    
+    private func updateAlertLabel(alerts: [WeatherAlert]){
+        if alerts.isEmpty{
+            alertLabel.text = "There are no weather alerts in your current area"
+        } else {
+            guard let mostSevere = getMostSevereAlert(alerts: alerts) else {return}
+            alertLabel.text = "\(mostSevere.severity): \(mostSevere.event)"
+            let backgroundColor = severityRating[mostSevere.severity.lowercased()]!.color
+            alertView.backgroundColor = backgroundColor
+            updateStatusBarColor(color: backgroundColor)
+        }
+    }
+    
+    private func getMostSevereAlert(alerts: [WeatherAlert]) -> WeatherAlert? {
+        let sorted = alerts.sorted{ severityRating[$0.severity.lowercased()]!.rating > severityRating [$1.severity.lowercased()]!.rating}
+        
+        return sorted.first
+    }
+    
+    private func updateStatusBarColor(color: UIColor){
+        let statusBarView = UIView(frame: UIApplication.shared.statusBarFrame)
+        
+        statusBarView.backgroundColor = color
+        view.addSubview(statusBarView)
     }
     
     //MARK: - Private Networking Functions
@@ -99,7 +148,7 @@ class BusinessMapViewController: UIViewController, MKMapViewDelegate, CLLocation
                 return
             }
             
-        }.resume()
+            }.resume()
         
     }
     
@@ -136,9 +185,16 @@ class BusinessMapViewController: UIViewController, MKMapViewDelegate, CLLocation
     private var locationManager  = CLLocationManager()
     private var location: CLLocationCoordinate2D? {
         didSet{
-            updateWithLocation()
+            updateWithLocation(demo: true)
         }
     }
+    
+    private let severityRating = [ "none": (rating: 0, color: UIColor(red: 11.0/255.0, green: 102.0/255.0, blue: 35.0/255.0, alpha: 1.0)),
+                                   "minor": (rating: 1, color: UIColor.green),
+                                   "moderate" : (rating: 2, color: UIColor.yellow),
+                                   "severe" : (rating: 3, color: UIColor.orange),
+                                   "extreme" : (rating: 4, color: UIColor.red)]
+    
     
     private var offers = [Offer]()
     private var requests = [Request]()
@@ -146,6 +202,5 @@ class BusinessMapViewController: UIViewController, MKMapViewDelegate, CLLocation
     @IBOutlet weak var alertView: UIView!
     @IBOutlet weak var alertLabel: UILabel!
     @IBOutlet weak var mapView: MKMapView!
-    @IBOutlet weak var tableView: UITableView!
     
 }

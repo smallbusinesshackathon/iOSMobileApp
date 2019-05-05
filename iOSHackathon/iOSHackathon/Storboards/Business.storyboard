@@ -190,8 +190,8 @@
                     <connections>
                         <outlet property="collectionView" destination="Tpi-1h-9e2" id="bnw-8W-qV8"/>
                         <outlet property="offerSegmentedControl" destination="zGI-Rb-tQu" id="HuK-Dz-NTB"/>
-                        <segue destination="66u-sK-t5q" kind="show" id="zQq-mt-0QA"/>
-                        <segue destination="EgT-rv-fDs" kind="show" id="hf1-lC-TFC"/>
+                        <segue destination="66u-sK-t5q" kind="show" identifier="EditOffer" id="zQq-mt-0QA"/>
+                        <segue destination="EgT-rv-fDs" kind="show" identifier="ViewOffer" id="hf1-lC-TFC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wz1-rO-baH" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -235,6 +235,9 @@
                                 <rect key="frame" x="20" y="88" width="34" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="goBack:" destination="EgT-rv-fDs" eventType="touchUpInside" id="7qU-uy-nGS"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Valid Until Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kef-hn-c9Z">
                                 <rect key="frame" x="277" y="134" width="117" height="21"/>
@@ -286,8 +289,8 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1F8-2U-eqd">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AlertLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kxC-FF-9fF">
-                                                <rect key="frame" x="168" y="17" width="78.5" height="20.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AlertLabel" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kxC-FF-9fF">
+                                                <rect key="frame" x="17" y="17" width="380" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -296,6 +299,8 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="kxC-FF-9fF" firstAttribute="centerY" secondItem="1F8-2U-eqd" secondAttribute="centerY" constant="5" id="RJZ-l8-oCa"/>
+                                            <constraint firstAttribute="trailing" secondItem="kxC-FF-9fF" secondAttribute="trailing" constant="17" id="T7J-ar-KI9"/>
+                                            <constraint firstItem="kxC-FF-9fF" firstAttribute="leading" secondItem="1F8-2U-eqd" secondAttribute="leading" constant="17" id="m5t-qv-hMl"/>
                                             <constraint firstItem="kxC-FF-9fF" firstAttribute="centerX" secondItem="1F8-2U-eqd" secondAttribute="centerX" id="qZM-ZA-EOq"/>
                                             <constraint firstAttribute="height" constant="44" id="yND-rN-55r"/>
                                         </constraints>
@@ -815,6 +820,6 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="C1S-Xk-03J"/>
-        <segue reference="XEA-iQ-Weu"/>
+        <segue reference="zQq-mt-0QA"/>
     </inferredMetricsTieBreakers>
 </document>
