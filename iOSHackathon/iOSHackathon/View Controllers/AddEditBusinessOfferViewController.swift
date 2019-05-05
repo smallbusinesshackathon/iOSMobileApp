@@ -40,7 +40,7 @@ class AddEditBusinessOfferViewController: UIViewController {
         let offStartDate = offerStartDatePicker.date
         let offEndDate = offerEndDatePicker.date
         let offActiveIndicator = offerActiveIndicator.isOn
-        let id = UUID()
+        let id = 0
         
         if offer != nil {
             // UPDATE REQUEST
@@ -60,7 +60,7 @@ class AddEditBusinessOfferViewController: UIViewController {
         guard let offer = offer else { return}
         
         offerTitleTextField.text = offer.offerTitle
-        offerDescriptionTextView.text = offer.offerShortDescription.text
+        offerDescriptionTextView.text = offer.offerShortDescription?.text
         offerMerchantNameTextField.text = offer.merchantList.first?.merchant
         offerLocationTextField.text = offer.merchantList.first?.merchantAddress.first
         offerRedemptionCodeTextField.text = offer.redemptionCode
@@ -70,7 +70,7 @@ class AddEditBusinessOfferViewController: UIViewController {
         offerActiveIndicator.isOn = offer.activeIndicator
     }
     
-    private func postOffer(title: String, description: String, id: Int = UUID().hashValue, merchantName: String, location: String, redemptionCode: String, shareTitle: String, activeIndicator: Bool, startDate: Date, endDate: Date) {
+    private func postOffer(title: String, description: String, id: Int, merchantName: String, location: String, redemptionCode: String, shareTitle: String, activeIndicator: Bool, startDate: Date, endDate: Date) {
         let offer = Offer(title: title, description: description, id: id, merchantName: merchantName, merchantLocation: location, redemptionCode: redemptionCode, shareTitle: shareTitle, activeIndicator: activeIndicator, startDate: startDate, endDate: endDate)
         
         let url = URL(string: "https://smallbusinesshackathon.firebaseio.com/offers")!.appendingPathComponent("\(offer.offerId)").appendingPathExtension("json")
