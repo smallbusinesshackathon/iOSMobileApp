@@ -181,7 +181,40 @@ class BusinessMapViewController: UIViewController, MKMapViewDelegate, CLLocation
         return urlComponents.url
     }
     
-    
+    private func loadAllOffers() {
+        let url = URL(string: "https://smallbusinesshackathon.firebaseio.com/offers.json")!
+        
+        var request = URLRequest(url: url)
+        
+        request.httpMethod = "GET"
+        
+        URLSession.shared.dataTask(with: request) { (data, _, error) in
+            
+            if let error = error {
+                NSLog("Error getting offers: \(error)")
+                return
+            }
+            
+            guard let data = data else {
+                NSLog("Error getting offers data: \(NSError())")
+                return
+            }
+            
+            do {
+                
+                //                let convertedString = String(data: data, encoding: String.Encoding.utf8)
+                //                print(convertedString!)
+                let offerResult = try JSONDecoder().decode([String: Offer].self, from: data)
+                
+                print(offerResult)
+                self.offers = offerResult.compactMap({ $0.value })
+            } catch {
+                NSLog("Error decoding offer representations: \(error)")
+            }
+            
+            }.resume()
+        
+    }
     
     
     //MARK: - Properties
@@ -199,7 +232,11 @@ class BusinessMapViewController: UIViewController, MKMapViewDelegate, CLLocation
                                    "extreme" : (rating: 4, color: UIColor.red)]
     
     
-    private var offers = [Offer]()
+    private var offers = [Offer](){
+        didSet{
+            mapView.addAnnotations(offers)
+        }
+    }
     private var requests = [Request]()
     
     @IBOutlet weak var alertView: UIView!
