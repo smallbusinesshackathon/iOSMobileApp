@@ -376,19 +376,34 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1F8-2U-eqd">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="66"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AlertLabel" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kxC-FF-9fF">
-                                                <rect key="frame" x="17" y="28" width="380" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sFn-do-QIL">
+                                                <rect key="frame" x="157" y="27" width="100.5" height="22"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="AlertLabel" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kxC-FF-9fF">
+                                                        <rect key="frame" x="0.0" y="0.0" width="78.5" height="22"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="255" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gt6-e0-QLn">
+                                                        <rect key="frame" x="78.5" y="0.0" width="22" height="22"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="22" id="HmV-7b-nTF"/>
+                                                            <constraint firstAttribute="width" constant="22" id="Wnk-0g-0Es"/>
+                                                        </constraints>
+                                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <state key="normal" image="alert"/>
+                                                        <connections>
+                                                            <action selector="seeAlert:" destination="e3K-M8-doQ" eventType="touchUpInside" id="X6L-V5-cO2"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="kxC-FF-9fF" firstAttribute="centerY" secondItem="1F8-2U-eqd" secondAttribute="centerY" constant="5" id="RJZ-l8-oCa"/>
-                                            <constraint firstAttribute="trailing" secondItem="kxC-FF-9fF" secondAttribute="trailing" constant="17" id="T7J-ar-KI9"/>
-                                            <constraint firstItem="kxC-FF-9fF" firstAttribute="leading" secondItem="1F8-2U-eqd" secondAttribute="leading" constant="17" id="m5t-qv-hMl"/>
-                                            <constraint firstItem="kxC-FF-9fF" firstAttribute="centerX" secondItem="1F8-2U-eqd" secondAttribute="centerX" id="qZM-ZA-EOq"/>
+                                            <constraint firstItem="sFn-do-QIL" firstAttribute="centerX" secondItem="1F8-2U-eqd" secondAttribute="centerX" id="cMk-i3-oRM"/>
+                                            <constraint firstItem="sFn-do-QIL" firstAttribute="centerY" secondItem="1F8-2U-eqd" secondAttribute="centerY" constant="5" id="mlJ-b5-15o"/>
                                             <constraint firstAttribute="height" constant="66" id="yND-rN-55r"/>
                                         </constraints>
                                     </view>
@@ -409,6 +424,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Map" image="001-placeholder" id="m9V-Az-cS4"/>
                     <connections>
+                        <outlet property="alertButton" destination="gt6-e0-QLn" id="GvO-K8-7W4"/>
                         <outlet property="alertLabel" destination="kxC-FF-9fF" id="I97-fe-mip"/>
                         <outlet property="alertView" destination="1F8-2U-eqd" id="uri-pp-UHs"/>
                         <outlet property="mapView" destination="K6I-sR-Dfi" id="cLT-97-AGx"/>
@@ -1066,6 +1082,7 @@
         <image name="003-voucher" width="24" height="24"/>
         <image name="005-danger" width="24" height="24"/>
         <image name="007-plus" width="32" height="32"/>
+        <image name="alert" width="16" height="16"/>
         <image name="store-1" width="256" height="256"/>
     </resources>
     <inferredMetricsTieBreakers>
