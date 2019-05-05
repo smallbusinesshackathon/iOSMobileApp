@@ -357,12 +357,18 @@ class BusinessMapViewController: UIViewController, MKMapViewDelegate, CLLocation
             return
         }
         
-        let messageText = "\(weatherAlert.description) \n\(weatherAlert.instruction)\nCheck your local weather channel for more information"
+        let paragraph = NSMutableParagraphStyle()
+        paragraph.alignment = .left
+        paragraph.paragraphSpacing = 10
         
+        let attributes: [NSAttributedString.Key : Any] = [NSAttributedString.Key.paragraphStyle: paragraph]
+        let attrString = NSAttributedString(string:"\(weatherAlert.headline) \n\(weatherAlert.instruction)\nCheck your local weather channel for more information", attributes: attributes)
         
-        let myAlert = UIAlertController(title: weatherAlert.event, message: messageText, preferredStyle: .alert)
+        let myAlert = UIAlertController(title: weatherAlert.event, message: "", preferredStyle: .alert)
         
-      myAlert.addAction(UIAlertAction(title: "Done", style:.default))
+        myAlert.setValue(attrString, forKey: "attributedMessage")
+        
+        myAlert.addAction(UIAlertAction(title: "Done", style:.default))
         
         self.present(myAlert, animated: true)
     }
