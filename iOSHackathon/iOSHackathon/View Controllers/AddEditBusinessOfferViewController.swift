@@ -12,7 +12,17 @@ class AddEditBusinessOfferViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //updateViews()
+
+        updateViews()
+        
+        offerDescriptionTextView.backgroundColor = .clear
+        offerDescriptionTextView.layer.cornerRadius = 5
+        offerDescriptionTextView.layer.borderColor = #colorLiteral(red: 0.921431005, green: 0.9214526415, blue: 0.9214410186, alpha: 1)
+        offerDescriptionTextView.layer.borderWidth = 1
+        
+        //submitButton.layer.cornerRadius = 5
+
+
     }
     
     @IBAction func goBack(_ sender: Any) {
