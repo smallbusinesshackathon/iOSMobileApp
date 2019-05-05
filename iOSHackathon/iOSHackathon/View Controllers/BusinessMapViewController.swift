@@ -106,14 +106,14 @@ class BusinessMapViewController: UIViewController, MKMapViewDelegate, CLLocation
         }
     }
     
-    private func demoUpdateWithHazard(fileName: DemoJson, coordinates: CLLocationCoordinate2D){
+    private func demoUpdateWithHazard(demoData: DemoJson, coordinates: CLLocationCoordinate2D){
         let location = coordinates
         
         let viewRegion = MKCoordinateRegion(center: location, latitudinalMeters: 20000, longitudinalMeters: 20000)
         mapView.setRegion(viewRegion, animated: true)
         
         //Find local alerts
-        demoGetAlertFromNWSAPI(fileName: fileName.rawValue){ (results, error) in
+        demoGetAlertFromNWSAPI(fileName: demoData.rawValue){ (results, error) in
             if let error = error {
                 NSLog("Error decoding API request: \(error)")
                 return
@@ -379,7 +379,8 @@ class BusinessMapViewController: UIViewController, MKMapViewDelegate, CLLocation
         didSet{
             //            updateWithLocation()
             //            demoUpdateWithLocationDC()
-            demoUpdateWithHazard(fileName: .TX, coordinates: CLLocationCoordinate2D(latitude: 29.384020, longitude: -94.902550))
+//            demoUpdateWithHazard(fileName: .TX, coordinates: CLLocationCoordinate2D(latitude: 29.384020, longitude: -94.902550))
+            demoUpdateWithHazard(demoData: .DC, coordinates: demoLocationDC)
         }
     }
     
