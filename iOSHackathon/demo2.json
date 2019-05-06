@@ -18,10 +18,10 @@
             "merchantList": [
                 {
                     "merchantId": 101457,
-                    "merchant": "Merchant Two",
+                    "merchant": "Your business",
                     "merchantAddress": [{
                         "key": 104404,
-                        "address1": "2 Lincoln Memorial Cir NW",
+                        "address1": "243 SE U St",
                         "address2": "",
                         "city": "Washington",
                         "state": "Washington, D.C.",
@@ -298,7 +298,7 @@
                     ]
                 }
             ],
-            "offerTitle": "Save 10%",
+            "offerTitle": "Save 20% off your first purchase",
             "featuredOfferIndicator": false,
             "validityFromDate": "Jul 1, 2016 GMT",
             "validityFromMonth": "7",
@@ -360,7 +360,7 @@
                     "value": "Facebook"
                 }
             ],
-            "shareTitle": "Save 10% on purchases exceeding $50",
+            "shareTitle": "Save 20% on purchases exceeding $50",
             "redemptionChannelList": [
                 {
                     "key": 47,
@@ -380,8 +380,8 @@
             "eventSubTitle": "",
             "dateLocations": [],
             "offerShortDescription": {
-                "richText": "&lt;p&gt;Save $10 on your purchase!&nbsp; (LAC/EU ver)&lt;/p&gt;",
-                "text": "Save $10 on your purchase!"
+                "richText": "Save 20% off on your purchase!",
+                "text": "Save 20% off on your purchase!"
             },
             "offerCopy": {
                 "richText": "&lt;p&gt;Save $10 on purchases that exceed $50 when you use your Visa card.&nbsp;&lt;/p&gt;n&lt;p&gt;adipiscing bibendum est ultricies integer quis auctor elit sed vulputate mi sit amet mauris commodo quis imperdiet massa tincidunt nunc pulvinar sapien et ligula ullamcorper malesuada proin libero nunc consequat interdum varius sit amet mattis vulputate enim nulla aliquet porttitor lacus luctus accumsan tortor posuere ac ut consequat semper viverra nam libero justo laoreet sit amet cursus sit amet dictum sit amet justo donec enim diam vulputate ut pharetra sit amet aliquam id diam maecenas ultricies mi eget mauris pharetra et ultrices neque ornare aenean euismod elementum nisi quis eleifend quam adipiscing vitae proin sagittis nisl rhoncus mattis rhoncus urna&lt;/p&gt;n&lt;p&gt;To redeem, enter or mention promo code VISA at checkout.&nbsp;&lt;/p&gt;",
@@ -1055,11 +1055,11 @@
             "merchantList": [
                 {
                     "merchantId": 101457,
-                    "merchant": "Merchant One",
+                    "merchant": "Your business",
                     "merchantAddress": [
                         {
                             "key": 104404,
-                            "address1": "2 Lincoln Memorial Cir NW",
+                            "address1": "243 SE U St",
                             "address2": "",
                             "city": "Washington",
                             "state": "Washington, D.C.",
@@ -1134,7 +1134,7 @@
                     "merchantImages": []
                 }
             ],
-            "offerTitle": "Save $10",
+            "offerTitle": "Save on your emergency supplies",
             "featuredOfferIndicator": false,
             "validityFromDate": "Jul 1, 2016 GMT",
             "validityFromMonth": "7",
@@ -1204,8 +1204,8 @@
             "eventSubTitle": "",
             "dateLocations": [],
             "offerShortDescription": {
-                "richText": "&lt;p&gt;Save $10 on your purchase!&lt;/p&gt;",
-                "text": "Save $10 on your purchase!"
+                "richText": "Save 20% off on your purchase!",
+                "text": "Grab your basics before the storm and save up to $15 off any purchase more than $50"
             },
             "offerCopy": {
                 "richText": "&lt;p&gt;Save $10 on purchases that exceed $50 when you use your Visa card&lt;/p&gt;n&lt;p&gt;velit laoreet id donec ultrices tincidunt arcu non sodales neque sodales ut etiam sit amet nisl purus in mollis nunc sed id semper risus in hendrerit gravida rutrum quisque non tellus orci ac auctor augue mauris augue neque gravida in fermentum et sollicitudin ac orci phasellus egestas tellus rutrum tellus pellentesque eu tincidunt tortor aliquam nulla facilisi cras fermentum odio eu feugiat pretium nibh ipsum consequat nisl vel pretium lectus quam id leo in vitae turpis massa sed elementum tempus egestas sed sed risus pretium quam vulputate dignissim suspendisse in est ante in nibh mauris cursus mattis molestie a iaculis&lt;/p&gt;n&lt;p&gt;Redeem using promotion code REDEEM.&nbsp;&lt;/p&gt;",
