@@ -70,8 +70,6 @@ class BusinessOffersViewController: UIViewController, UICollectionViewDataSource
         }
     }
     
-    
-    
     private func checkDataSource() {
         switch offerSegmentedControl.selectedSegmentIndex {
         case 0:
@@ -84,7 +82,46 @@ class BusinessOffersViewController: UIViewController, UICollectionViewDataSource
     }
     
     private func loadMyOffers() {
-        loadAllOffers()
+        let url = URL(string: "https://smallbusinesshackathon.firebaseio.com/offers.json")!
+        
+        var request = URLRequest(url: url)
+        
+        request.httpMethod = "GET"
+        
+        URLSession.shared.dataTask(with: request) { (data, _, error) in
+            
+            if let error = error {
+                NSLog("Error getting offers: \(error)")
+                return
+            }
+            
+            //            guard let data = data else {
+            //                NSLog("Error getting offers data: \(NSError())")
+            //                return
+            //            }
+            
+            //begin demo Code
+            
+            guard let url = Bundle.main.url(forResource: "demo2", withExtension: "json") else {return}
+            
+            
+            do {
+                let demoData = try Data(contentsOf: url)
+                //                                let convertedString = String(data: demoData, encoding: String.Encoding.utf8)
+                //                                print(convertedString!)
+                //
+                let offerResult = try JSONDecoder().decode(Response.self, from: demoData)
+                let offers = offerResult.offers
+                //                print(offerResult)
+                //                self.offers = offerResult.compactMap({ $0.value })
+                self.offers = offers.compactMap({ $0})
+                //                self.offers = offers
+                
+            } catch {
+                NSLog("Error decoding offer representations: \(error)")
+            }
+            
+            }.resume()
     }
     
     private func loadAllOffers() {

@@ -19,3 +19,14 @@ enum DecodingError: Error{
     case invalidResponse
 }
 
+enum AnnotationType: String {
+    case request
+    case offer
+}
+
+enum DemoJson: String {
+    case WV = "flashfloodWVandSWVa"
+    case TX = "severeThunderstormGalvestonTX"
+    case FL = "specialWeatherWakullaFL"
+    case DC = "demoDCPolgyon"
+}

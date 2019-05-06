@@ -1,0 +1,162 @@
+{
+            "id": "https://api.weather.gov/alerts/NWS-IDP-PROD-3523885-3076392",
+            "type": "Feature",
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            -76.920000000000002,
+                            38.719999999999999
+                        ],
+                        [
+                            -77.010000000000005,
+                            38.740000000000002
+                        ],
+                        [
+                            -77.030000000000001,
+                            38.770000000000003
+                        ],
+                        [
+                            -77.019999999999996,
+                            38.790000000000006
+                        ],
+                        [
+                            -77.019999999999996,
+                            38.860000000000007
+                        ],
+                        [
+                            -77.039999999999992,
+                            38.88000000000001
+                        ],
+                        [
+                            -77.049999999999997,
+                            38.780000000000008
+                        ],
+                        [
+                            -77.049999999999997,
+                            38.750000000000007
+                        ],
+                        [
+                            -77.170000000000002,
+                            38.780000000000008
+                        ],
+                        [
+                            -77.25,
+                            38.840000000000011
+                        ],
+                        [
+                            -77.189999999999998,
+                            38.900000000000013
+                        ],
+                        [
+                            -77.060000000000002,
+                            38.960000000000015
+                        ],
+                        [
+                            -76.680000000000007,
+                            38.890000000000015
+                        ],
+                        [
+                            -76.920000000000002,
+                            38.719999999999999
+                        ]
+                    ]
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/NWS-IDP-PROD-3523885-3076392",
+                "@type": "wx:Alert",
+                "id": "NWS-IDP-PROD-3523885-3076392",
+                "areaDesc": "City of Falls Church, VA; Arlington, VA; Prince Georges, MD; City of Alexandria, VA; Fairfax, VA; District of Columbia, DC",
+                "geocode": {
+                    "UGC": [
+                        "VAC610",
+                        "VAC013",
+                        "MDC033",
+                        "VAC510",
+                        "VAC059",
+                        "DCC001"
+                    ],
+                    "SAME": [
+                        "051610",
+                        "051013",
+                        "024033",
+                        "051510",
+                        "051059",
+                        "011001"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/county/VAC610",
+                    "https://api.weather.gov/zones/county/VAC013",
+                    "https://api.weather.gov/zones/county/MDC033",
+                    "https://api.weather.gov/zones/county/VAC510",
+                    "https://api.weather.gov/zones/county/VAC059",
+                    "https://api.weather.gov/zones/county/DCC001"
+                ],
+                "references": [
+                    {
+                        "@id": "https://api.weather.gov/alerts/NWS-IDP-PROD-3523870-3076387",
+                        "identifier": "NWS-IDP-PROD-3523870-3076387",
+                        "sender": "w-nws.webmaster@noaa.gov",
+                        "sent": "2019-05-02T16:19:00-04:00"
+                    },
+                    {
+                        "@id": "https://api.weather.gov/alerts/NWS-IDP-PROD-3523831-3076368",
+                        "identifier": "NWS-IDP-PROD-3523831-3076368",
+                        "sender": "w-nws.webmaster@noaa.gov",
+                        "sent": "2019-05-02T16:00:00-04:00"
+                    },
+                    {
+                        "@id": "https://api.weather.gov/alerts/NWS-IDP-PROD-3523734-3076308",
+                        "identifier": "NWS-IDP-PROD-3523734-3076308",
+                        "sender": "w-nws.webmaster@noaa.gov",
+                        "sent": "2019-05-02T15:38:00-04:00"
+                    }
+                ],
+                "sent": "2019-05-02T16:26:00-04:00",
+                "effective": "2019-05-02T16:26:00-04:00",
+                "onset": "2019-05-02T16:26:00-04:00",
+                "expires": "2019-05-02T16:35:00-04:00",
+                "ends": "2019-05-02T16:30:00-04:00",
+                "status": "Actual",
+                "messageType": "Update",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Observed",
+                "urgency": "Immediate",
+                "event": "Severe Thunderstorm Warning",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Baltimore MD/Washington DC",
+                "headline": "Severe Thunderstorm Warning issued May 2 at 4:26PM EDT until May 2 at 4:30PM EDT by NWS Baltimore MD/Washington DC",
+                "description": "The storms which prompted the warning have weakened below severe\nlimits, and no longer pose an immediate threat to life or property.\nTherefore, the warning will be allowed to expire.  However gusty\nwinds up to 30 mph are still possible with these thunderstorms.",
+                "instruction": "",
+                "response": "Shelter",
+                "parameters": {
+                    "eventMotionDescription": [
+                        "2019-05-02T16:25:00.000-04:00...storm...282DEG...17KT...38.87,-76.9 38.83,-77.14"
+                    ],
+                    "NWSheadline": [
+                        "THE SEVERE THUNDERSTORM WARNING FOR THE DISTRICT OF COLUMBIA... CENTRAL PRINCE GEORGES...ARLINGTON...AND EAST CENTRAL FAIRFAX COUNTIES...THE CITY OF FALLS CHURCH AND THE CITY OF ALEXANDRIA WILL EXPIRE AT 430 PM EDT"
+                    ],
+                    "VTEC": [
+                        "/O.EXP.KLWX.SV.W.0058.000000T0000Z-190502T2030Z/"
+                    ],
+                    "EAS-ORG": [
+                        "WXR"
+                    ],
+                    "PIL": [
+                        "LWXSVSLWX"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "CMAS",
+                        "EAS",
+                        "NWEM"
+                    ],
+                    "eventEndingTime": [
+                        "2019-05-02T16:30:00-04:00"
+                    ]
+                }
+            }
+        }
