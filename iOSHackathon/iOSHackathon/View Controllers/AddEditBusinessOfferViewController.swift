@@ -98,7 +98,6 @@ class AddEditBusinessOfferViewController: UIViewController {
         }.resume()
         
 
-    }
 
         self.dismiss(animated: true, completion: nil)
     }
