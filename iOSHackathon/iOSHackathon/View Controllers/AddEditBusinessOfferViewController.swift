@@ -40,7 +40,9 @@ class AddEditBusinessOfferViewController: UIViewController {
         let offRedemptionCode = offerRedemptionCodeTextField.text,
             let offShareTitle = offerTitleTextField.text else { return }
         
+
         let offEndDate = offerEndDatePicker.date
+
         let id = 0
         
         if offer != nil {
@@ -66,33 +68,35 @@ class AddEditBusinessOfferViewController: UIViewController {
         //offerEndDatePicker.date = offer.validityToDate
     }
     
-    private func postOffer(title: String, description: String, id: Int, merchantName: String, location: String, redemptionCode: String, shareTitle: String, activeIndicator: Bool, startDate: Date, endDate: Date) {
-//        let offer = Offer(title: title, description: description, id: id, merchantName: merchantName, merchantLocation: location, redemptionCode: redemptionCode, shareTitle: shareTitle, activeIndicator: activeIndicator, startDate: startDate, endDate: endDate)
-//        
-//        let url = URL(string: "https://smallbusinesshackathon.firebaseio.com/offers")!.appendingPathComponent("\(offer.offerId)").appendingPathExtension("json")
-//        
-//        var request = URLRequest(url: url)
-//        
-//        request.httpMethod = "PUT"
-//        
-//        do {
-//            request.httpBody =  try JSONEncoder().encode(offer)
-//        } catch {
-//            NSLog("Error encoding offer: \(error)")
-//        }
-//        
-//        URLSession.shared.dataTask(with: request) { (data, _, error) in
-//            
-//            if let error = error {
-//                NSLog("Error putting offer: \(error)")
-//                return
-//            }
-//            
-//            guard let data = data else { return }
-//            
-//            print(data)
-//            
-//        }.resume()
+
+    private func postOffer(title: String, description: String, id: Int, merchantName: String, location: String, redemptionCode: String, shareTitle: String, activeIndicator: Bool, startDate: String, endDate: String) {
+        let offer = Offer(title: title, description: description, id: id)
+        
+        let url = URL(string: "https://smallbusinesshackathon.firebaseio.com/offers")!.appendingPathComponent("\(offer.offerId)").appendingPathExtension("json")
+        
+        var request = URLRequest(url: url)
+        
+        request.httpMethod = "PUT"
+        
+        do {
+            request.httpBody =  try JSONEncoder().encode(offer)
+        } catch {
+            NSLog("Error encoding offer: \(error)")
+        }
+        
+        URLSession.shared.dataTask(with: request) { (data, _, error) in
+            
+            if let error = error {
+                NSLog("Error putting offer: \(error)")
+                return
+            }
+            
+            guard let data = data else { return }
+            
+            print(data)
+            
+        }.resume()
+        
 
         self.dismiss(animated: true, completion: nil)
     }
