@@ -34,23 +34,39 @@ class BusinessOffersViewController: UIViewController, UICollectionViewDataSource
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        
+//        if segue.identifier == "AddOffer" {
+//            
+//        } else if segue.identifier == "EditOffer" {
+//            
+//        } else if segue.identifier == "ViewOffer" {
+//            
+//        }
+//        if let destinationVC = segue.destination as? AddEditBusinessOfferViewController {
+//            if let indexPath = collectionView.indexPathsForSelectedItems?.first {
+//                destinationVC.offer = offers[indexPath.row]
+//            }
+//            
+//        } else if let destinationVC = segue.destination as? BusinessOfferDetailViewController {
+//            if let indexPath = collectionView.indexPathsForSelectedItems?.first {
+//                destinationVC.offer = offers[indexPath.row]
+//            }
+//        }
         
-        if segue.identifier == "AddOffer" {
+        if segue.identifier == "ViewOffer" {
+            guard let destinationVC = segue.destination as? BusinessOfferDetailViewController,
+                let indexPath = collectionView.indexPathsForSelectedItems?.first else { return }
             
+            destinationVC.offer = self.offers[indexPath.row]
         } else if segue.identifier == "EditOffer" {
+            guard let destinationVC = segue.destination as? AddEditBusinessOfferViewController,
+                let indexPath = collectionView.indexPathsForSelectedItems?.first else { return }
             
-        } else if segue.identifier == "" {
+            destinationVC.offer = self.offers[indexPath.row]
+        } else if segue.identifier == "AddOffer" {
+            guard let destinationVC = segue.destination as? AddEditBusinessOfferViewController else { return }
             
-        }
-        if let destinationVC = segue.destination as? AddEditBusinessOfferViewController {
-            if let indexPath = collectionView.indexPathsForSelectedItems?.first {
-                destinationVC.offer = offers[indexPath.row]
-            }
-            
-        } else if let destinationVC = segue.destination as? BusinessOfferDetailViewController {
-            if let indexPath = collectionView.indexPathsForSelectedItems?.first {
-                destinationVC.offer = offers[indexPath.row]
-            }
+            destinationVC.offer = nil
         }
     }
     
@@ -120,6 +136,38 @@ class BusinessOffersViewController: UIViewController, UICollectionViewDataSource
 //            
 //        }.resume()
         
+//        let url = URL(string: "https://smallbusinesshackathon.firebaseio.com/offers.json")!
+//
+//        var request = URLRequest(url: url)
+//
+//        request.httpMethod = "GET"
+//
+//        URLSession.shared.dataTask(with: request) { (data, _, error) in
+//
+//            if let error = error {
+//                NSLog("Error getting offers: \(error)")
+//                return
+//            }
+//
+//            guard let data = data else {
+//                NSLog("Error getting offers data: \(NSError())")
+//                return
+//            }
+//
+//            do {
+//
+//                                let convertedString = String(data: data, encoding: String.Encoding.utf8)
+//                                print(convertedString!)
+//                let offerResult = try JSONDecoder().decode([String: Offer].self, from: data)
+//
+//                //print(offerResult)
+//                self.offers = offerResult.compactMap({ $0.value })
+//            } catch {
+//                NSLog("Error decoding offer representations: \(error)")
+//            }
+//
+//        }.resume()
+        
         let url = URL(string: "https://smallbusinesshackathon.firebaseio.com/offers.json")!
         
         var request = URLRequest(url: url)
@@ -133,24 +181,33 @@ class BusinessOffersViewController: UIViewController, UICollectionViewDataSource
                 return
             }
             
-            guard let data = data else {
-                NSLog("Error getting offers data: \(NSError())")
-                return
-            }
+            //            guard let data = data else {
+            //                NSLog("Error getting offers data: \(NSError())")
+            //                return
+            //            }
+            
+            //begin demo Code
+            
+            guard let url = Bundle.main.url(forResource: "demoOfferData", withExtension: "json") else {return}
+            
             
             do {
+                let demoData = try Data(contentsOf: url)
+                //                                let convertedString = String(data: demoData, encoding: String.Encoding.utf8)
+                //                                print(convertedString!)
+                //
+                let offerResult = try JSONDecoder().decode(Response.self, from: demoData)
+                let offers = offerResult.offers
+                //                print(offerResult)
+                //                self.offers = offerResult.compactMap({ $0.value })
+                self.offers = offers.compactMap({ $0})
+                //                self.offers = offers
                 
-                //                let convertedString = String(data: data, encoding: String.Encoding.utf8)
-                //                print(convertedString!)
-                let offerResult = try JSONDecoder().decode([String: Offer].self, from: data)
-                
-                //print(offerResult)
-                self.offers = offerResult.compactMap({ $0.value })
             } catch {
                 NSLog("Error decoding offer representations: \(error)")
             }
             
-        }.resume()
+            }.resume()
         
     }
 
@@ -173,9 +230,9 @@ class BusinessOffersViewController: UIViewController, UICollectionViewDataSource
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         switch offerSegmentedControl.selectedSegmentIndex {
-        case 1:
-            performSegue(withIdentifier: "EditOffer", sender: self)
         case 0:
+            performSegue(withIdentifier: "EditOffer", sender: self)
+        case 1:
             performSegue(withIdentifier: "ViewOffer", sender: self)
         default:
             break
