@@ -56,8 +56,8 @@
 		10C3020E227E2F19006A5CB7 /* NWSResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NWSResponse.swift; sourceTree = "<group>"; };
 		10DD8379227ECE8E00107378 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		10DD8381227ED8CB00107378 /* severeThunderstormGalvestonTX.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = severeThunderstormGalvestonTX.json; sourceTree = "<group>"; };
-		10DD8382227ED8CB00107378 /* flashfloodWVandSWVa.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = flashfloodWVandSWVa.json; path = ../Resources/flashfloodWVandSWVa.json; sourceTree = "<group>"; };
-		10DD8383227ED8CB00107378 /* specialWeatherWakullaFL.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = specialWeatherWakullaFL.json; path = ../Resources/specialWeatherWakullaFL.json; sourceTree = "<group>"; };
+		10DD8382227ED8CB00107378 /* flashfloodWVandSWVa.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = flashfloodWVandSWVa.json; sourceTree = "<group>"; };
+		10DD8383227ED8CB00107378 /* specialWeatherWakullaFL.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = specialWeatherWakullaFL.json; sourceTree = "<group>"; };
 		7B8E4E46227D42CA001F9C2F /* Business.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Business.storyboard; sourceTree = "<group>"; };
 		7B8E4E48227D42D0001F9C2F /* Customer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Customer.storyboard; sourceTree = "<group>"; };
 		7B8E4E4F227D4EB1001F9C2F /* BusinessOffersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessOffersViewController.swift; sourceTree = "<group>"; };

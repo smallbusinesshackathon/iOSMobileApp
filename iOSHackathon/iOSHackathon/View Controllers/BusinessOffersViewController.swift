@@ -15,7 +15,6 @@ class BusinessOffersViewController: UIViewController, UICollectionViewDataSource
         
         // Check which data to populate collection view.
         checkDataSource()
-        setAppearance()
     }
     
     @IBAction func selectSegmentControl(_ sender: Any) {
@@ -54,17 +53,6 @@ class BusinessOffersViewController: UIViewController, UICollectionViewDataSource
     }
     
     // MARK - Private Methods
-    
-    private func setAppearance() {
-        offerSegmentedControl.backgroundColor = .clear
-        offerSegmentedControl.tintColor = .clear
-        offerSegmentedControl.setTitleTextAttributes([
-            NSAttributedString.Key.foregroundColor: UIColor.lightGray
-            ], for: .normal)
-        offerSegmentedControl.setTitleTextAttributes([
-            NSAttributedString.Key.foregroundColor: #colorLiteral(red: 0.011998998, green: 0.4799926877, blue: 1, alpha: 1)  // #colorLiteral(red: 0.9342113733, green: 0.7635644078, blue: 0.07422252744, alpha: 1)
-            ], for: .selected)
-    }
     
     private func loadMyOffers() {
         let url = URL(string: "https://smallbusinesshackathon.firebaseio.com/offers.json")!

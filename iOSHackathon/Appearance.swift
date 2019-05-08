@@ -9,6 +9,15 @@ import UIKit
 enum Appearance {
     
     static func setTheme() {
-        //UIBarButtonItem.appearance().tintColor = .yellow
+        
+        // Style all segmented controls in app.
+        UISegmentedControl.appearance().backgroundColor = .clear
+        UISegmentedControl.appearance().tintColor = .clear
+        UISegmentedControl.appearance().setTitleTextAttributes([
+            NSAttributedString.Key.foregroundColor: UIColor.lightGray
+            ], for: .normal)
+        UISegmentedControl.appearance().setTitleTextAttributes([
+            NSAttributedString.Key.foregroundColor: #colorLiteral(red: 0.011998998, green: 0.4799926877, blue: 1, alpha: 1) ], for: .selected)
+        
     }
 }
