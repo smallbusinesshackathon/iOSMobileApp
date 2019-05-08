@@ -13,15 +13,8 @@ class AddEditBusinessRequestViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        requestDescriptionTextView.backgroundColor = .clear
-        requestDescriptionTextView.layer.cornerRadius = 5
-        requestDescriptionTextView.layer.borderColor = #colorLiteral(red: 0.921431005, green: 0.9214526415, blue: 0.9214410186, alpha: 1)
-        requestDescriptionTextView.layer.borderWidth = 1
-        
-        submitButton.layer.cornerRadius = 5
-        
+        setUpAppearance()
         loadRequest()
-
     }
     @IBAction func goBack(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
@@ -63,6 +56,15 @@ class AddEditBusinessRequestViewController: UIViewController {
             // POST REQUEST
 
         }
+    }
+    
+    private func setUpAppearance() {
+        requestDescriptionTextView.backgroundColor = .clear
+        requestDescriptionTextView.layer.cornerRadius = 5
+        requestDescriptionTextView.layer.borderColor = #colorLiteral(red: 0.921431005, green: 0.9214526415, blue: 0.9214410186, alpha: 1)
+        requestDescriptionTextView.layer.borderWidth = 1
+        
+        submitButton.layer.cornerRadius = 5
     }
     
     private func loadRequest() {
