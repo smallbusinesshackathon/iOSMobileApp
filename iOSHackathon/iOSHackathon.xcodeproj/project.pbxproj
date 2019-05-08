@@ -31,9 +31,7 @@
 		7B8E4E6E227E3885001F9C2F /* OfferCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8E4E6D227E3885001F9C2F /* OfferCollectionViewCell.swift */; };
 		7BD13E84227E7D7B001E758C /* Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD13E83227E7D7B001E758C /* Appearance.swift */; };
 		7BD13E86227E800B001E758C /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD13E85227E800B001E758C /* TabBarViewController.swift */; };
-		7BD13E88227EA724001E758C /* d.json in Resources */ = {isa = PBXBuildFile; fileRef = 7BD13E87227EA724001E758C /* d.json */; };
 		7BD13E8A227ED6F3001E758C /* demo2.json in Resources */ = {isa = PBXBuildFile; fileRef = 7BD13E89227ED6F3001E758C /* demo2.json */; };
-		7BD13E8D227F0524001E758C /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BD13E8C227F0524001E758C /* WebKit.framework */; };
 		7BD13E8F227F092B001E758C /* NewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD13E8E227F092B001E758C /* NewViewController.swift */; };
 		7BD13E91227F09CB001E758C /* fema.json in Resources */ = {isa = PBXBuildFile; fileRef = 7BD13E90227F09CB001E758C /* fema.json */; };
 		7BD13E94227F0A9E001E758C /* Agencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD13E92227F0A9E001E758C /* Agencies.swift */; };
@@ -58,8 +56,8 @@
 		10C3020E227E2F19006A5CB7 /* NWSResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NWSResponse.swift; sourceTree = "<group>"; };
 		10DD8379227ECE8E00107378 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		10DD8381227ED8CB00107378 /* severeThunderstormGalvestonTX.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = severeThunderstormGalvestonTX.json; sourceTree = "<group>"; };
-		10DD8382227ED8CB00107378 /* flashfloodWVandSWVa.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = flashfloodWVandSWVa.json; sourceTree = "<group>"; };
-		10DD8383227ED8CB00107378 /* specialWeatherWakullaFL.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = specialWeatherWakullaFL.json; sourceTree = "<group>"; };
+		10DD8382227ED8CB00107378 /* flashfloodWVandSWVa.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = flashfloodWVandSWVa.json; path = ../Resources/flashfloodWVandSWVa.json; sourceTree = "<group>"; };
+		10DD8383227ED8CB00107378 /* specialWeatherWakullaFL.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = specialWeatherWakullaFL.json; path = ../Resources/specialWeatherWakullaFL.json; sourceTree = "<group>"; };
 		7B8E4E46227D42CA001F9C2F /* Business.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Business.storyboard; sourceTree = "<group>"; };
 		7B8E4E48227D42D0001F9C2F /* Customer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Customer.storyboard; sourceTree = "<group>"; };
 		7B8E4E4F227D4EB1001F9C2F /* BusinessOffersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessOffersViewController.swift; sourceTree = "<group>"; };
@@ -73,11 +71,9 @@
 		7B8E4E6D227E3885001F9C2F /* OfferCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferCollectionViewCell.swift; sourceTree = "<group>"; };
 		7BD13E83227E7D7B001E758C /* Appearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appearance.swift; sourceTree = "<group>"; };
 		7BD13E85227E800B001E758C /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
-		7BD13E87227EA724001E758C /* d.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = d.json; sourceTree = "<group>"; };
-		7BD13E89227ED6F3001E758C /* demo2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = demo2.json; sourceTree = SOURCE_ROOT; };
-		7BD13E8C227F0524001E758C /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		7BD13E89227ED6F3001E758C /* demo2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = demo2.json; path = "iOSHackathon/Mock Data/demo2.json"; sourceTree = SOURCE_ROOT; };
 		7BD13E8E227F092B001E758C /* NewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewViewController.swift; sourceTree = "<group>"; };
-		7BD13E90227F09CB001E758C /* fema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = fema.json; sourceTree = SOURCE_ROOT; };
+		7BD13E90227F09CB001E758C /* fema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = fema.json; path = "iOSHackathon/Mock Data/fema.json"; sourceTree = SOURCE_ROOT; };
 		7BD13E92227F0A9E001E758C /* Agencies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Agencies.swift; sourceTree = SOURCE_ROOT; };
 		7BD13E93227F0A9E001E758C /* Agency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Agency.swift; sourceTree = SOURCE_ROOT; };
 		A23F51EC227D2AAB00C729C7 /* iOSHackathon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSHackathon.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -97,7 +93,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7BD13E8D227F0524001E758C /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,18 +102,25 @@
 		10082B2C227DEFC5002C8D56 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				7BD13E87227EA724001E758C /* d.json */,
 				10082B29227D5E5D002C8D56 /* Extensions.swift */,
 				10082B2D227E187E002C8D56 /* Enums.swift */,
 				7BD13E83227E7D7B001E758C /* Appearance.swift */,
 				10DD8379227ECE8E00107378 /* Protocols.swift */,
 			);
 			name = Helpers;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		7BB5A7D122838C910072162D /* Mock Data */ = {
 			isa = PBXGroup;
 			children = (
+				7BD13E90227F09CB001E758C /* fema.json */,
+				10DD8382227ED8CB00107378 /* flashfloodWVandSWVa.json */,
+				106A6EA7227F02AE00129982 /* demoDCPolgyon.json */,
+				10DD8381227ED8CB00107378 /* severeThunderstormGalvestonTX.json */,
+				10DD8383227ED8CB00107378 /* specialWeatherWakullaFL.json */,
+				7BD13E89227ED6F3001E758C /* demo2.json */,
+				10C1D7AD227E9EFB00A1A427 /* demoOfferData.json */,
 			);
 			path = "Mock Data";
 			sourceTree = "<group>";
@@ -126,7 +128,6 @@
 		7BD13E8B227F0523001E758C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				7BD13E8C227F0524001E758C /* WebKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -136,7 +137,6 @@
 			children = (
 				A23F51EE227D2AAB00C729C7 /* iOSHackathon */,
 				A23F51ED227D2AAB00C729C7 /* Products */,
-				10082B2C227DEFC5002C8D56 /* Helpers */,
 				7BD13E8B227F0523001E758C /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -154,9 +154,10 @@
 			children = (
 				7BB5A7D122838C910072162D /* Mock Data */,
 				A23F5209227D500600C729C7 /* Models */,
+				10082B2C227DEFC5002C8D56 /* Helpers */,
 				A23F5203227D2B0900C729C7 /* Resources */,
 				A23F5201227D2ADF00C729C7 /* View Controllers */,
-				A23F5202227D2AF600C729C7 /* Storboards */,
+				A23F5202227D2AF600C729C7 /* Storyboards */,
 			);
 			path = iOSHackathon;
 			sourceTree = "<group>";
@@ -181,7 +182,7 @@
 			path = "View Controllers";
 			sourceTree = "<group>";
 		};
-		A23F5202227D2AF600C729C7 /* Storboards */ = {
+		A23F5202227D2AF600C729C7 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
 				A23F51F3227D2AAB00C729C7 /* Main.storyboard */,
@@ -189,19 +190,12 @@
 				7B8E4E48227D42D0001F9C2F /* Customer.storyboard */,
 				A23F51F8227D2AAF00C729C7 /* LaunchScreen.storyboard */,
 			);
-			path = Storboards;
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 		A23F5203227D2B0900C729C7 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				7BD13E90227F09CB001E758C /* fema.json */,
-				10DD8382227ED8CB00107378 /* flashfloodWVandSWVa.json */,
-				106A6EA7227F02AE00129982 /* demoDCPolgyon.json */,
-				10DD8381227ED8CB00107378 /* severeThunderstormGalvestonTX.json */,
-				10DD8383227ED8CB00107378 /* specialWeatherWakullaFL.json */,
-				7BD13E89227ED6F3001E758C /* demo2.json */,
-				10C1D7AD227E9EFB00A1A427 /* demoOfferData.json */,
 				A23F51EF227D2AAB00C729C7 /* AppDelegate.swift */,
 				A23F51F6227D2AAF00C729C7 /* Assets.xcassets */,
 				A23F51FB227D2AAF00C729C7 /* Info.plist */,
@@ -291,7 +285,6 @@
 				A23F51FA227D2AAF00C729C7 /* LaunchScreen.storyboard in Resources */,
 				A23F51F7227D2AAF00C729C7 /* Assets.xcassets in Resources */,
 				7B8E4E47227D42CA001F9C2F /* Business.storyboard in Resources */,
-				7BD13E88227EA724001E758C /* d.json in Resources */,
 				A23F51F5227D2AAB00C729C7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
