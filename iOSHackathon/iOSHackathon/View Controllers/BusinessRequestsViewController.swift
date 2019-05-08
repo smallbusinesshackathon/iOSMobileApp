@@ -14,7 +14,6 @@ class BusinessRequestsViewController: UIViewController, UICollectionViewDelegate
 
         // Check which data to populate collection view.
         checkDataSource()
-        setUpAppearance()
     }
     
     // MARK - UICollectionViewDataSource
@@ -78,17 +77,6 @@ class BusinessRequestsViewController: UIViewController, UICollectionViewDelegate
         default:
             break
         }
-    }
-    
-    private func setUpAppearance() {
-        requestSegmentedControl.backgroundColor = .clear
-        requestSegmentedControl.tintColor = .clear
-        requestSegmentedControl.setTitleTextAttributes([
-            NSAttributedString.Key.foregroundColor: UIColor.lightGray
-            ], for: .normal)
-        requestSegmentedControl.setTitleTextAttributes([
-            NSAttributedString.Key.foregroundColor: #colorLiteral(red: 0.011998998, green: 0.4799926877, blue: 1, alpha: 1)  // #colorLiteral(red: 0.9342113733, green: 0.7635644078, blue: 0.07422252744, alpha: 1)
-            ], for: .selected)
     }
     
     private func loadMyRequests() {
