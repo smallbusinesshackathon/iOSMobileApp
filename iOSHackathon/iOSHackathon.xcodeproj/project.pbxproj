@@ -118,6 +118,13 @@
 			name = Helpers;
 			sourceTree = "<group>";
 		};
+		7BB5A7D122838C910072162D /* Mock Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Mock Data";
+			sourceTree = "<group>";
+		};
 		7BD13E8B227F0523001E758C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -147,6 +154,7 @@
 		A23F51EE227D2AAB00C729C7 /* iOSHackathon */ = {
 			isa = PBXGroup;
 			children = (
+				7BB5A7D122838C910072162D /* Mock Data */,
 				A23F5209227D500600C729C7 /* Models */,
 				A23F5203227D2B0900C729C7 /* Resources */,
 				A23F5201227D2ADF00C729C7 /* View Controllers */,
