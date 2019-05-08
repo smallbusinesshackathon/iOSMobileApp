@@ -9,10 +9,11 @@ import UIKit
 
 class BusinessLoginViewController: UIViewController {
     
-    
-    @IBOutlet weak var businessNameInput: UITextField!
-    @IBOutlet weak var businessPhoneNumInput: UITextField!
-
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        setUpAppearance()
+    }
     
     @IBAction func buttonClick(sender: UIButton) {
         let username = "35C9vt7T2"
@@ -60,34 +61,20 @@ class BusinessLoginViewController: UIViewController {
             DispatchQueue.main.async {
                 self.present(alertController, animated: true)
             }
-            
-            
         }.resume()
         
     }
     
-
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        signInButton.layer.cornerRadius = 5
-
-    }
+    // MARK - Private Methods
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func setUpAppearance() {
+        signInButton.layer.cornerRadius = 5
     }
-    */
     
     // MARK - Properties
     
     @IBOutlet weak var signInButton: UIButton!
     @IBOutlet weak var signUpButton: UIButton!
-    
+    @IBOutlet weak var businessNameInput: UITextField!
+    @IBOutlet weak var businessPhoneNumInput: UITextField!
 }

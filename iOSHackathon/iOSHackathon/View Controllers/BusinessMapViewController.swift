@@ -8,7 +8,6 @@
 import UIKit
 import MapKit
 
-
 let demoLocationDC = CLLocationCoordinate2D(latitude: 38.907192, longitude: -77.036873)
 
 class BusinessMapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {

@@ -24,27 +24,7 @@ class BusinessOffersViewController: UIViewController, UICollectionViewDataSource
     
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        
-//        if segue.identifier == "AddOffer" {
-//            
-//        } else if segue.identifier == "EditOffer" {
-//            
-//        } else if segue.identifier == "ViewOffer" {
-//            
-//        }
-//        if let destinationVC = segue.destination as? AddEditBusinessOfferViewController {
-//            if let indexPath = collectionView.indexPathsForSelectedItems?.first {
-//                destinationVC.offer = offers[indexPath.row]
-//            }
-//            
-//        } else if let destinationVC = segue.destination as? BusinessOfferDetailViewController {
-//            if let indexPath = collectionView.indexPathsForSelectedItems?.first {
-//                destinationVC.offer = offers[indexPath.row]
-//            }
-//        }
-        
         if segue.identifier == "ViewOffer" {
             guard let destinationVC = segue.destination as? BusinessOfferDetailViewController,
                 let indexPath = collectionView.indexPathsForSelectedItems?.first else { return }
@@ -72,6 +52,8 @@ class BusinessOffersViewController: UIViewController, UICollectionViewDataSource
             break
         }
     }
+    
+    // MARK - Private Methods
     
     private func setAppearance() {
         offerSegmentedControl.backgroundColor = .clear

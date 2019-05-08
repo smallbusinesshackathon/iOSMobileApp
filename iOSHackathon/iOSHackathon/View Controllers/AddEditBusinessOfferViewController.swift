@@ -13,24 +13,13 @@ class AddEditBusinessOfferViewController: UIViewController {
         super.viewDidLoad()
 
         updateViews()
-        
-        offerDescriptionTextView.backgroundColor = .clear
-        offerDescriptionTextView.layer.cornerRadius = 5
-        offerDescriptionTextView.layer.borderColor = #colorLiteral(red: 0.921431005, green: 0.9214526415, blue: 0.9214410186, alpha: 1)
-        offerDescriptionTextView.layer.borderWidth = 1
-        
+        setUpAppearance()
     }
     
     @IBAction func goBack(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
     
-    @IBOutlet weak var offerTitleTextField: UITextField!
-    @IBOutlet weak var offerDescriptionTextView: UITextView!
-    @IBOutlet weak var offerLocationTextField: UITextField!
-    @IBOutlet weak var offerRedemptionCodeTextField: UITextField!
-    @IBOutlet weak var offerEndDatePicker: UIDatePicker!
-    @IBOutlet weak var viewTitleLabel: UILabel!
     
     @IBAction func addUpdateOffer(_ sender: Any) {
         guard let offTitle = offerTitleTextField.text,
@@ -55,6 +44,8 @@ class AddEditBusinessOfferViewController: UIViewController {
         }
     }
     
+    // MARK - Private Methods
+    
     private func updateViews() {
         guard let offer = offer else { return}
         
@@ -68,6 +59,13 @@ class AddEditBusinessOfferViewController: UIViewController {
         //offerEndDatePicker.date = offer.validityToDate
     }
     
+
+    private func setUpAppearance() {
+        offerDescriptionTextView.backgroundColor = .clear
+        offerDescriptionTextView.layer.cornerRadius = 5
+        offerDescriptionTextView.layer.borderColor = #colorLiteral(red: 0.921431005, green: 0.9214526415, blue: 0.9214410186, alpha: 1)
+        offerDescriptionTextView.layer.borderWidth = 1
+    }
 
     private func postOffer(title: String, description: String, id: Int, merchantName: String, location: String, redemptionCode: String, shareTitle: String, activeIndicator: Bool, startDate: String, endDate: String) {
         let offer = Offer(title: title, description: description, id: id)
@@ -96,7 +94,6 @@ class AddEditBusinessOfferViewController: UIViewController {
             print(data)
             
         }.resume()
-        
 
         self.dismiss(animated: true, completion: nil)
     }
@@ -112,8 +109,12 @@ class AddEditBusinessOfferViewController: UIViewController {
         }
     }
     
-    
-    
+    @IBOutlet weak var offerTitleTextField: UITextField!
+    @IBOutlet weak var offerDescriptionTextView: UITextView!
+    @IBOutlet weak var offerLocationTextField: UITextField!
+    @IBOutlet weak var offerRedemptionCodeTextField: UITextField!
+    @IBOutlet weak var offerEndDatePicker: UIDatePicker!
+    @IBOutlet weak var viewTitleLabel: UILabel!
 }
 
 
