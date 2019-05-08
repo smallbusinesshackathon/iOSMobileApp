@@ -24,7 +24,6 @@
 		7B8E4E52227D501D001F9C2F /* AddEditBusinessOfferViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8E4E51227D501D001F9C2F /* AddEditBusinessOfferViewController.swift */; };
 		7B8E4E54227D53DE001F9C2F /* BusinessRequestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8E4E53227D53DE001F9C2F /* BusinessRequestsViewController.swift */; };
 		7B8E4E5A227D6167001F9C2F /* BusinessRespondToRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8E4E59227D6167001F9C2F /* BusinessRespondToRequestViewController.swift */; };
-		7B8E4E5C227D6182001F9C2F /* BusinessSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8E4E5B227D6182001F9C2F /* BusinessSettingsViewController.swift */; };
 		7B8E4E5E227DE8C8001F9C2F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8E4E5D227DE8C8001F9C2F /* MainViewController.swift */; };
 		7B8E4E60227DE913001F9C2F /* BusinessOfferDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8E4E5F227DE913001F9C2F /* BusinessOfferDetailViewController.swift */; };
 		7B8E4E62227DE925001F9C2F /* AddEditBusinessRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8E4E61227DE925001F9C2F /* AddEditBusinessRequestViewController.swift */; };
@@ -67,7 +66,6 @@
 		7B8E4E51227D501D001F9C2F /* AddEditBusinessOfferViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditBusinessOfferViewController.swift; sourceTree = "<group>"; };
 		7B8E4E53227D53DE001F9C2F /* BusinessRequestsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessRequestsViewController.swift; sourceTree = "<group>"; };
 		7B8E4E59227D6167001F9C2F /* BusinessRespondToRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessRespondToRequestViewController.swift; sourceTree = "<group>"; };
-		7B8E4E5B227D6182001F9C2F /* BusinessSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessSettingsViewController.swift; sourceTree = "<group>"; };
 		7B8E4E5D227DE8C8001F9C2F /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		7B8E4E5F227DE913001F9C2F /* BusinessOfferDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessOfferDetailViewController.swift; sourceTree = "<group>"; };
 		7B8E4E61227DE925001F9C2F /* AddEditBusinessRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditBusinessRequestViewController.swift; sourceTree = "<group>"; };
@@ -178,7 +176,6 @@
 				7B8E4E6B227E1E52001F9C2F /* RequestCollectionViewCell.swift */,
 				7B8E4E61227DE925001F9C2F /* AddEditBusinessRequestViewController.swift */,
 				7B8E4E59227D6167001F9C2F /* BusinessRespondToRequestViewController.swift */,
-				7B8E4E5B227D6182001F9C2F /* BusinessSettingsViewController.swift */,
 				7BD13E8E227F092B001E758C /* NewViewController.swift */,
 			);
 			path = "View Controllers";
@@ -316,7 +313,6 @@
 				10DD837A227ECE8E00107378 /* Protocols.swift in Sources */,
 				A23F520B227D502400C729C7 /* Business.swift in Sources */,
 				7B8E4E60227DE913001F9C2F /* BusinessOfferDetailViewController.swift in Sources */,
-				7B8E4E5C227D6182001F9C2F /* BusinessSettingsViewController.swift in Sources */,
 				7BD13E8F227F092B001E758C /* NewViewController.swift in Sources */,
 				7B8E4E5A227D6167001F9C2F /* BusinessRespondToRequestViewController.swift in Sources */,
 				A23F520D227D549000C729C7 /* BusinessLoginViewController.swift in Sources */,
