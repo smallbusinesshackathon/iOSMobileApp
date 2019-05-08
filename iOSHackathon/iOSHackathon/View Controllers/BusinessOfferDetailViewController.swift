@@ -34,7 +34,6 @@ class BusinessOfferDetailViewController: UIViewController {
         descriptionLabel.text = offer.offerShortDescription?.text ?? "Check it out!"
         offerRedemptionCodeLabel.text = offer.redemptionCode
         locationLabel.text = offer.merchantList.first?.merchantAddress.first?.address1 ?? "123 Main St"
-        
     }
 
     // MARK - Properties
