@@ -67,8 +67,9 @@ class BusinessLoginViewController: UIViewController {
     
     // MARK - Private Methods
     
+    // Set up any specific UI elements outside of general setTheme().
     private func setUpAppearance() {
-        signInButton.layer.cornerRadius = 5
+        Appearance.setUpBlueButton(button: signInButton)
     }
     
     // MARK - Properties

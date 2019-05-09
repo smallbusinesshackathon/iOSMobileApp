@@ -64,7 +64,8 @@ class AddEditBusinessRequestViewController: UIViewController {
         requestDescriptionTextView.layer.borderColor = #colorLiteral(red: 0.921431005, green: 0.9214526415, blue: 0.9214410186, alpha: 1)
         requestDescriptionTextView.layer.borderWidth = 1
         
-        submitButton.layer.cornerRadius = 5
+        Appearance.setUpBlueButton(button: submitButton)
+        //submitButton.layer.cornerRadius = 5
     }
     
     private func loadRequest() {

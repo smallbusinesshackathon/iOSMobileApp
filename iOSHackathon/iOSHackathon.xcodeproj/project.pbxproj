@@ -18,13 +18,13 @@
 		10DD8384227ED8CB00107378 /* severeThunderstormGalvestonTX.json in Resources */ = {isa = PBXBuildFile; fileRef = 10DD8381227ED8CB00107378 /* severeThunderstormGalvestonTX.json */; };
 		10DD8385227ED8CB00107378 /* flashfloodWVandSWVa.json in Resources */ = {isa = PBXBuildFile; fileRef = 10DD8382227ED8CB00107378 /* flashfloodWVandSWVa.json */; };
 		10DD8386227ED8CB00107378 /* specialWeatherWakullaFL.json in Resources */ = {isa = PBXBuildFile; fileRef = 10DD8383227ED8CB00107378 /* specialWeatherWakullaFL.json */; };
+		7B21EABF2283CB8500195379 /* BusinessSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B21EABE2283CB8500195379 /* BusinessSettingsViewController.swift */; };
 		7B8E4E47227D42CA001F9C2F /* Business.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B8E4E46227D42CA001F9C2F /* Business.storyboard */; };
 		7B8E4E49227D42D0001F9C2F /* Customer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B8E4E48227D42D0001F9C2F /* Customer.storyboard */; };
 		7B8E4E50227D4EB1001F9C2F /* BusinessOffersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8E4E4F227D4EB1001F9C2F /* BusinessOffersViewController.swift */; };
 		7B8E4E52227D501D001F9C2F /* AddEditBusinessOfferViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8E4E51227D501D001F9C2F /* AddEditBusinessOfferViewController.swift */; };
 		7B8E4E54227D53DE001F9C2F /* BusinessRequestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8E4E53227D53DE001F9C2F /* BusinessRequestsViewController.swift */; };
 		7B8E4E5A227D6167001F9C2F /* BusinessRespondToRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8E4E59227D6167001F9C2F /* BusinessRespondToRequestViewController.swift */; };
-		7B8E4E5E227DE8C8001F9C2F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8E4E5D227DE8C8001F9C2F /* MainViewController.swift */; };
 		7B8E4E60227DE913001F9C2F /* BusinessOfferDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8E4E5F227DE913001F9C2F /* BusinessOfferDetailViewController.swift */; };
 		7B8E4E62227DE925001F9C2F /* AddEditBusinessRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8E4E61227DE925001F9C2F /* AddEditBusinessRequestViewController.swift */; };
 		7B8E4E6C227E1E52001F9C2F /* RequestCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8E4E6B227E1E52001F9C2F /* RequestCollectionViewCell.swift */; };
@@ -58,13 +58,13 @@
 		10DD8381227ED8CB00107378 /* severeThunderstormGalvestonTX.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = severeThunderstormGalvestonTX.json; sourceTree = "<group>"; };
 		10DD8382227ED8CB00107378 /* flashfloodWVandSWVa.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = flashfloodWVandSWVa.json; sourceTree = "<group>"; };
 		10DD8383227ED8CB00107378 /* specialWeatherWakullaFL.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = specialWeatherWakullaFL.json; sourceTree = "<group>"; };
+		7B21EABE2283CB8500195379 /* BusinessSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessSettingsViewController.swift; sourceTree = "<group>"; };
 		7B8E4E46227D42CA001F9C2F /* Business.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Business.storyboard; sourceTree = "<group>"; };
 		7B8E4E48227D42D0001F9C2F /* Customer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Customer.storyboard; sourceTree = "<group>"; };
 		7B8E4E4F227D4EB1001F9C2F /* BusinessOffersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessOffersViewController.swift; sourceTree = "<group>"; };
 		7B8E4E51227D501D001F9C2F /* AddEditBusinessOfferViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditBusinessOfferViewController.swift; sourceTree = "<group>"; };
 		7B8E4E53227D53DE001F9C2F /* BusinessRequestsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessRequestsViewController.swift; sourceTree = "<group>"; };
 		7B8E4E59227D6167001F9C2F /* BusinessRespondToRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessRespondToRequestViewController.swift; sourceTree = "<group>"; };
-		7B8E4E5D227DE8C8001F9C2F /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		7B8E4E5F227DE913001F9C2F /* BusinessOfferDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessOfferDetailViewController.swift; sourceTree = "<group>"; };
 		7B8E4E61227DE925001F9C2F /* AddEditBusinessRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditBusinessRequestViewController.swift; sourceTree = "<group>"; };
 		7B8E4E6B227E1E52001F9C2F /* RequestCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -165,7 +165,6 @@
 		A23F5201227D2ADF00C729C7 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				7B8E4E5D227DE8C8001F9C2F /* MainViewController.swift */,
 				A23F520C227D549000C729C7 /* BusinessLoginViewController.swift */,
 				7BD13E85227E800B001E758C /* TabBarViewController.swift */,
 				10082B27227D539D002C8D56 /* BusinessMapViewController.swift */,
@@ -177,6 +176,7 @@
 				7B8E4E6B227E1E52001F9C2F /* RequestCollectionViewCell.swift */,
 				7B8E4E61227DE925001F9C2F /* AddEditBusinessRequestViewController.swift */,
 				7B8E4E59227D6167001F9C2F /* BusinessRespondToRequestViewController.swift */,
+				7B21EABE2283CB8500195379 /* BusinessSettingsViewController.swift */,
 				7BD13E8E227F092B001E758C /* NewViewController.swift */,
 			);
 			path = "View Controllers";
@@ -297,7 +297,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				10082B28227D539D002C8D56 /* BusinessMapViewController.swift in Sources */,
-				7B8E4E5E227DE8C8001F9C2F /* MainViewController.swift in Sources */,
 				7BD13E95227F0A9E001E758C /* Agency.swift in Sources */,
 				7B8E4E62227DE925001F9C2F /* AddEditBusinessRequestViewController.swift in Sources */,
 				10082B2A227D5E5D002C8D56 /* Extensions.swift in Sources */,
@@ -315,6 +314,7 @@
 				7BD13E86227E800B001E758C /* TabBarViewController.swift in Sources */,
 				7B8E4E54227D53DE001F9C2F /* BusinessRequestsViewController.swift in Sources */,
 				7B8E4E52227D501D001F9C2F /* AddEditBusinessOfferViewController.swift in Sources */,
+				7B21EABF2283CB8500195379 /* BusinessSettingsViewController.swift in Sources */,
 				A23F5213227DDC3200C729C7 /* Offer.swift in Sources */,
 				A23F520B227D502400C729C7 /* Business.swift in Sources */,
 				A23F51F0227D2AAB00C729C7 /* AppDelegate.swift in Sources */,
