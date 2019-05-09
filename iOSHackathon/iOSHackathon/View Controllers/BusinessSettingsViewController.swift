@@ -1,17 +1,18 @@
 //
-//  TabBarViewController.swift
+//  BusinessSettingsViewController.swift
 //  iOSHackathon
 //
-//  Created by Daniela Parra on 5/4/19.
+//  Created by Daniela Parra on 5/8/19.
 //
 
 import UIKit
 
-class TabBarViewController: UITabBarController {
+class BusinessSettingsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // Do any additional setup after loading the view.
     }
     
 
@@ -24,5 +25,15 @@ class TabBarViewController: UITabBarController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    
+    // MARK - Private Methods
+    
+    private func setUpAppearance() {
+        Appearance.setUpBlueButton(button: submitChangesButton)
+    }
+    
+    // MARK - Properties
+    
+    @IBOutlet weak var submitChangesButton: UIButton!
+    
 }

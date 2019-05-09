@@ -12,7 +12,14 @@ class BusinessRespondToRequestViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setUpAppearance()
         updateViews()
+    }
+    
+    // MARK - Private Methods
+    
+    private func setUpAppearance() {
+        Appearance.setUpBlueButton(button: respondButton)
     }
     
     private func updateViews() {
@@ -65,6 +72,7 @@ class BusinessRespondToRequestViewController: UIViewController {
     @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var addressLabel: UILabel!
     
+    @IBOutlet weak var respondButton: UIButton!
     @IBOutlet weak var financeStackView: UIStackView!
     
 }

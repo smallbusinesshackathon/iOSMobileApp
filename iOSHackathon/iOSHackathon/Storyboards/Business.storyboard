@@ -641,13 +641,10 @@
                                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4TO-2u-c41">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UrC-9o-hMH">
                                                 <rect key="frame" x="0.0" y="237.5" width="334" height="30"/>
                                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="30" id="uvh-ya-Byu"/>
-                                                </constraints>
-                                                <state key="normal" title="Submit changes">
+                                                <state key="normal" title="Submit Changes">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                             </button>
@@ -685,6 +682,9 @@
                         <viewLayoutGuide key="safeArea" id="kEZ-zf-qGl"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" image="002-settings" id="jpS-Um-xM8"/>
+                    <connections>
+                        <outlet property="submitChangesButton" destination="UrC-9o-hMH" id="wtp-a4-Ihl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zPy-lI-JKC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1106,13 +1106,13 @@
                                         <rect key="frame" x="0.0" y="145.5" width="350" height="0.0"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Donation amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iVB-XY-CJW">
-                                                <rect key="frame" x="0.0" y="0.0" width="294.5" height="0.0"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="137" height="0.0"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="$50" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rdy-Is-YyL">
-                                                <rect key="frame" x="302.5" y="0.0" width="47.5" height="0.0"/>
+                                                <rect key="frame" x="145" y="0.0" width="205" height="0.0"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -1156,6 +1156,7 @@
                         <outlet property="dateLabel" destination="364-CI-pEZ" id="1n8-WZ-Rpo"/>
                         <outlet property="descriptionLabel" destination="4lK-vk-TVf" id="Go0-xk-KoL"/>
                         <outlet property="financeStackView" destination="egh-X0-Anb" id="QoV-my-owI"/>
+                        <outlet property="respondButton" destination="boc-W4-aZN" id="w4d-5f-lSI"/>
                         <outlet property="titleLabel" destination="75C-qK-HAh" id="pCJ-Yz-Yw6"/>
                     </connections>
                 </viewController>

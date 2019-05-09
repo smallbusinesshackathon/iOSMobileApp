@@ -26,8 +26,7 @@ class BusinessRequestsViewController: UIViewController, UICollectionViewDelegate
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RequestCell", for: indexPath) as! RequestCollectionViewCell
         
         cell.request = requests[indexPath.row]
-        cell.contentView.backgroundColor = #colorLiteral(red: 0.921431005, green: 0.9214526415, blue: 0.9214410186, alpha: 1)
-        cell.contentView.layer.cornerRadius = 20
+        cell.layer.cornerRadius = 20
         
         return cell
     }
