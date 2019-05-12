@@ -15,18 +15,18 @@ class BusinessLoginViewController: UIViewController {
         setUpAppearance()
     }
     
+    // Sign in functionality.
     @IBAction func buttonClick(sender: UIButton) {
-        let username = "35C9vt7T2"
-        let transactionKey = "9GxM2nU34267zw6Z"
+        guard let username = usernameInput.text,
+            let transactionKey = passwordInput.text else { return }
         
         let url = URL(string: "https://apitest.authorize.net/xml/v1/request.api")!
         
         var request = URLRequest(url: url)
         
         request.httpMethod = "POST"
-        //request.addValue("accept", forHTTPHeaderField: "application/json")
         
-        let json: [String: Any] = ["authenticateTestRequest": ["merchantAuthentication": ["name": username, "transactionKey": transactionKey]]]
+        let json: [String: Any] = ["authenticateTestRequest": ["merchantAuthentication": ["name": "35C9vt7T2", "transactionKey": "9GxM2nU34267zw6Z"]]]
         
         do {
             request.httpBody = try JSONSerialization.data(withJSONObject: json, options: [])
@@ -76,6 +76,6 @@ class BusinessLoginViewController: UIViewController {
     
     @IBOutlet weak var signInButton: UIButton!
     @IBOutlet weak var signUpButton: UIButton!
-    @IBOutlet weak var businessNameInput: UITextField!
-    @IBOutlet weak var businessPhoneNumInput: UITextField!
+    @IBOutlet weak var usernameInput: UITextField!
+    @IBOutlet weak var passwordInput: UITextField!
 }
