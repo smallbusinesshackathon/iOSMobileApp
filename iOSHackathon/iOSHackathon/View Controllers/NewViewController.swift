@@ -8,6 +8,9 @@
 import UIKit
 
 class NewViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    // MARK - UITableViewDataSource
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return agencies.count
     }
@@ -22,12 +25,7 @@ class NewViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         return cell
     }
     
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
+    // MARK - IBActions
     
     @IBAction func goBack(_ sender: Any) {
         self.dismiss(animated: true
@@ -36,25 +34,19 @@ class NewViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     
     @IBAction func loadFEMA(_ sender: Any) {
         
-        guard let url = Bundle.main.url(forResource: "fema", withExtension: "json") else {return}
-        
+        guard let url = Bundle.main.url(forResource: "fema", withExtension: "json") else { return }
         
         do {
             let demoData = try Data(contentsOf: url)
-            //                                let convertedString = String(data: demoData, encoding: String.Encoding.utf8)
-            //                                print(convertedString!)
-            //
             let result = try JSONDecoder().decode(Agencies.self, from: demoData)
-            
-            //                print(offerResult)
-            //                self.offers = offerResult.compactMap({ $0.value })
             self.agencies = result.fema
-            //                self.offers = offers
             
         } catch {
-            NSLog("Error decoding offer representations: \(error)")
+            NSLog("Error decoding fema agencies: \(error)")
         }
     }
+    
+    // MARK - Properties
     
     var agencies: [Agency] = [] {
         didSet {

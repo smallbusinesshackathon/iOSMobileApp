@@ -9,8 +9,6 @@ import UIKit
 
 class RequestCollectionViewCell: UICollectionViewCell {
 
-    
-    
     private func updateViews() {
         guard let request = request else { return }
         
@@ -24,7 +22,6 @@ class RequestCollectionViewCell: UICollectionViewCell {
         } else {
             caseStatusLabel.text = "Closed"
         }
-        
     }
     
     // MARK - Properties
@@ -34,6 +31,7 @@ class RequestCollectionViewCell: UICollectionViewCell {
             updateViews()
         }
     }
+    
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var requestDescriptionLabel: UILabel!
     @IBOutlet weak var categoryLabel: UILabel!

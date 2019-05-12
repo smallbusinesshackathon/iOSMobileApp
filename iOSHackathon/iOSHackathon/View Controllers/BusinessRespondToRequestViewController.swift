@@ -60,12 +60,15 @@ class BusinessRespondToRequestViewController: UIViewController {
         }
     }
     
+    // MARK - Properties
+    
     var request: Request? {
         didSet {
             guard isViewLoaded else { return }
             updateViews()
         }
     }
+    
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
