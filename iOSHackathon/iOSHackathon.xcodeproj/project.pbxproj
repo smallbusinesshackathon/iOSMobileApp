@@ -30,7 +30,6 @@
 		7B8E4E6C227E1E52001F9C2F /* RequestCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8E4E6B227E1E52001F9C2F /* RequestCollectionViewCell.swift */; };
 		7B8E4E6E227E3885001F9C2F /* OfferCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8E4E6D227E3885001F9C2F /* OfferCollectionViewCell.swift */; };
 		7BD13E84227E7D7B001E758C /* Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD13E83227E7D7B001E758C /* Appearance.swift */; };
-		7BD13E86227E800B001E758C /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD13E85227E800B001E758C /* TabBarViewController.swift */; };
 		7BD13E8A227ED6F3001E758C /* demo2.json in Resources */ = {isa = PBXBuildFile; fileRef = 7BD13E89227ED6F3001E758C /* demo2.json */; };
 		7BD13E8F227F092B001E758C /* NewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD13E8E227F092B001E758C /* NewViewController.swift */; };
 		7BD13E91227F09CB001E758C /* fema.json in Resources */ = {isa = PBXBuildFile; fileRef = 7BD13E90227F09CB001E758C /* fema.json */; };
@@ -70,7 +69,6 @@
 		7B8E4E6B227E1E52001F9C2F /* RequestCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestCollectionViewCell.swift; sourceTree = "<group>"; };
 		7B8E4E6D227E3885001F9C2F /* OfferCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferCollectionViewCell.swift; sourceTree = "<group>"; };
 		7BD13E83227E7D7B001E758C /* Appearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appearance.swift; sourceTree = "<group>"; };
-		7BD13E85227E800B001E758C /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		7BD13E89227ED6F3001E758C /* demo2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = demo2.json; path = "iOSHackathon/Mock Data/demo2.json"; sourceTree = SOURCE_ROOT; };
 		7BD13E8E227F092B001E758C /* NewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewViewController.swift; sourceTree = "<group>"; };
 		7BD13E90227F09CB001E758C /* fema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = fema.json; path = "iOSHackathon/Mock Data/fema.json"; sourceTree = SOURCE_ROOT; };
@@ -166,7 +164,6 @@
 			isa = PBXGroup;
 			children = (
 				A23F520C227D549000C729C7 /* BusinessLoginViewController.swift */,
-				7BD13E85227E800B001E758C /* TabBarViewController.swift */,
 				10082B27227D539D002C8D56 /* BusinessMapViewController.swift */,
 				7B8E4E4F227D4EB1001F9C2F /* BusinessOffersViewController.swift */,
 				7B8E4E6D227E3885001F9C2F /* OfferCollectionViewCell.swift */,
@@ -311,7 +308,6 @@
 				A23F51F0227D2AAB00C729C7 /* AppDelegate.swift in Sources */,
 				7B8E4E50227D4EB1001F9C2F /* BusinessOffersViewController.swift in Sources */,
 				7B8E4E6C227E1E52001F9C2F /* RequestCollectionViewCell.swift in Sources */,
-				7BD13E86227E800B001E758C /* TabBarViewController.swift in Sources */,
 				7B8E4E54227D53DE001F9C2F /* BusinessRequestsViewController.swift in Sources */,
 				7B8E4E52227D501D001F9C2F /* AddEditBusinessOfferViewController.swift in Sources */,
 				7B21EABF2283CB8500195379 /* BusinessSettingsViewController.swift in Sources */,
