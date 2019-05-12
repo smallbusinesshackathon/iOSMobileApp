@@ -98,10 +98,10 @@
                         <viewLayoutGuide key="safeArea" id="BSp-Wh-Eww"/>
                     </view>
                     <connections>
-                        <outlet property="businessNameInput" destination="eBt-Uw-IUp" id="tDK-H1-mDP"/>
-                        <outlet property="businessPhoneNumInput" destination="vy9-Z4-aBE" id="VC6-9j-Uff"/>
+                        <outlet property="passwordInput" destination="vy9-Z4-aBE" id="BuD-0u-fB8"/>
                         <outlet property="signInButton" destination="fV0-fH-Cz0" id="Ehg-Mw-TgS"/>
                         <outlet property="signUpButton" destination="lEx-Dy-hWM" id="hOE-oG-x2I"/>
+                        <outlet property="usernameInput" destination="eBt-Uw-IUp" id="Rvj-wk-1Od"/>
                         <segue destination="1tG-sf-W16" kind="show" identifier="ViewTabBar" id="skd-yf-CHh"/>
                     </connections>
                 </viewController>
