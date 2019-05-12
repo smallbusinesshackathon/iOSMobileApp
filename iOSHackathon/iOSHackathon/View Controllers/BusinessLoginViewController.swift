@@ -26,7 +26,7 @@ class BusinessLoginViewController: UIViewController {
         
         request.httpMethod = "POST"
         
-        let json: [String: Any] = ["authenticateTestRequest": ["merchantAuthentication": ["name": username, "transactionKey": transactionKey]]]
+        let json: [String: Any] = ["authenticateTestRequest": ["merchantAuthentication": ["name": "35C9vt7T2", "transactionKey": "9GxM2nU34267zw6Z"]]]
         
         do {
             request.httpBody = try JSONSerialization.data(withJSONObject: json, options: [])

@@ -9,15 +9,6 @@ import UIKit
 
 class OfferCollectionViewCell: UICollectionViewCell {
     
-    
-    @IBOutlet weak var offerTitleLabel: UILabel!
-    @IBOutlet weak var offerMerchantNameLabel: UILabel!
-    @IBOutlet weak var offerLocationLabel: UILabel!
-    @IBOutlet weak var offerActiveIndicatorLabel: UILabel!
-    @IBOutlet weak var descriptionLabel: UILabel!
-    
-    
-    
     private func updateViews() {
         guard let offer = offer else { return }
         
@@ -40,5 +31,11 @@ class OfferCollectionViewCell: UICollectionViewCell {
             updateViews()
         }
     }
+    
+    @IBOutlet weak var offerTitleLabel: UILabel!
+    @IBOutlet weak var offerMerchantNameLabel: UILabel!
+    @IBOutlet weak var offerLocationLabel: UILabel!
+    @IBOutlet weak var offerActiveIndicatorLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
 }
 

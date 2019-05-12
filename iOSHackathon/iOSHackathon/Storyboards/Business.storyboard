@@ -457,8 +457,8 @@
                                     <action selector="goBack:" destination="66u-sK-t5q" eventType="touchUpInside" id="1vb-9I-kkF"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="0G0-M0-OMI">
-                                <rect key="frame" x="42" y="162" width="330" height="467"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="0G0-M0-OMI">
+                                <rect key="frame" x="42" y="166" width="330" height="496"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Offer Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jm2-6P-PXp">
                                         <rect key="frame" x="0.0" y="0.0" width="330" height="20.5"/>
@@ -467,71 +467,71 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="McS-Xi-UP5">
-                                        <rect key="frame" x="0.0" y="26.5" width="330" height="30"/>
+                                        <rect key="frame" x="0.0" y="26.5" width="330" height="59"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hs5-s2-nzU">
-                                        <rect key="frame" x="0.0" y="62.5" width="330" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="91.5" width="330" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="pfh-L2-3Xj">
-                                        <rect key="frame" x="0.0" y="89" width="330" height="128"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="pfh-L2-3Xj">
+                                        <rect key="frame" x="0.0" y="118" width="330" height="128"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o7v-Hm-rj2">
-                                        <rect key="frame" x="0.0" y="223" width="330" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o7v-Hm-rj2">
+                                        <rect key="frame" x="0.0" y="252" width="330" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bok-KK-x9t">
-                                        <rect key="frame" x="0.0" y="249.5" width="330" height="30"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bok-KK-x9t">
+                                        <rect key="frame" x="0.0" y="278.5" width="330" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Redemption Code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c3J-A0-lCz">
-                                        <rect key="frame" x="0.0" y="285.5" width="330" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Redemption Code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c3J-A0-lCz">
+                                        <rect key="frame" x="0.0" y="314.5" width="330" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hgn-O4-Z03">
-                                        <rect key="frame" x="0.0" y="312" width="330" height="30"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hgn-O4-Z03">
+                                        <rect key="frame" x="0.0" y="341" width="330" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="End Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7MA-Ug-N0h">
-                                        <rect key="frame" x="0.0" y="348" width="330" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="End Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7MA-Ug-N0h">
+                                        <rect key="frame" x="0.0" y="377" width="330" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0yj-o2-pXU">
-                                        <rect key="frame" x="0.0" y="374.5" width="330" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0yj-o2-pXU">
+                                        <rect key="frame" x="0.0" y="403.5" width="330" height="30"/>
                                         <state key="normal" title="Add Date"/>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="kjhkjh" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mQP-2f-4ct">
-                                        <rect key="frame" x="0.0" y="410.5" width="330" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="kjhkjh" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mQP-2f-4ct">
+                                        <rect key="frame" x="0.0" y="439.5" width="330" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <datePicker hidden="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="5ZX-Ap-n2s">
-                                        <rect key="frame" x="0.0" y="434" width="330" height="0.0"/>
+                                        <rect key="frame" x="0.0" y="463" width="330" height="0.0"/>
                                         <date key="date" timeIntervalSinceReferenceDate="578722342.18545401">
                                             <!--2019-05-05 04:12:22 +0000-->
                                         </date>
                                     </datePicker>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p83-hx-00H">
-                                        <rect key="frame" x="0.0" y="437" width="330" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p83-hx-00H">
+                                        <rect key="frame" x="0.0" y="466" width="330" height="30"/>
                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Submit">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -547,6 +547,7 @@
                         <constraints>
                             <constraint firstItem="VQF-eB-82x" firstAttribute="leading" secondItem="fc1-CS-3bn" secondAttribute="leading" constant="42" id="8li-0q-Y91"/>
                             <constraint firstItem="fc1-CS-3bn" firstAttribute="trailing" secondItem="0G0-M0-OMI" secondAttribute="trailing" constant="42" id="Fsy-Mt-nPY"/>
+                            <constraint firstItem="fc1-CS-3bn" firstAttribute="bottom" secondItem="0G0-M0-OMI" secondAttribute="bottom" constant="200" id="MG5-AP-juc"/>
                             <constraint firstItem="eyT-Hc-cZa" firstAttribute="leading" secondItem="fc1-CS-3bn" secondAttribute="leading" constant="20" id="eFN-6s-ugc"/>
                             <constraint firstItem="VQF-eB-82x" firstAttribute="top" secondItem="eyT-Hc-cZa" secondAttribute="bottom" constant="8" id="jfG-2C-Yul"/>
                             <constraint firstItem="0G0-M0-OMI" firstAttribute="top" secondItem="VQF-eB-82x" secondAttribute="bottom" constant="24" id="rjd-Or-RDM"/>
@@ -561,6 +562,7 @@
                         <outlet property="offerLocationTextField" destination="Bok-KK-x9t" id="12U-ff-Rgv"/>
                         <outlet property="offerRedemptionCodeTextField" destination="hgn-O4-Z03" id="u8o-13-zdc"/>
                         <outlet property="offerTitleTextField" destination="McS-Xi-UP5" id="uJg-jB-w0m"/>
+                        <outlet property="submitButton" destination="p83-hx-00H" id="nQp-og-fIT"/>
                         <outlet property="viewTitleLabel" destination="VQF-eB-82x" id="TJE-HV-mxD"/>
                     </connections>
                 </viewController>
